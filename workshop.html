@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Workshop | Magic Button Labs</title>
-<meta name="description" content="Hands-on training for new monday.com teams. Led by monday.com architects. Private and group sessions. If you do not feel confident running monday.com, we will work with you one-on-one until you are."/>
+<title>Builders Blueprint Workshop | Magic Button Labs</title>
+<meta name="description" content="You didn't build it wrong. You just weren't shown how to build it right. Learn the architecture patterns serious monday.com teams use — in one day."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -17,33 +17,45 @@
 .workshop-hero-copy .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .workshop-hero-stat { display: flex; flex-direction: column; gap: 16px; }
 .ws-stat-big { background: var(--ink); color: #fff; padding: 40px 44px; display: flex; flex-direction: column; gap: 8px; }
-.ws-stat-big .num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(56px, 7vw, 88px); font-weight: 300; letter-spacing: -0.04em; line-height: 1; color: #fff; }
+.ws-stat-big .num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(48px, 6vw, 72px); font-weight: 300; letter-spacing: -0.04em; line-height: 1; color: #fff; }
 .ws-stat-big .num em { font-style: normal; color: var(--accent); }
-.ws-stat-big .label { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.5; }
+.ws-stat-big .label { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.55; }
 .ws-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .ws-stat-mini { background: var(--band); border: 1px solid var(--hairline); padding: 24px 28px; }
-.ws-stat-mini .mini-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+.ws-stat-mini .mini-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); line-height: 1; margin-bottom: 6px; }
 .ws-stat-mini .mini-label { font-size: 12.5px; color: var(--ink-subtle); }
+.problem-band { background: var(--band); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 64px 0; }
+.problem-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.problem-copy h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.02em; color: var(--ink); line-height: 1.2; margin-bottom: 20px; }
+.problem-copy p { font-size: 15.5px; color: var(--ink-muted); line-height: 1.75; font-weight: 300; }
+.problem-copy p + p { margin-top: 14px; }
+.problem-signs { display: flex; flex-direction: column; gap: 0; }
+.problem-sign { display: flex; align-items: flex-start; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+.problem-sign:first-child { border-top: 1px solid var(--hairline); }
+.problem-sign .sign-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.problem-sign p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; margin: 0; }
+.problem-sign p strong { color: var(--ink); font-weight: 600; }
 .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
-.price-card { background: var(--paper); border: 1px solid var(--hairline); padding: 44px 40px; position: relative; transition: border-color 0.2s; }
+.price-card { background: var(--paper); border: 1px solid var(--hairline); padding: 44px 40px; position: relative; transition: border-color 0.2s; display: flex; flex-direction: column; }
 .price-card:hover { border-color: rgba(57,176,226,0.35); }
 .price-card.featured { border-color: var(--accent); background: var(--band); }
-.price-card .price-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--ink-subtle); margin-bottom: 20px; display: block; }
+.price-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--ink-subtle); margin-bottom: 20px; display: block; }
 .price-card.featured .price-label { color: var(--accent); }
-.price-card .price-amount { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(36px, 4vw, 52px); font-weight: 300; letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin-bottom: 6px; }
-.price-card .price-amount em { font-style: normal; font-size: 16px; font-weight: 400; letter-spacing: 0; color: var(--ink-muted); margin-left: 2px; }
-.price-card .price-desc { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; margin: 20px 0 28px; font-weight: 300; }
-.price-card .price-perks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
-.price-card .price-perks li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
-.price-card .price-perks li::before { content: ''; display: block; width: 16px; height: 16px; border-radius: 50%; background: rgba(57,176,226,0.15); border: 1.5px solid var(--accent); flex-shrink: 0; margin-top: 2px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%2339B0E2' stroke-width='1.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-size: 10px; background-position: center; background-repeat: no-repeat; }
+.price-amount { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+.price-amount em { font-style: normal; font-size: 15px; font-weight: 400; letter-spacing: 0; color: var(--ink-muted); margin-left: 2px; }
+.price-desc { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; margin: 20px 0 28px; font-weight: 300; }
+.price-perks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; flex: 1; }
+.price-perks li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
+.price-perks li::before { content: ''; display: block; width: 16px; height: 16px; border-radius: 50%; background: rgba(57,176,226,0.15); border: 1.5px solid var(--accent); flex-shrink: 0; margin-top: 2px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%2339B0E2' stroke-width='1.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-size: 10px; background-position: center; background-repeat: no-repeat; }
 .format-note { margin-top: 32px; padding: 20px 24px; background: var(--paper); border: 1px solid var(--hairline); border-left: 3px solid var(--accent); font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
 .format-note strong { color: var(--ink); font-weight: 600; }
+.format-note a { color: var(--accent); }
 .guarantee-band { background: var(--ink); padding: 80px 0; }
 .guarantee-inner { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; }
 .guarantee-badge { width: 120px; height: 120px; border-radius: 50%; border: 2px solid rgba(57,176,226,0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; flex-shrink: 0; gap: 4px; padding: 16px; }
-.guarantee-badge .badge-top { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); }
-.guarantee-badge .badge-word { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.02em; line-height: 1; }
-.guarantee-badge .badge-word em { font-style: normal; color: var(--accent); }
+.badge-top { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); }
+.badge-word { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.02em; line-height: 1; }
+.badge-word em { font-style: normal; color: var(--accent); }
 .guarantee-copy h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.02em; color: #fff; line-height: 1.15; margin-bottom: 16px; }
 .guarantee-copy p { font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.75; font-weight: 300; max-width: 60ch; }
 .walkaway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 48px; }
@@ -52,22 +64,14 @@
 .walkaway-icon { font-size: 28px; margin-bottom: 20px; display: block; }
 .walkaway-card h3 { margin-bottom: 12px; }
 .walkaway-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
-.who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-.audience-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-.audience-list li { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--hairline); font-size: 15px; color: var(--ink-muted); line-height: 1.6; align-items: flex-start; }
-.audience-list li:first-child { border-top: 1px solid var(--hairline); }
-.audience-list li .aud-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); flex-shrink: 0; padding-top: 3px; }
-.who-callout { background: var(--band); border: 1px solid var(--hairline); padding: 40px; margin-top: 32px; }
-.who-callout h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 12px; line-height: 1.3; }
-.who-callout p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; margin-bottom: 24px; font-weight: 300; }
 @media (max-width: 900px) {
   .workshop-hero-inner { grid-template-columns: 1fr; }
   .workshop-hero-stat { display: none; }
+  .problem-inner { grid-template-columns: 1fr; gap: 40px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .guarantee-inner { grid-template-columns: 1fr; gap: 32px; }
   .guarantee-badge { display: none; }
   .walkaway-grid { grid-template-columns: 1fr; }
-  .who-inner { grid-template-columns: 1fr; gap: 48px; }
 }
 .workshop-hero-copy h1 { animation: fadeUp 0.7s ease-out 0.05s backwards; }
 .workshop-hero-copy .subhead { animation: fadeUp 0.7s ease-out 0.18s backwards; }
@@ -75,6 +79,7 @@
 </style>
 </head>
 <body>
+
 <nav class="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
@@ -89,6 +94,7 @@
       <span class="nav-logo-text">Magic Button Labs</span>
     </a>
     <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
       <li class="hide-mob"><a href="workshop.html" class="active">Workshop</a></li>
       <li><a href="customer-journey.html">Customer Journey</a></li>
       <li class="hide-mob"><a href="about.html">About</a></li>
@@ -97,45 +103,81 @@
     </ul>
   </div>
 </nav>
+
 <section class="workshop-hero">
   <div class="wrap">
     <div class="workshop-hero-inner">
       <div class="workshop-hero-copy">
-        <span class="eyebrow">monday.com Workshops</span>
-        <h1 class="display">Most teams use about <em>12%</em> of what monday.com can do.</h1>
-        <p class="subhead">Our hands-on workshops turn your team from &ldquo;I think I click here?&rdquo; into people who actually know what they&rsquo;re doing. Browse our workshops or tell us what&rsquo;s holding your team back. We&rsquo;ll build the rest around you.</p>
+        <span class="eyebrow">Builders Blueprint Workshop</span>
+        <h1 class="display">You didn&rsquo;t build it wrong. You just weren&rsquo;t shown how to build it <em>right.</em></h1>
+        <p class="subhead">Most monday.com accounts are built by people figuring it out as they go. This workshop teaches you the architecture patterns serious teams use &mdash; so you can stop patching and start building something that actually scales.</p>
         <div class="hero-actions">
           <a class="btn btn-dark" href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Join the Waitlist</a>
-          <a class="btn btn-outline" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline" href="contact.html">Book a Private Session</a>
         </div>
       </div>
       <div class="workshop-hero-stat" aria-hidden="true">
         <div class="ws-stat-big">
-          <span class="num"><em>12</em>%</span>
-          <span class="label">of monday.com&rsquo;s power the average team actually uses. Embarrassing, right?</span>
+          <span class="num"><em>1</em> day</span>
+          <span class="label">Live workshop &middot; 8&ndash;10 hours &middot; Hands-on labs. You leave with a system that works, built inside your own account.</span>
         </div>
         <div class="ws-stat-row">
-          <div class="ws-stat-mini"><div class="mini-num">1 day</div><div class="mini-label">to transform your team</div></div>
-          <div class="ws-stat-mini"><div class="mini-num">Live</div><div class="mini-label">on Zoom with a builder</div></div>
+          <div class="ws-stat-mini"><div class="mini-num">8 modules</div><div class="mini-label">Architecture to automation</div></div>
+          <div class="ws-stat-mini"><div class="mini-num">Live</div><div class="mini-label">Led by a certified Architect</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="problem-band">
+  <div class="wrap">
+    <div class="problem-inner">
+      <div class="problem-copy">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>Your monday.com works. Kind of. Until it doesn&rsquo;t.</h2>
+        <p>You built something. It made sense at the time. Now it&rsquo;s grown into something fragile &mdash; and you&rsquo;re not sure if that&rsquo;s your fault or just how monday.com works.</p>
+        <p>It&rsquo;s not your fault. Nobody showed you the right patterns. This workshop does.</p>
+      </div>
+      <div class="problem-signs">
+        <div class="problem-sign"><span class="sign-icon">&#x1F4CA;</span><p><strong>Boards that made sense six months ago</strong> now feel like a messy spreadsheet nobody trusts.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F514;</span><p><strong>Notifications firing constantly</strong> &mdash; or not at all &mdash; so your team ignores them either way.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F91D;</span><p><strong>Handoffs still happen over Slack</strong> because monday.com doesn&rsquo;t quite capture how work actually moves.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F4AC;</span><p><strong>&ldquo;Can you just pull that from monday.com?&rdquo;</strong> &mdash; and the answer is always &ldquo;let me dig around first.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">After one day</span>
+    <h2 class="section-title">You&rsquo;ll know exactly what&rsquo;s happening &mdash; without having to ask.</h2>
+    <p class="lead">Everything your team needs is visible. Work moves without someone chasing it. And you&rsquo;re the person at your company who finally knows how to build this right.</p>
+    <div class="walkaway-grid">
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F3D7;</span><h3 class="card-title">Architecture that scales</h3><p>Learn the board structures, naming patterns, and data models that hold up as your team and workload grow. No more rebuilding from scratch in six months.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x26A1;</span><h3 class="card-title">Automations that actually run</h3><p>Build automations inside your own account during the workshop. Work moves forward on its own. Handoffs happen without a Slack message.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4C8;</span><h3 class="card-title">Dashboards leaders trust</h3><p>Connect your boards so the data you need surfaces automatically. Your team sees what matters. Leadership stops asking for manual updates.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
 <section class="section">
   <div class="wrap">
     <span class="eyebrow">Pricing and format</span>
-    <h2 class="section-title">Live on Zoom. Led by a monday.com builder. Built around your team.</h2>
-    <p class="lead">Stop leaving money on the table. Sign up today and get a monday.com that actually works, in as little as a day.</p>
+    <h2 class="section-title">Live on Zoom. Led by a monday.com Architect. Built around your team.</h2>
+    <p class="lead">The same training our architects go through &mdash; now available directly to your team.</p>
     <div class="pricing-grid">
       <div class="price-card">
         <span class="price-label">Group Session</span>
         <div class="price-amount">$500 <em>per person</em></div>
-        <p class="price-desc">Join a cohort of monday.com users across industries. Learn the fundamentals, ask questions, and walk away with a working system.</p>
+        <p class="price-desc">Join a cohort of monday.com builders across industries. Learn the right patterns, ask real questions, and walk away with a system that works.</p>
         <ul class="price-perks">
           <li>Full-day live session on Zoom</li>
           <li>Hands-on labs throughout</li>
-          <li>Open Q&amp;A with a monday.com architect</li>
+          <li>Open Q&amp;A with a certified Architect</li>
           <li>Covered by the Magic Guarantee</li>
         </ul>
         <a class="btn btn-outline" href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Join the Waitlist</a>
@@ -143,20 +185,24 @@
       <div class="price-card featured">
         <span class="price-label">Private Session</span>
         <div class="price-amount">$2,500 <em>per engagement</em></div>
-        <p class="price-desc">Your team, your workflow, your monday.com. We build the workshop around exactly what you need&mdash;from day one setup to advanced automation.</p>
+        <p class="price-desc">Your team, your workflow, your monday.com. We build the workshop around exactly what you need &mdash; from day-one structure to advanced automation.</p>
         <ul class="price-perks">
           <li>Private session for your team only</li>
           <li>Custom agenda built around your workflow</li>
           <li>Hands-on configuration inside your account</li>
           <li>Covered by the Magic Guarantee</li>
         </ul>
-        <a class="btn btn-dark" href="contact.html">Contact Us</a>
+        <a class="btn btn-dark" href="contact.html">Book a Private Session</a>
       </div>
     </div>
-    <div class="format-note"><strong>Magic not included,</strong> but honestly, it kind of feels that way. Both formats include hands-on labs, live Q&amp;A, and are fully covered by our Magic Guarantee.</div>
+    <div class="format-note">
+      <strong>Also available:</strong> monday.com AI Training Workshop &mdash; a separate session covering AI features and how to build with them. <a href="contact.html">Ask us about it &rarr;</a>
+    </div>
   </div>
 </section>
+
 <hr class="rule">
+
 <div class="guarantee-band">
   <div class="wrap">
     <div class="guarantee-inner">
@@ -168,60 +214,38 @@
       <div class="guarantee-copy">
         <span class="eyebrow" style="color: rgba(57,176,226,0.8);">The Magic Guarantee</span>
         <h2>We work with you until you&rsquo;re confident. No exceptions.</h2>
-        <p>Do the labs. Ask questions. If you do not feel confident running monday.com, we will work with you one-on-one until you are. You can also join the next workshop at no extra cost.</p>
+        <p>Do the labs. Ask the questions. If you don&rsquo;t finish the day feeling confident about how to build monday.com, we work with you one-on-one until you are &mdash; and you can join the next session at no extra cost.</p>
       </div>
     </div>
   </div>
 </div>
+
 <section class="section">
   <div class="wrap">
-    <span class="eyebrow">What you&rsquo;ll walk away with</span>
-    <h2 class="section-title">Build monday.com the right way in one day.</h2>
-    <p class="lead">Design boards that actually work for your team. Connect data and workflows without the chaos. Leave ready to own monday.com, not fight it.</p>
-    <div class="walkaway-grid">
-      <div class="walkaway-card"><span class="walkaway-icon">&#x1F47E;</span><h3 class="card-title">See the big picture</h3><p>Understand how monday.com is actually structured&mdash;boards, items, automations, dashboards&mdash;and how they all connect to run your business.</p></div>
-      <div class="walkaway-card"><span class="walkaway-icon">&#x26A1;</span><h3 class="card-title">Connected workflows</h3><p>Walk out with live automations, linked boards, and data flows you built yourself. Not a demo. Your real account, working the right way.</p></div>
-      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4C8;</span><h3 class="card-title">Built to scale</h3><p>Learn the architecture decisions that keep monday.com from becoming a mess as your team and data grow. Future-proof from day one.</p></div>
+    <span class="eyebrow">Who this is for</span>
+    <h2 class="section-title">Built for the person who owns monday.com at their company.</h2>
+    <p class="lead">Whether you were handed the keys or bought them yourself &mdash; if you&rsquo;re responsible for making monday.com work, this is for you.</p>
+    <div class="walkaway-grid" style="margin-top:40px;">
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F511;</span><h3 class="card-title">The monday.com champion</h3><p>You manage the account, field the requests, and try to keep everything from breaking. You need to build it right the first time &mdash; not fix it every six months.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4BC;</span><h3 class="card-title">The leader who bought in</h3><p>You invested in monday.com because you believed it could change how your team works. This is how you make sure that bet pays off.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F9F1;</span><h3 class="card-title">The self-taught builder</h3><p>You figured most of it out on YouTube and trial and error. This fills the gaps &mdash; and explains why some things you built never quite worked right.</p></div>
     </div>
   </div>
 </section>
-<hr class="rule">
-<section class="section">
-  <div class="wrap">
-    <div class="who-inner">
-      <div>
-        <span class="eyebrow">Who this workshop is for</span>
-        <h2 class="section-title">Sound like your team?</h2>
-        <ul class="audience-list">
-          <li><span class="aud-num">01</span><span>Teams who just bought monday.com and know their workflow is too unique to wing it.</span></li>
-          <li><span class="aud-num">02</span><span>Admins who were handed the keys to an incredibly powerful tool and left to figure it out.</span></li>
-          <li><span class="aud-num">03</span><span>Leaders who need to see monday.com actually working before they believe the hype.</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="who-callout">
-          <h3>Not sure where to start?</h3>
-          <p>Tell us what&rsquo;s holding your team back. We&rsquo;ll build the workshop around you&mdash;from initial board setup to complex cross-department automations.</p>
-          <a class="btn btn-dark" href="contact.html">Contact Us</a>
-        </div>
-        <div style="margin-top:16px;" class="who-callout">
-          <h3 style="font-size:16px;">Already have monday.com?</h3>
-          <p>Most of our workshop attendees do&mdash;and have been using about 12% of what it can do. We&rsquo;ll fix that in a day.</p>
-          <a class="btn btn-outline" href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Join the Waitlist</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <div class="cta-band">
   <div class="cta-band-inner">
-    <div><h2>Ready to stop leaving money on the table?</h2><p>Private from $2,500. Group from $500. Covered by the Magic Guarantee.</p></div>
+    <div>
+      <h2>Ready to build it right?</h2>
+      <p>Group sessions from $500. Private from $2,500. Covered by the Magic Guarantee.</p>
+    </div>
     <div class="cta-actions">
       <a class="btn btn-accent" href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Join the Waitlist</a>
-      <a class="btn btn-outline-white" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline-white" href="contact.html">Book a Private Session</a>
     </div>
   </div>
 </div>
+
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -247,5 +271,6 @@
     <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
   </div>
 </footer>
+
 </body>
 </html>
