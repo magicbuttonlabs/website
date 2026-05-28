@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog | Magic Button Labs</title>
+<meta name="description" content="Insights, guides, and best practices for getting the most out of monday.com. From Magic Button Labs, certified monday.com architects."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.blog-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--hairline); }
+.blog-body { padding: 80px 0 88px; }
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+.post-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--paper); border: 1px solid var(--hairline); overflow: hidden; transition: border-color 0.2s; text-decoration: none; color: inherit; }
+.post-card-featured:hover { border-color: rgba(57,176,226,0.4); }
+.post-thumb-placeholder { width: 100%; min-height: 280px; background: linear-gradient(135deg, var(--band) 0%, var(--band-deeper) 100%); display: flex; align-items: center; justify-content: center; }
+.post-thumb-icon { font-size: 48px; opacity: 0.35; }
+.post-card-featured .post-body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; }
+.post-card { background: var(--paper); border: 1px solid var(--hairline); overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s; }
+.post-card:hover { border-color: rgba(57,176,226,0.4); }
+.post-card .post-body { padding: 28px 28px 32px; display: flex; flex-direction: column; flex: 1; }
+.post-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.post-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); background: rgba(57,176,226,0.1); padding: 3px 9px; border-radius: 100px; }
+.post-date { font-size: 12px; color: var(--ink-subtle); }
+.post-body h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 20px; letter-spacing: -0.015em; color: var(--ink); line-height: 1.3; margin-bottom: 12px; }
+.post-card-featured .post-body h2 { font-size: clamp(22px, 2.5vw, 30px); margin-bottom: 16px; }
+.post-body p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; font-weight: 300; flex: 1; }
+.post-read-more { display: inline-flex; align-items: center; gap: 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 24px; transition: color 0.15s; text-decoration: none; }
+.post-read-more:hover { color: var(--accent-deep); }
+.post-read-more::after { content: '\2192'; }
+.post-card.soon { border-style: dashed; background: var(--bg); }
+.post-card.soon .soon-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--ink-subtle); margin-bottom: 10px; display: block; }
+.post-card.soon h2 { color: var(--ink-subtle); }
+.filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
+.filter-pill { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12.5px; font-weight: 500; color: var(--ink-muted); background: var(--paper); border: 1px solid var(--hairline); padding: 6px 14px; border-radius: 100px; transition: border-color 0.18s, color 0.18s; text-decoration: none; }
+.filter-pill:hover, .filter-pill.active { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 900px) { .post-grid { grid-template-columns: 1fr; } .post-card-featured { grid-template-columns: 1fr; } .post-card-featured .post-body { padding: 32px 28px; } }
+.blog-hero h1 { animation: fadeUp 0.7s ease-out 0.05s backwards; }
+.blog-hero p  { animation: fadeUp 0.7s ease-out 0.18s backwards; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="workshop.html">Workshop</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="blog-hero">
+  <div class="wrap">
+    <span class="eyebrow">Blog</span>
+    <h1 class="display">Insights for <em>monday.com</em> teams</h1>
+    <p class="subhead" style="margin-top:20px;">Guides, best practices, and lessons from the field&mdash;from certified monday.com architects who&rsquo;ve seen it all.</p>
+    <div class="filter-row">
+      <a class="filter-pill active" href="#">All Posts</a>
+      <a class="filter-pill" href="#">Workflows</a>
+      <a class="filter-pill" href="#">Automations</a>
+      <a class="filter-pill" href="#">Best Practices</a>
+      <a class="filter-pill" href="#">Case Studies</a>
+    </div>
+  </div>
+</section>
+<section class="blog-body">
+  <div class="wrap">
+    <div class="post-grid">
+      <a class="post-card-featured" href="https://www.magicbuttonlabs.com/post/monday-com-workflow-best-practices" target="_blank" rel="noopener">
+        <div class="post-thumb-placeholder"><span class="post-thumb-icon">&#x1F9E9;</span></div>
+        <div class="post-body">
+          <div class="post-meta"><span class="post-tag">Workflows</span><span class="post-date">May 14, 2025</span></div>
+          <h2>How to build a monday.com workflow your team will actually use</h2>
+          <p>Most monday.com setups break down because they were built around features, not real work. Learn how to design workflows your team will use, with guidance from Magic Button Labs.</p>
+          <span class="post-read-more">Read the post</span>
+        </div>
+      </a>
+      <div class="post-card soon">
+        <div class="post-thumb-placeholder" style="min-height:180px;"><span class="post-thumb-icon" style="font-size:36px;">&#x26A1;</span></div>
+        <div class="post-body"><span class="soon-label">Coming soon</span><h2>The automation mistakes that slow teams down</h2><p>The five most common monday.com automation errors, and how to fix them before they become expensive habits.</p></div>
+      </div>
+      <div class="post-card soon">
+        <div class="post-thumb-placeholder" style="min-height:180px;"><span class="post-thumb-icon" style="font-size:36px;">&#x1F4CA;</span></div>
+        <div class="post-body"><span class="soon-label">Coming soon</span><h2>Dashboards that actually tell you something</h2><p>Most monday.com dashboards show data. The best ones drive decisions. Here&rsquo;s the difference.</p></div>
+      </div>
+      <div class="post-card soon">
+        <div class="post-thumb-placeholder" style="min-height:180px;"><span class="post-thumb-icon" style="font-size:36px;">&#x1F91D;</span></div>
+        <div class="post-body"><span class="soon-label">Coming soon</span><h2>How to onboard a new client in monday.com without losing your mind</h2><p>A repeatable system for client onboarding that keeps your team aligned and your clients happy from day one.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div><h2>Ready to make monday.com magic?</h2><p>No matter your industry, we&rsquo;ve seen it before and we know how to help.</p></div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline-white" href="workshop.html">See the Workshop</a>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Workshop</a></li><li><a href="contact.html">Implementation</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+</body>
+</html>
