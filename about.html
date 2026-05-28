@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us | Magic Button Labs</title>
+<meta name="description" content="We built Magic Button Labs to make monday.com setup simple, smart, and built to last. Certified monday.com Architects with decades of real-world experience."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.about-hero { padding: 80px 0 72px; border-bottom: 1px solid var(--hairline); }
+.about-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-hero-copy h1 { margin-bottom: 32px; }
+.about-hero-copy p { font-size: 16px; color: var(--ink-muted); line-height: 1.8; font-weight: 300; }
+.about-hero-copy p + p { margin-top: 16px; }
+.about-hero-copy p:last-of-type { color: var(--ink); font-weight: 400; }
+.about-hero-copy .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
+.about-stats { display: flex; flex-direction: column; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 8px; }
+.about-stat { background: var(--paper); padding: 28px 32px; display: flex; align-items: baseline; gap: 12px; }
+.about-stat .stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 300; letter-spacing: -0.04em; color: var(--ink); line-height: 1; flex-shrink: 0; }
+.about-stat .stat-num em { font-style: normal; color: var(--accent); }
+.about-stat .stat-text { font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 48px; }
+.value-card { background: var(--paper); padding: 40px 36px; transition: background 0.25s ease; }
+.value-card:hover { background: var(--band); }
+.value-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--band); border: 1px solid rgba(57,176,226,0.18); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 24px; }
+.value-card h3 { margin-bottom: 12px; }
+.value-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; }
+.how-card { padding-top: 24px; border-top: 2px solid var(--band-deeper); }
+.how-num { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 16px; }
+.how-card h3 { margin-bottom: 10px; }
+.how-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
+.trusted-band { background: var(--band); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 88px 0; }
+.trusted-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.industry-chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+.chip { font-size: 13px; font-weight: 500; color: var(--ink-muted); background: var(--paper); border: 1px solid var(--hairline); padding: 7px 15px; border-radius: 100px; transition: border-color 0.18s, color 0.18s; }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.trust-quote { background: var(--paper); border: 1px solid var(--hairline); padding: 36px; position: relative; margin-top: 28px; }
+.trust-quote::before { content: "\201C"; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 80px; font-weight: 700; color: var(--accent); position: absolute; top: 10px; left: 20px; line-height: 1; opacity: 0.18; }
+.trust-quote blockquote { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-style: italic; font-weight: 400; color: var(--ink); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 18px; padding-top: 22px; }
+.trust-quote .attr { font-size: 12.5px; color: var(--ink-subtle); text-transform: uppercase; letter-spacing: 0.15em; }
+.trust-quote .attr strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 900px) {
+  .about-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .about-stats { display: none; }
+  .values-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .trusted-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+.about-hero-copy h1 { animation: fadeUp 0.7s ease-out 0.05s backwards; }
+.about-hero-copy p { animation: fadeUp 0.7s ease-out 0.18s backwards; }
+.about-hero-copy .hero-actions { animation: fadeUp 0.7s ease-out 0.3s backwards; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="workshop.html">Workshop</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li class="hide-mob"><a href="about.html" class="active">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="about-hero">
+  <div class="wrap">
+    <div class="about-hero-inner">
+      <div class="about-hero-copy">
+        <span class="eyebrow">About Us</span>
+        <h1 class="display">Built to make monday.com <em>actually work</em> for you.</h1>
+        <p>We built Magic Button Labs to make monday.com setup simple, smart, and built to last. Long projects and cookie-cutter templates slow teams down, so we created a better way.</p>
+        <p>Our Scale Kits give you everything you need to run your business in one connected system. Designed by certified monday.com Architects with decades of real-world experience, every setup is tailored to help your team move faster and work smarter.</p>
+        <p>With the right tools, structure, and support, your team gets more than a platform. You get momentum.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline" href="workshop.html">See the Workshop</a>
+        </div>
+      </div>
+      <div class="about-stats" aria-hidden="true">
+        <div class="about-stat"><span class="stat-num">30<em>+</em></span><span class="stat-text">industries served across hundreds of real client engagements</span></div>
+        <div class="about-stat"><span class="stat-num">14</span><span class="stat-text">modules in our flagship Customer Journey Solution</span></div>
+        <div class="about-stat"><span class="stat-num">100<em>%</em></span><span class="stat-text">native monday.com &mdash; no integrations to maintain, no vendor sprawl</span></div>
+        <div class="about-stat"><span class="stat-num"><em>&#x221E;</em></span><span class="stat-text">hours spent perfecting architectures so you don&rsquo;t have to start from scratch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Why teams choose us</span>
+    <h2 class="section-title">Why teams choose Magic Button Labs</h2>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-icon">&#x1F9E9;</div><h3 class="card-title">No guesswork</h3><p>We&#x2019;ve already spent thousands of hours perfecting architectures across industries, so you don&#x2019;t have to start from scratch.</p></div>
+      <div class="value-card"><div class="value-icon">&#x26A1;</div><h3 class="card-title">No downtime</h3><p>We work inside your existing monday.com account. No new hardware, no disruption, just instant activation.</p></div>
+      <div class="value-card"><div class="value-icon">&#x1F3AF;</div><h3 class="card-title">We meet you where you are</h3><p>Every Scale Kit is designed for your company&#x2019;s unique goals, tools, and workflow.</p></div>
+    </div>
+  </div>
+</section>
+<hr class="rule">
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">How we help</span>
+    <h2 class="section-title">How we help</h2>
+    <div class="how-grid">
+      <div class="how-card"><span class="how-num">01 &mdash; Activate</span><h3 class="card-title">Activate</h3><p>We bring your monday.com to life, connecting your data, tools, and team so everything runs smoothly from day one.</p></div>
+      <div class="how-card"><span class="how-num">02 &mdash; Customize &amp; Optimize</span><h3 class="card-title">Customize and optimize</h3><p>We fine-tune every detail until your workspace feels effortless, automating what slows you down and simplifying what matters most.</p></div>
+      <div class="how-card"><span class="how-num">03 &mdash; Ongoing Support</span><h3 class="card-title">Ongoing support</h3><p>We stay close by with expert help, fresh ideas, and quick fixes that keep your system growing right along with you.</p></div>
+    </div>
+    <div style="margin-top:48px;"><a class="btn btn-dark" href="contact.html">Contact Us</a></div>
+  </div>
+</section>
+<div class="trusted-band">
+  <div class="wrap">
+    <div class="trusted-inner">
+      <div>
+        <span class="eyebrow">Trusted by teams who scale fast</span>
+        <h2 class="section-title">From chaos to clarity</h2>
+        <p class="lead">From creative agencies to real estate, from manufacturing to minor league baseball, our clients share one goal: turning monday.com into their operational superpower.</p>
+        <div class="industry-chips">
+          <span class="chip">Creative Agencies</span><span class="chip">Real Estate</span><span class="chip">Manufacturing</span><span class="chip">Minor League Baseball</span><span class="chip">Professional Services</span><span class="chip">Technology</span><span class="chip">Construction</span><span class="chip">Healthcare</span><span class="chip">Education</span><span class="chip">+ 20 more industries</span>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title">See how others made monday.com magic</h2>
+        <p style="font-size:15px;color:var(--ink-muted);line-height:1.65;font-weight:300;">From chaos to clarity, Magic Button Labs helped them get there in record time.</p>
+        <div class="trust-quote">
+          <blockquote>this feels like, like, I just saw a pony for the first time and I now have to go beg my parents for a pony.</blockquote>
+          <div class="attr"><strong>Stephanie Marlowe</strong> &mdash; Tutela Solutions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div><h2>Ready to get started?</h2><p>No matter your industry, we&#x2019;ve seen it before and we know how to help set up monday.com perfectly for your business.</p></div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline-white" href="workshop.html">See the Workshop</a>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Workshop</a></li><li><a href="contact.html">Implementation</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+</body>
+</html>
