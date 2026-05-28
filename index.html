@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Magic Button Labs | monday.com consulting</title>
-<meta name="description" content="Magic Button Labs builds monday.com for the way you work. Full-service solutions including onboarding, automations, and training from certified experts."/>
+<meta name="description" content="Magic Button Labs helps teams unlock the full power of monday.com — smart builds, real automations, and systems designed to fit the way you work."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -57,16 +57,13 @@
 .how-num { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 16px; }
 .how-card h3 { margin-bottom: 10px; }
 .how-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
-.cj-callout { background: var(--band); border: 1px solid var(--hairline); padding: 52px 56px; display: grid; grid-template-columns: 1fr 240px; gap: 48px; align-items: start; margin-top: 52px; }
-.cj-callout h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 12px; line-height: 1.3; }
-.cj-callout p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; margin-bottom: 20px; }
-.mod-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
-.mod-chip { font-size: 12px; font-weight: 500; color: var(--ink-muted); background: var(--paper); border: 1px solid var(--hairline); padding: 5px 12px; border-radius: 100px; }
-.cj-stats-stack { display: flex; flex-direction: column; gap: 10px; }
-.cj-stat-box { background: var(--paper); border: 1px solid var(--hairline); padding: 20px; text-align: center; }
-.cj-stat-box .big { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; font-weight: 300; letter-spacing: -0.02em; color: var(--ink); line-height: 1; }
-.cj-stat-box .big em { font-style: italic; color: var(--accent); }
-.cj-stat-box .small { font-size: 12px; color: var(--ink-subtle); margin-top: 5px; }
+/* Offerings grid */
+.solutions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 48px; }
+.sol-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; transition: background 0.2s; }
+.sol-card:hover { background: var(--band); }
+.sol-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 18px; }
+.sol-card h3 { margin-bottom: 12px; }
+.sol-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; flex: 1; margin-bottom: 28px; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
@@ -75,7 +72,7 @@
   .workspace-list { display: none; }
   .trusted-inner { grid-template-columns: 1fr; gap: 48px; }
   .how-grid { grid-template-columns: 1fr; }
-  .cj-callout { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: 1fr; }
 }
 .hero-text h1 { animation: fadeUp 0.7s ease-out 0.05s backwards; }
 .hero-text .subhead { animation: fadeUp 0.7s ease-out 0.18s backwards; }
@@ -112,8 +109,8 @@
     <div class="hero-inner">
       <div class="hero-text">
         <span class="eyebrow">monday.com Partner</span>
-        <h1 class="display">Your perfect monday.com setup <em>starts here</em></h1>
-        <p class="subhead">Full-service monday.com setups, designed to fit the way you work.</p>
+        <h1 class="display">monday.com can do <em>so much more</em></h1>
+        <p class="subhead">Most teams use a fraction of what monday.com can do. We help you unlock the rest &mdash; with smart builds, real automations, and systems designed to fit the way your business actually works.</p>
         <div class="hero-actions">
           <a class="btn btn-dark" href="contact.html">Contact Us</a>
           <a class="btn btn-outline" href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a>
@@ -207,22 +204,33 @@
 
 <section class="section-sm">
   <div class="wrap">
-    <span class="eyebrow">Featured Solution</span>
-    <h2 class="section-title">The Customer Journey Solution</h2>
-    <p class="lead" style="margin-bottom:0;">Our flagship monday.com build &mdash; 14 modules covering your full client lifecycle.</p>
-    <div class="cj-callout">
-      <div>
-        <h3>From first inbound to renewal and upsell &mdash; connected, visible, and running on monday.com.</h3>
-        <p>Built natively on monday.com across thousands of hours and hundreds of real client engagements. No external tools, no integrations to maintain, no vendor sprawl.</p>
-        <div class="mod-chips">
-          <span class="mod-chip">&#x1F331; Lead Capture</span><span class="mod-chip">&#x1F333; Sales Pipeline</span><span class="mod-chip">&#x1F4B0; Invoicing</span><span class="mod-chip">&#x1F4B8; Commissions</span><span class="mod-chip">&#x1F4AC; Project Management</span><span class="mod-chip">&#x23F1;&#xFE0F; Time Tracking</span><span class="mod-chip">&#x2696;&#xFE0F; Resource Planning</span><span class="mod-chip">&#x1F4DA; Embedded Learning</span><span class="mod-chip">+ 6 more</span>
-        </div>
-        <a class="btn btn-dark" href="customer-journey.html">Explore the full solution &rarr;</a>
+    <span class="eyebrow">What we offer</span>
+    <h2 class="section-title">Everything you need to go further with monday.com</h2>
+    <p class="lead" style="margin-bottom:0;">Whether you want to learn, build, or have us do it for you &mdash; we have a path.</p>
+    <div class="solutions-grid">
+      <div class="sol-card">
+        <div class="sol-eyebrow">Training</div>
+        <h3 class="card-title">monday.com Training</h3>
+        <p>The same training our architects go through. Learn how to build scalable monday.com systems from the ground up &mdash; whether you&#x2019;re building on your own, alongside us, or just want to get more out of what you have.</p>
+        <a class="btn btn-outline" href="contact.html">Get in touch &rarr;</a>
       </div>
-      <div class="cj-stats-stack">
-        <div class="cj-stat-box"><div class="big">14 <em>modules</em></div><div class="small">Full client lifecycle</div></div>
-        <div class="cj-stat-box"><div class="big">30+ <em>industries</em></div><div class="small">Hundreds of clients</div></div>
-        <div class="cj-stat-box"><div class="big">100% <em>native</em></div><div class="small">No integration sprawl</div></div>
+      <div class="sol-card">
+        <div class="sol-eyebrow">Workshop</div>
+        <h3 class="card-title">monday.com Workshop</h3>
+        <p>A focused session to map your architecture and leave with a clear blueprint. Hands-on, built around your business, and run by certified monday.com Architects.</p>
+        <a class="btn btn-outline" href="workshop.html">See the Workshop &rarr;</a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-eyebrow">Solution</div>
+        <h3 class="card-title">Customer Journey Solution</h3>
+        <p>Our flagship build &mdash; 14 modules covering your full client lifecycle from first inbound to renewal. Built natively on monday.com across hundreds of real engagements.</p>
+        <a class="btn btn-outline" href="customer-journey.html">Explore the solution &rarr;</a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-eyebrow">Custom Build</div>
+        <h3 class="card-title">Custom Implementation</h3>
+        <p>We architect, build, and implement a monday.com system designed specifically for how your team works. Full-service, from discovery to launch.</p>
+        <a class="btn btn-outline" href="contact.html">Get in touch &rarr;</a>
       </div>
     </div>
   </div>
