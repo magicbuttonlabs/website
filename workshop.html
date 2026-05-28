@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"/>
 <style>
+/* ---- WORKSHOP-SPECIFIC STYLES ---- */
 .workshop-hero { padding: 80px 0 72px; border-bottom: 1px solid var(--hairline); }
 .workshop-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .workshop-hero-copy h1 { margin-bottom: 24px; }
@@ -64,6 +65,12 @@
 .walkaway-icon { font-size: 28px; margin-bottom: 20px; display: block; }
 .walkaway-card h3 { margin-bottom: 12px; }
 .walkaway-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; }
+.sessions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 48px; }
+.session-card { background: var(--paper); padding: 32px 28px; transition: background 0.2s; }
+.session-card:hover { background: var(--band); }
+.session-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 14px; }
+.session-card h3 { margin-bottom: 10px; font-size: 16px; }
+.session-card p { font-size: 13.5px; color: var(--ink-muted); line-height: 1.6; }
 @media (max-width: 900px) {
   .workshop-hero-inner { grid-template-columns: 1fr; }
   .workshop-hero-stat { display: none; }
@@ -72,6 +79,7 @@
   .guarantee-inner { grid-template-columns: 1fr; gap: 32px; }
   .guarantee-badge { display: none; }
   .walkaway-grid { grid-template-columns: 1fr; }
+  .sessions-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .workshop-hero-copy h1 { animation: fadeUp 0.7s ease-out 0.05s backwards; }
 .workshop-hero-copy .subhead { animation: fadeUp 0.7s ease-out 0.18s backwards; }
@@ -110,7 +118,7 @@
       <div class="workshop-hero-copy">
         <span class="eyebrow">Builders Blueprint Workshop</span>
         <h1 class="display">You didn&rsquo;t build it wrong. You just weren&rsquo;t shown how to build it <em>right.</em></h1>
-        <p class="subhead">Most monday.com accounts are built by people figuring it out as they go. This workshop teaches you the architecture patterns serious teams use &mdash; so you can stop patching and start building something that actually scales.</p>
+        <p class="subhead">The Builders Blueprint Series teaches you how serious teams build monday.com. Not through slides alone &mdash; through real concepts, live demonstrations, and hands-on labs where you build inside a pre-configured environment. The same way our architects learned it.</p>
         <div class="hero-actions">
           <a class="btn btn-dark" href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Join the Waitlist</a>
           <a class="btn btn-outline" href="contact.html">Book a Private Session</a>
@@ -118,12 +126,18 @@
       </div>
       <div class="workshop-hero-stat" aria-hidden="true">
         <div class="ws-stat-big">
-          <span class="num"><em>1</em> day</span>
-          <span class="label">Live workshop &middot; 8&ndash;10 hours &middot; Hands-on labs. You leave with a system that works, built inside your own account.</span>
+          <span class="num"><em>8</em> sessions</span>
+          <span class="label">Concept &middot; Live demo &middot; Hands-on lab. Each session builds on the last &mdash; delivered at a pace that fits your team.</span>
         </div>
         <div class="ws-stat-row">
-          <div class="ws-stat-mini"><div class="mini-num">8 modules</div><div class="mini-label">Architecture to automation</div></div>
-          <div class="ws-stat-mini"><div class="mini-num">Live</div><div class="mini-label">Led by a certified Architect</div></div>
+          <div class="ws-stat-mini">
+            <div class="mini-num">Your pace</div>
+            <div class="mini-label">Most clients spread across 2&ndash;4 weeks</div>
+          </div>
+          <div class="ws-stat-mini">
+            <div class="mini-num">Your account</div>
+            <div class="mini-label">Labs run in a pre-built environment</div>
+          </div>
         </div>
       </div>
     </div>
@@ -151,13 +165,44 @@
 
 <section class="section">
   <div class="wrap">
-    <span class="eyebrow">After one day</span>
+    <span class="eyebrow">How it works</span>
+    <h2 class="section-title">Learn it. See it. Build it.</h2>
+    <p class="lead">Every session follows the same structure: we teach the concept, show you what it looks like in a real system, then put you inside a pre-built lab environment with real boards and exercises designed to make the lesson stick.</p>
+    <p style="font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;margin-top:16px;max-width:68ch;">Sessions are delivered live and designed to fit around active implementation. Most clients spread the series across two to four weeks. You don&rsquo;t have to do it all at once &mdash; and the labs are self-contained so the order can flex to what your team needs first.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section-sm">
+  <div class="wrap">
+    <span class="eyebrow">The curriculum</span>
+    <h2 class="section-title">Eight sessions. Each one changes how you build.</h2>
+    <p class="lead" style="margin-bottom:0;">From foundational board structure to team adoption &mdash; the complete blueprint for building monday.com the right way.</p>
+    <div class="sessions-grid">
+      <div class="session-card"><div class="session-num">01</div><h3 class="card-title">Boards &amp; Views</h3><p>Structure boards so work is visible without being cluttered. Learn the mental models serious builders use from day one.</p></div>
+      <div class="session-card"><div class="session-num">02</div><h3 class="card-title">Dashboards</h3><p>Build dashboards leadership actually reads. Connect your data so the right numbers surface automatically.</p></div>
+      <div class="session-card"><div class="session-num">03</div><h3 class="card-title">Relational Data</h3><p>Connect boards so your data flows instead of duplicates. Stop copy-pasting between boards and start building a real source of truth.</p></div>
+      <div class="session-card"><div class="session-num">04</div><h3 class="card-title">Automations</h3><p>Make work move forward without someone pushing it. Build automation logic that holds up as your system grows.</p></div>
+      <div class="session-card"><div class="session-num">05</div><h3 class="card-title">Notifications</h3><p>Design alerts people actually respond to. Stop the noise &mdash; surface the signals that matter at the moment they matter.</p></div>
+      <div class="session-card"><div class="session-num">06</div><h3 class="card-title">Permissions</h3><p>Control who sees what and who can do what &mdash; without creating friction for the people who need to get work done.</p></div>
+      <div class="session-card"><div class="session-num">07</div><h3 class="card-title">Architecture</h3><p>Evaluate your system before it becomes a mess. Learn how to make structural decisions that hold up at scale.</p></div>
+      <div class="session-card"><div class="session-num">08</div><h3 class="card-title">Team Adoption</h3><p>Launch monday.com so your team actually uses it. Build the rollout plan, onboarding docs, and working agreements that make it stick.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">The outcome</span>
     <h2 class="section-title">You&rsquo;ll know exactly what&rsquo;s happening &mdash; without having to ask.</h2>
     <p class="lead">Everything your team needs is visible. Work moves without someone chasing it. And you&rsquo;re the person at your company who finally knows how to build this right.</p>
     <div class="walkaway-grid">
-      <div class="walkaway-card"><span class="walkaway-icon">&#x1F3D7;</span><h3 class="card-title">Architecture that scales</h3><p>Learn the board structures, naming patterns, and data models that hold up as your team and workload grow. No more rebuilding from scratch in six months.</p></div>
-      <div class="walkaway-card"><span class="walkaway-icon">&#x26A1;</span><h3 class="card-title">Automations that actually run</h3><p>Build automations inside your own account during the workshop. Work moves forward on its own. Handoffs happen without a Slack message.</p></div>
-      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4C8;</span><h3 class="card-title">Dashboards leaders trust</h3><p>Connect your boards so the data you need surfaces automatically. Your team sees what matters. Leadership stops asking for manual updates.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F3D7;</span><h3 class="card-title">Architecture that scales</h3><p>The board structures, naming patterns, and data models that hold up as your team and workload grow. No more rebuilding from scratch in six months.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x26A1;</span><h3 class="card-title">Automations that actually run</h3><p>You built them yourself, inside your own account, during the lab. Work moves forward on its own. Handoffs happen without a Slack message.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4C8;</span><h3 class="card-title">Dashboards leaders trust</h3><p>Your boards are connected. The data surfaces automatically. Leadership stops asking for manual updates &mdash; because the answer is already there.</p></div>
     </div>
   </div>
 </section>
@@ -175,7 +220,7 @@
         <div class="price-amount">$500 <em>per person</em></div>
         <p class="price-desc">Join a cohort of monday.com builders across industries. Learn the right patterns, ask real questions, and walk away with a system that works.</p>
         <ul class="price-perks">
-          <li>Full-day live session on Zoom</li>
+          <li>Live sessions on Zoom</li>
           <li>Hands-on labs throughout</li>
           <li>Open Q&amp;A with a certified Architect</li>
           <li>Covered by the Magic Guarantee</li>
@@ -185,11 +230,11 @@
       <div class="price-card featured">
         <span class="price-label">Private Session</span>
         <div class="price-amount">$2,500 <em>per engagement</em></div>
-        <p class="price-desc">Your team, your workflow, your monday.com. We build the workshop around exactly what you need &mdash; from day-one structure to advanced automation.</p>
+        <p class="price-desc">Your team, your workflow, your monday.com. We build the workshop around exactly what you need &mdash; and deliver it at a pace that fits your implementation.</p>
         <ul class="price-perks">
-          <li>Private session for your team only</li>
+          <li>Private sessions for your team only</li>
           <li>Custom agenda built around your workflow</li>
-          <li>Hands-on configuration inside your account</li>
+          <li>Hands-on labs inside your own account</li>
           <li>Covered by the Magic Guarantee</li>
         </ul>
         <a class="btn btn-dark" href="contact.html">Book a Private Session</a>
@@ -214,7 +259,7 @@
       <div class="guarantee-copy">
         <span class="eyebrow" style="color: rgba(57,176,226,0.8);">The Magic Guarantee</span>
         <h2>We work with you until you&rsquo;re confident. No exceptions.</h2>
-        <p>Do the labs. Ask the questions. If you don&rsquo;t finish the day feeling confident about how to build monday.com, we work with you one-on-one until you are &mdash; and you can join the next session at no extra cost.</p>
+        <p>Do the labs. Ask the questions. If you don&rsquo;t finish the series feeling confident about how to build monday.com, we work with you one-on-one until you are &mdash; and you can join the next session at no extra cost.</p>
       </div>
     </div>
   </div>
