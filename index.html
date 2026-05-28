@@ -25,12 +25,12 @@
 .hero-text h1 { margin-bottom: 20px; }
 .hero-text .subhead { margin-bottom: 36px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.hero-visual { background: var(--band); border: 1px solid var(--hairline); border-radius: 12px; padding: 36px; display: flex; flex-direction: column; gap: 10px; }
-.hero-pill { display: flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--hairline); border-radius: 8px; padding: 13px 17px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px; font-weight: 500; color: var(--ink); }
-.hero-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.hero-pill.muted .dot { background: var(--rule); }
-.hero-pill .tag { margin-left: auto; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); background: rgba(57,176,226,0.12); padding: 3px 8px; border-radius: 100px; }
-.hero-pill .tag-gone { margin-left: auto; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-subtle); background: rgba(58,51,53,0.07); padding: 3px 8px; border-radius: 100px; }
+.hero-visual { display: flex; flex-direction: column; gap: 10px; }
+.hero-path-card { background: var(--paper); border: 1px solid var(--hairline); border-radius: 10px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; transition: border-color 0.2s, box-shadow 0.2s; }
+.hero-path-card:hover { border-color: var(--accent); box-shadow: 0 2px 16px rgba(57,176,226,0.1); }
+.hero-path-icon { font-size: 20px; margin-bottom: 4px; }
+.hero-path-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); }
+.hero-path-desc { font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; margin: 0; }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 48px; }
 .why-card { background: var(--paper); padding: 40px 36px; transition: background 0.25s ease; }
 .why-card:hover { background: var(--band); }
