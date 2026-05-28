@@ -10,6 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"/>
 <style>
+/* ---- ANNOUNCEMENT BAR ---- */
+.announce-bar { background: var(--accent-deep); color: #fff; text-align: center; padding: 11px 24px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4; position: relative; }
+.announce-bar a { color: #fff; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; opacity: 0.92; transition: opacity 0.15s; white-space: nowrap; }
+.announce-bar a:hover { opacity: 1; }
+.announce-bar .announce-inner { display: flex; align-items: center; justify-content: center; gap: 18px; max-width: var(--max-w); margin: 0 auto; }
+.announce-bar .announce-label { background: rgba(255,255,255,0.18); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; padding: 3px 9px; border-radius: 100px; flex-shrink: 0; }
+.announce-dismiss { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.6); font-size: 18px; line-height: 1; padding: 4px; transition: color 0.15s; }
+.announce-dismiss:hover { color: #fff; }
+
 /* ---- HOME-SPECIFIC STYLES ---- */
 .hero { padding: 88px 0 72px; border-bottom: 1px solid var(--hairline); }
 .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -80,6 +89,14 @@
 </style>
 </head>
 <body>
+
+<div class="announce-bar" id="announce-bar">
+  <div class="announce-inner">
+    <span class="announce-label">New</span>
+    <span>The training our architects use &mdash; now open to your team. <a href="contact.html">Learn more &rarr;</a></span>
+  </div>
+  <button class="announce-dismiss" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Dismiss">&times;</button>
+</div>
 
 <nav class="site-nav">
   <div class="nav-inner">
