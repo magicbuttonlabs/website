@@ -195,6 +195,31 @@ h3.card-title {
   font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Hamburger toggle — hidden on desktop, shown on mobile */
+.nav-toggle { display: none; }
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  margin: -8px -8px -8px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.nav-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
 .nav-links {
@@ -358,11 +383,65 @@ h3.card-title {
   .cta-band-inner { grid-template-columns: 1fr; gap: 32px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-bottom { padding: 22px 24px; }
-  .nav-links .hide-mob { display: none; }
+
+  /* --- Mobile nav: hamburger + slide-down menu --- */
+  .nav-burger { display: flex; }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(245, 245, 245, 0.98);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--hairline);
+    box-shadow: 0 12px 24px rgba(58, 51, 53, 0.06);
+    padding: 8px 24px 16px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.25s ease, visibility 0.25s;
+  }
+  /* Override the desktop hide-mob — all links show in the mobile menu */
+  .nav-links .hide-mob { display: block; }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 13px 8px;
+    border-radius: 8px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-links li:last-child a { border-bottom: none; }
+
+  .nav-links a.nav-cta {
+    text-align: center;
+    margin-top: 12px;
+    padding: 14px 8px !important;
+  }
+
+  /* Open state, driven by the hidden checkbox */
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 80vh;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
 
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
+  body { font-size: 15px; }
+  .section { padding: 56px 0; }
+  .section-sm { padding: 44px 0; }
+  .cta-band { padding: 56px 0; }
+  .lead { font-size: 16px; }
 }
 
 /* === ANIMATIONS === */
