@@ -576,7 +576,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 
 <script>
 (function(){var lb=document.getElementById('lightbox'),fr=document.getElementById('lightbox-frame'),cl=document.getElementById('lightbox-close');function open(id){fr.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';lb.classList.add('open');document.body.style.overflow='hidden';}function close(){lb.classList.remove('open');fr.src='';document.body.style.overflow='';}document.querySelectorAll('.module .thumb').forEach(function(b){b.addEventListener('click',function(){var id=b.getAttribute('data-video');if(id)open(id);});});cl.addEventListener('click',close);lb.addEventListener('click',function(e){if(e.target===lb)close();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});})();
-(function(){var list=document.getElementById('testimonials-list'),wrap=document.getElementById('testimonials-more'),btn=document.getElementById('testimonials-more-btn');if(!list||!wrap||!btn)return;if(list.querySelectorAll('.quote.is-hidden').length===0){wrap.classList.add('is-empty');return;}var total=list.querySelectorAll('.quote').length,lbl=btn.querySelector('.label');lbl.textContent='see all '+total+' testimonials';btn.addEventListener('click',function(){var x=list.classList.toggle('is-expanded');lbl.textContent=x?'show fewer':'see all '+total+' testimonials';});})();
 </script>
+
+<script src="testimonials.js" defer></script>
 </body>
 </html>
