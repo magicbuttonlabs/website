@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foundation Build | Magic Button Labs</title>
+<meta name="description" content="Foundation Build — an end-to-end architecture prototype built directly in monday.com. No migrations, no integrations, no full buildout. Get the plan right before you invest."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- FOUNDATION BUILD — page-specific ---- */
+.fb-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--hairline); }
+.fb-hero h1 { margin-bottom: 22px; max-width: 16ch; }
+.fb-hero .lead { margin-bottom: 36px; }
+.fb-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.fb-not-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.fb-col h2 { margin-bottom: 22px; }
+.fb-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.fb-list li { font-size: 16px; color: var(--ink-muted); line-height: 1.5; padding-left: 30px; position: relative; }
+.fb-list li strong { color: var(--ink); font-weight: 600; }
+.fb-list.is-no li::before { content: '\00D7'; position: absolute; left: 2px; top: -2px; color: var(--rule); font-weight: 700; font-size: 19px; line-height: 1.4; }
+.fb-list.is-yes li::before { content: ''; position: absolute; left: 2px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+
+.fb-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 40px; }
+.fb-stage { background: var(--paper); padding: 36px 32px; display: flex; flex-direction: column; gap: 10px; }
+.fb-stage .step { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 22px; color: var(--accent); line-height: 1; }
+.fb-stage h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+.fb-stage p { font-size: 15px; color: var(--ink-muted); line-height: 1.55; }
+
+.fb-get { background: var(--band); }
+.fb-get-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.fb-get-head { display: flex; flex-direction: column; gap: 14px; }
+.fb-get-head .big { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 34px); letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
+.fb-get-head .big em { font-style: normal; color: var(--accent); }
+.fb-get-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+.fb-get-list li { font-size: 16px; color: var(--ink-muted); line-height: 1.5; padding-left: 28px; position: relative; }
+.fb-get-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 10px; height: 10px; border-radius: 2px; background: var(--accent); }
+
+.fb-outcomes { display: flex; gap: 14px 56px; flex-wrap: wrap; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule); }
+.fb-outcome { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 450; font-size: clamp(18px, 2vw, 22px); letter-spacing: -0.01em; color: var(--ink); }
+.fb-outcome .dot { color: var(--accent); font-style: italic; font-weight: 300; margin-right: 10px; }
+
+@media (max-width: 900px) {
+  .fb-not-grid { grid-template-columns: 1fr; gap: 36px; }
+  .fb-stages { grid-template-columns: 1fr; }
+  .fb-get-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li class="hide-mob"><a href="workshop.html">Workshop</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="fb-hero">
+  <div class="wrap">
+    <span class="eyebrow">Deploy &amp; Build</span>
+    <h1 class="display">Build it once. <em>Not twice.</em></h1>
+    <p class="lead">Foundation Build is an end-to-end architecture prototype, built directly in monday.com &mdash; not another planning doc. We don&rsquo;t do migrations, integrations, or full buildouts. We design and prove the scalable structure your team is confident building around.</p>
+    <div class="fb-hero-actions">
+      <a class="btn btn-dark" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline" href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">What this is &mdash; and isn&rsquo;t</span>
+    <h2 class="section-title">Design your system before you build it.</h2>
+    <div class="fb-not-grid">
+      <div class="fb-col">
+        <h3 class="card-title" style="font-size:20px;">What we do</h3>
+        <ul class="fb-list is-yes">
+          <li>Build an <strong>end-to-end architecture prototype</strong>, right in monday.com.</li>
+          <li>Show you a <strong>scalable structure</strong> you&rsquo;re confident building around.</li>
+          <li><strong>Validate the path forward</strong> before you commit to a full build.</li>
+        </ul>
+      </div>
+      <div class="fb-col">
+        <h3 class="card-title" style="font-size:20px;">What we don&rsquo;t do</h3>
+        <ul class="fb-list is-no">
+          <li>Migrations.</li>
+          <li>Integrations.</li>
+          <li>Full buildouts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <span class="eyebrow">The design stages</span>
+    <h2 class="section-title">Three stages, one working prototype.</h2>
+    <div class="fb-stages">
+      <div class="fb-stage">
+        <span class="step">i.</span>
+        <h3>Analyze</h3>
+        <p>Understand the work &mdash; how your business actually runs, and what the system has to carry.</p>
+      </div>
+      <div class="fb-stage">
+        <span class="step">ii.</span>
+        <h3>Prototype</h3>
+        <p>Shape the system &mdash; an end-to-end architecture, built and working in monday.com.</p>
+      </div>
+      <div class="fb-stage">
+        <span class="step">iii.</span>
+        <h3>Align</h3>
+        <p>Validate the path forward &mdash; a defined starting point your team owns and can build on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section fb-get">
+  <div class="wrap">
+    <div class="fb-get-grid">
+      <div class="fb-get-head">
+        <span class="eyebrow" style="margin-bottom:4px;">What you get</span>
+        <span class="big">A <em>validated start</em>.</span>
+        <span class="big">A <em>clearer path</em> forward.</span>
+      </div>
+      <ul class="fb-get-list">
+        <li>A working prototype, not another planning doc.</li>
+        <li>A defined starting point your team owns.</li>
+        <li>A prioritized backlog ready to execute.</li>
+      </ul>
+    </div>
+    <div class="fb-outcomes">
+      <span class="fb-outcome"><span class="dot">&mdash;</span>Avoid rework</span>
+      <span class="fb-outcome"><span class="dot">&mdash;</span>Avoid wasted spend</span>
+      <span class="fb-outcome"><span class="dot">&mdash;</span>Get the plan right before you invest</span>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Ready to get the plan right?</h2>
+      <p>Design your system before you build it &mdash; then build around a foundation you trust.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline-white" href="customer-journey.html">See the Customer Journey Solution</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Workshop</a></li><li><a href="contact.html">Implementation</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
