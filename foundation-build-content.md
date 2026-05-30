@@ -57,7 +57,14 @@ The canonical prose, section by section. Both artifacts draw from this. A string
 
 ## 2. Render Deltas
 
-How the website and 2-pager intentionally diverge, and why. This is the block that prevents silent drift.
+How the three artifacts intentionally diverge, and why — the full page (`foundation-build.html`), the web primer (`foundation-build-overview.html`), and the print 2-pager (`foundation-build-2pager.html` ⚠️ not yet in Trove/Project). This block prevents silent drift.
+
+### Delta 0 — The three artifacts and their jobs
+- **Full page** (`foundation-build.html`): the depth — hero, the two-column do/don't, three stage cards, "what you get" band, CTA. Reader is engaged.
+- **Web primer** (`foundation-build-overview.html`): the on-ramp — condensed, mobile-friendly, shareable. Identity strip + hero + 3 stats + do/don't + three stages + what-you-get + single CTA to the full page. Reader is warm.
+- **Print 2-pager** (`foundation-build-2pager.html` ⚠️): the leave-behind PDF. A QR/link on the PDF points at the primer URL.
+- **Funnel:** PDF → primer → full page → contact. See the canon's "Three Artifacts" in `topic-2pager-framework.md`.
+- **Note:** the primer reuses the 2-pager's identity strip, hero meta, and 3/1/0 stats — these are the ⚠️ strings below, now rendering live on the primer but still unverified against an actual print 2-pager.
 
 ### Delta A — "What we don't do" framing  *(the decision that prompted this standard)*
 - **Website:** Balanced two-column "What we do / What we don't do" list. Explicit negative framing, three bare words on the "don't" side (Migrations. Integrations. Full buildouts.).
