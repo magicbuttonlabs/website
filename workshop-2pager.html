@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Builder's Blueprint Series — Magic Button Labs</title>
+<link rel="stylesheet" href="fonts-2pager.css">
+<style>
+@page { size:8.5in 11in; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { margin:0; padding:0; }
+body { font-family:'DM Sans',Arial,sans-serif; background:#F5F5F5; color:#3A3335; }
+
+/* ── SHARED ── */
+.topbar { background:#3A3335; height:38pt; padding:0 44pt; display:table; width:100%; table-layout:fixed; }
+.tb-row { display:table-row; height:38pt; }
+.tb-l, .tb-r { display:table-cell; vertical-align:middle; }
+.tb-r { text-align:right; font-size:7pt; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#948C8E; }
+
+.kicker { font-size:7pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#948C8E; margin-bottom:12pt; }
+
+/* ── PAGE 1 — HERO ── */
+.hero { background:#FFFFFF; padding:34pt 44pt 30pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.hero-eyebrow { font-size:7.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:14pt; }
+.hero-cols { display:grid; grid-template-columns:1fr 168pt; gap:32pt; }
+.hero h1 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:34pt; line-height:1.06; letter-spacing:-.03em; color:#3A3335; margin-bottom:15pt; }
+.hero h1 em { color:#39B0E2; font-style:italic; font-weight:800; }
+.hero-lead { font-size:10pt; line-height:1.6; color:#595153; font-weight:300; margin-bottom:11pt; }
+.hero-meta { font-size:8pt; color:#948C8E; line-height:1.6; font-weight:300; }
+.hero-stats { padding-left:18pt; border-left:1pt solid #B5ACAE; }
+.stat { padding:9pt 0; border-bottom:1pt solid rgba(58,51,53,.10); }
+.stat:last-child { border-bottom:none; }
+.stat-n { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:24pt; line-height:1; color:#3A3335; letter-spacing:-.03em; margin-bottom:3pt; }
+.stat-n em { color:#39B0E2; font-style:normal; }
+.stat-l { font-size:7pt; color:#948C8E; line-height:1.3; font-weight:400; }
+
+/* ── PAGE 1 — PILLARS ── */
+.pillars-wrap { background:#F5F5F5; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; height:255pt; overflow:hidden; }
+.pillar { background:#FFFFFF; padding:20pt 15pt; overflow:hidden; }
+.p-icon { width:26pt; height:26pt; margin-bottom:10pt; display:block; }
+.pillar h3 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11.5pt; line-height:1.2; letter-spacing:-.02em; color:#3A3335; margin-bottom:7pt; }
+.pillar p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; margin-bottom:8pt; }
+.pillar-mods { font-size:6.5pt; color:#948C8E; font-style:italic; font-family:'DM Sans',Arial,sans-serif; font-weight:400; line-height:1.5; padding-top:7pt; border-top:1pt solid rgba(58,51,53,.10); }
+
+/* ── PAGE 1 — FOUNDATION & SCALE BAND ── */
+.foundation-band { margin-top:1.5pt; background:#DFF0FA; border:1pt solid #B5ACAE; border-top:none; padding:14pt 15pt; display:grid; grid-template-columns:68pt 1fr; gap:18pt; align-items:start; }
+.fb-kicker { font-size:6.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; padding-top:2pt; }
+.fb-name { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.fb-desc { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; margin-bottom:6pt; }
+.fb-mods { font-size:6.5pt; color:#948C8E; font-style:italic; font-family:'DM Sans',Arial,sans-serif; font-weight:400; line-height:1.5; }
+
+/* ── PAGE BREAK ── */
+.page-break { break-before:page; page-break-before:always; height:0; overflow:visible; }
+
+/* ── PAGE 2 — STEPS ── */
+.steps-wrap { background:#F5F5F5; padding:24pt 44pt 20pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.step { background:#FFFFFF; padding:17pt 15pt; }
+.step-num { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:17pt; color:#39B0E2; line-height:1; margin-bottom:5pt; }
+.step h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.step p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CONTEXT ── */
+.context-band { background:#DFF0FA; padding:20pt 44pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 1fr; gap:32pt; align-items:center; }
+.ctx-quote { font-family:'DM Sans',Arial,sans-serif; font-style:italic; font-weight:400; font-size:11.5pt; line-height:1.6; color:#595153; }
+.ctx-quote em { color:#39B0E2; font-style:italic; font-weight:500; }
+.ctx-details { padding-left:26pt; border-left:1pt solid #B5ACAE; }
+.ctx-item { margin-bottom:6pt; padding-left:12pt; position:relative; font-size:8pt; color:#595153; font-weight:300; line-height:1.5; }
+.ctx-item:last-child { margin-bottom:0; }
+.ctx-item::before { content:''; position:absolute; left:0; top:4pt; width:4.5pt; height:4.5pt; border-radius:50%; background:#39B0E2; }
+
+/* ── PAGE 2 — OUTCOMES ── */
+.outcomes-wrap { background:#FFFFFF; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.outcomes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; height:237pt; overflow:hidden; }
+.outcome { background:#F5F5F5; padding:19pt 15pt; overflow:hidden; }
+.outcome-num { font-family:'DM Sans',Arial,sans-serif; font-weight:400; font-size:9pt; color:#39B0E2; margin-bottom:6pt; letter-spacing:.02em; }
+.outcome h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:7pt; line-height:1.2; letter-spacing:-.02em; }
+.outcome p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CTA ── */
+.cta { background:#3A3335; padding:20pt 44pt; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 188pt; gap:30pt; align-items:center; }
+.cta-kicker { font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; margin-bottom:6pt; }
+.cta-hed { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:16pt; color:white; letter-spacing:-.03em; line-height:1.2; margin-bottom:7pt; }
+.cta-hed em { font-style:italic; font-weight:800; color:#286BB0; }
+.cta-url { font-size:9.5pt; font-weight:700; color:#286BB0; margin-bottom:3pt; }
+.cta-sub { font-size:7.5pt; color:#948C8E; font-weight:300; }
+.cta-r { text-align:right; padding-left:26pt; border-left:1pt solid rgba(255,255,255,.10); }
+.cta-tag { font-size:7.5pt; color:rgba(255,255,255,.32); font-weight:300; line-height:1.5; margin-top:7pt; }
+
+/* Workshop specifics */
+.hero { padding:48pt 44pt 42pt; }
+.pillars-wrap { padding:34pt 44pt 0; }
+/* 8-session curriculum: 4-col, 2-row compact grid */
+.sessions-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.session { background:#FFFFFF; padding:13pt 13pt 14pt; }
+.session-num { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-size:13pt; color:#39B0E2; line-height:1; margin-bottom:6pt; letter-spacing:-.02em; }
+.session h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:10pt; color:#3A3335; margin-bottom:5pt; line-height:1.15; letter-spacing:-.01em; }
+.session p { font-size:7pt; line-height:1.5; color:#595153; font-weight:300; }
+/* page 2 */
+.steps-wrap { padding:34pt 44pt 28pt; }
+.steps-grid { grid-template-columns:repeat(3,1fr); }
+.context-band { padding:30pt 44pt; }
+.outcomes-wrap { padding:34pt 44pt 0; }
+.outcomes-grid { height:150pt; }
+
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Partner Resource &middot; Builder's Blueprint Series</div>
+</div></div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Builder's Blueprint Series Training</div>
+  <div class="hero-cols">
+    <div>
+      <h1>You didn't build it wrong.<br>You weren't shown how to build it <em>right.</em></h1>
+      <p class="hero-lead">The Builder's Blueprint Series teaches you how serious teams build monday.com &mdash; not through slides alone, but through real concepts, live demonstrations, and hands-on labs where you build inside a pre-configured environment. The same way our architects learned it.</p>
+      <p class="hero-meta">Delivered live, led by a certified monday.com Architect, and designed to fit around active implementation work.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">8</div><div class="stat-l">sessions &mdash; concept, live demo, hands-on lab</div></div>
+      <div class="stat"><div class="stat-n">2&ndash;4</div><div class="stat-l">weeks &mdash; the pace most teams set</div></div>
+      <div class="stat"><div class="stat-n">1</div><div class="stat-l">pre-built lab environment to build in</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pillars-wrap">
+  <div class="kicker">Eight sessions &mdash; each one changes how you build</div>
+  <div class="sessions-grid">
+    <div class="session"><div class="session-num">01</div><h4>Boards &amp; Views</h4><p>Structure boards so work is visible without clutter.</p></div>
+    <div class="session"><div class="session-num">02</div><h4>Dashboards</h4><p>Dashboards leadership actually reads.</p></div>
+    <div class="session"><div class="session-num">03</div><h4>Relational Data</h4><p>Connect boards so data flows instead of duplicates.</p></div>
+    <div class="session"><div class="session-num">04</div><h4>Automations</h4><p>Make work move forward without someone pushing it.</p></div>
+    <div class="session"><div class="session-num">05</div><h4>Notifications</h4><p>Alerts people actually respond to.</p></div>
+    <div class="session"><div class="session-num">06</div><h4>Permissions</h4><p>Control who sees and does what, without friction.</p></div>
+    <div class="session"><div class="session-num">07</div><h4>Architecture</h4><p>Evaluate your system before it becomes a mess.</p></div>
+    <div class="session"><div class="session-num">08</div><h4>Team Adoption</h4><p>Launch so your team actually uses it.</p></div>
+  </div>
+</div>
+
+<!-- ===== PAGE BREAK ===== -->
+<div class="page-break"></div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Builder's Blueprint Series &middot; 2 of 2</div>
+</div></div>
+
+<div class="steps-wrap">
+  <div class="kicker">How every session works</div>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">i.</div><h4>Learn it</h4><p>Teach the concept &mdash; the pattern serious teams use, and why it works the way it does.</p></div>
+    <div class="step"><div class="step-num">ii.</div><h4>See it</h4><p>Show what it looks like in a real system &mdash; a live demonstration, not a screenshot.</p></div>
+    <div class="step"><div class="step-num">iii.</div><h4>Build it</h4><p>Put you inside a pre-built lab with real boards and exercises. Self-contained, so order can flex.</p></div>
+  </div>
+</div>
+
+<div class="context-band">
+  <div class="ctx-quote">"Your monday.com works. Kind of. Until it doesn't. <em>It's not your fault</em> &mdash; nobody showed you the right patterns. This series does."</div>
+  <div class="ctx-details">
+    <div class="ctx-item">Boards that made sense six months ago now feel like a spreadsheet nobody trusts.</div>
+    <div class="ctx-item">Notifications fire constantly, or not at all &mdash; so your team ignores them.</div>
+    <div class="ctx-item">"Can you pull that from monday.com?" still means "let me dig around first."</div>
+  </div>
+</div>
+
+<div class="outcomes-wrap">
+  <div class="kicker">What you walk away with</div>
+  <div class="outcomes-grid">
+    <div class="outcome"><div class="outcome-num">First &mdash;</div><h4>Architecture that scales</h4><p>You'll evaluate and structure systems the way an architect does &mdash; so what you build holds up as the work grows, instead of becoming the next mess to untangle.</p></div>
+    <div class="outcome"><div class="outcome-num">Second &mdash;</div><h4>Automations that actually run</h4><p>Workflows that move work forward on their own, with notifications people trust and respond to &mdash; not the noise everyone learns to ignore.</p></div>
+    <div class="outcome"><div class="outcome-num">Third &mdash;</div><h4>Dashboards leaders trust</h4><p>You'll know exactly what's happening without having to ask &mdash; and so will the people you report to. Covered by the Magic Guarantee: we work with you until you're confident.</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div>
+    <div class="cta-kicker">Ready to build it right?</div>
+    <div class="cta-hed">See the full curriculum &mdash;<br><em>and join the waitlist</em></div>
+    <div class="cta-url">magicbuttonlabs.com/workshop-overview</div>
+    <div class="cta-sub">Group from $500 &middot; Private from $2,500 &middot; Covered by the Magic Guarantee</div>
+  </div>
+  <div class="cta-r">
+    <svg width="165" height="20" viewBox="0 0 165 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="2" width="24" height="14" rx="3.5" fill="#286BB0" opacity="0.7"/>
+      <path d="M12 5.5L12.6 8.4L15.5 9L12.6 9.6L12 12.5L11.4 9.6L8.5 9L11.4 8.4Z" fill="white" opacity="0.9"/>
+      <text x="30" y="13.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="11.5"><tspan fill="rgba(255,255,255,0.45)">Magic Button</tspan><tspan fill="#286BB0" opacity="0.65"> Labs</tspan></text>
+    </svg>
+    <div class="cta-tag">monday.com Partner<br>Led by a certified Architect</div>
+  </div>
+</div>
+
+</body>
+</html>
