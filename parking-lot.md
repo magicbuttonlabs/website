@@ -33,9 +33,13 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 ## Open
 
 ### Workshop naming flux — resolve before sweeping primer + entry points
-**Status:** Open (cross-ref `workshop-content.md` Delta 1, and the Workshop rename item elsewhere in this file)
-**Context:** The Workshop offering is mid-rename ("Workshop" → "Builders Blueprint Series Training"), with entry-point labels still saying "Workshop" and a "Builder" vs "Builders" question open. The new `workshop-overview.html` primer follows the page title but the sticky bar / funnel still mix "Workshop" and "Builders Blueprint." Built on copy that's actively moving.
-**Action needed:** Resolve the rename (incl. singular/plural), then sweep page + primer + nav/footer/homepage entry points together. Until then, the primer is correct-as-of-build but will need a copy pass when the name settles.
+**Status:** Open — PARTIAL DECISION 2026-05-30 (cross-ref `workshop-content.md` Delta 1)
+**Context:** The Workshop offering is mid-rename, with three variants now in play:
+- **"Workshop"** — nav, footer, homepage card, full-page filename (`workshop.html`).
+- **"Builders Blueprint Series" / "Builders Blueprint Series Training"** (plural, no apostrophe) — used throughout `workshop-overview.html` (title, eyebrow, topbar, bar label).
+- **"Builder's Blueprint Series"** (singular, apostrophe) — chosen for the **print 2-pager** this session (Ethan's call), so the PDF leads the rename in this new direction.
+**⚠️ Known mismatch created this session:** the `workshop-overview.html` primer says "Builders" (plural) but its "Download PDF" now serves a 2-pager titled "Builder's" (singular). A visitor sees one name on the page and a different one on the document. Deliberate, logged, not silently reconciled.
+**Action needed:** Lock the name (incl. Workshop-vs-Blueprint and singular-vs-plural), then sweep in one pass: full page + filename, primer, the 2-pager, and nav/footer/homepage entry points. The 2-pager currently leads; everything else trails.
 
 ### Content files — add primer as a third artifact (CJ + Foundation Build)
 **Status:** Done 2026-05-30
