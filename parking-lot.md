@@ -32,6 +32,16 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### Workshop naming flux — resolve before sweeping primer + entry points
+**Status:** Open (cross-ref `workshop-content.md` Delta 1, and the Workshop rename item elsewhere in this file)
+**Context:** The Workshop offering is mid-rename ("Workshop" → "Builders Blueprint Series Training"), with entry-point labels still saying "Workshop" and a "Builder" vs "Builders" question open. The new `workshop-overview.html` primer follows the page title but the sticky bar / funnel still mix "Workshop" and "Builders Blueprint." Built on copy that's actively moving.
+**Action needed:** Resolve the rename (incl. singular/plural), then sweep page + primer + nav/footer/homepage entry points together. Until then, the primer is correct-as-of-build but will need a copy pass when the name settles.
+
+### Content files — add primer as a third artifact (CJ + Foundation Build)
+**Status:** Open (cross-ref `cj-website-content.md`, `foundation-build-content.md`)
+**Context:** Both content files predate their web primers. Their render deltas + section maps still describe a two-artifact world; now there are three (full page + web primer + print PDF). `workshop-content.md` was built fresh and already includes the primer in its section map.
+**Action needed:** Update the CJ and Foundation Build content files — add the primer to each section map and record primer-specific deltas. (Foundation Build's is already noted below; CJ needs the same.)
+
 ### Foundation Build content file — add primer as a third artifact
 **Status:** Open (cross-ref `foundation-build-content.md`)
 **Context:** The Foundation Build content file's render deltas and section map predate the web primer (`foundation-build-overview.html`). They currently describe a two-artifact world (website + 2-pager); now there are three (full page + web primer + print PDF), per the canon's "Three Artifacts" pattern.
