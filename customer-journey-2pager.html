@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Journey Solution — Magic Button Labs</title>
+<link rel="stylesheet" href="fonts-2pager.css">
+<style>
+@page { size:8.5in 11in; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { margin:0; padding:0; }
+body { font-family:'DM Sans',Arial,sans-serif; background:#F5F5F5; color:#3A3335; }
+
+/* ── SHARED ── */
+.topbar { background:#3A3335; height:38pt; padding:0 44pt; display:table; width:100%; table-layout:fixed; }
+.tb-row { display:table-row; height:38pt; }
+.tb-l, .tb-r { display:table-cell; vertical-align:middle; }
+.tb-r { text-align:right; font-size:7pt; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#948C8E; }
+
+.kicker { font-size:7pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#948C8E; margin-bottom:12pt; }
+
+/* ── PAGE 1 — HERO ── */
+.hero { background:#FFFFFF; padding:34pt 44pt 30pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.hero-eyebrow { font-size:7.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:14pt; }
+.hero-cols { display:grid; grid-template-columns:1fr 168pt; gap:32pt; }
+.hero h1 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:34pt; line-height:1.06; letter-spacing:-.03em; color:#3A3335; margin-bottom:15pt; }
+.hero h1 em { color:#39B0E2; font-style:italic; font-weight:800; }
+.hero-lead { font-size:10pt; line-height:1.6; color:#595153; font-weight:300; margin-bottom:11pt; }
+.hero-meta { font-size:8pt; color:#948C8E; line-height:1.6; font-weight:300; }
+.hero-stats { padding-left:18pt; border-left:1pt solid #B5ACAE; }
+.stat { padding:9pt 0; border-bottom:1pt solid rgba(58,51,53,.10); }
+.stat:last-child { border-bottom:none; }
+.stat-n { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:24pt; line-height:1; color:#3A3335; letter-spacing:-.03em; margin-bottom:3pt; }
+.stat-n em { color:#39B0E2; font-style:normal; }
+.stat-l { font-size:7pt; color:#948C8E; line-height:1.3; font-weight:400; }
+
+/* ── PAGE 1 — PILLARS — 3-col sequential + foundation band ── */
+.pillars-wrap { background:#F5F5F5; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; height:255pt; overflow:hidden; }
+.pillar { background:#FFFFFF; padding:20pt 15pt; overflow:hidden; }
+.p-icon { width:26pt; height:26pt; margin-bottom:10pt; display:block; }
+.pillar h3 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11.5pt; line-height:1.2; letter-spacing:-.02em; color:#3A3335; margin-bottom:7pt; }
+.pillar p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; margin-bottom:8pt; }
+.pillar-mods { font-size:6.5pt; color:#948C8E; font-style:italic; font-family:'DM Sans',Arial,sans-serif; font-weight:400; line-height:1.5; padding-top:7pt; border-top:1pt solid rgba(58,51,53,.10); }
+
+/* ── PAGE 1 — FOUNDATION & SCALE BAND ── */
+.foundation-band { margin-top:1.5pt; background:#DFF0FA; border:1pt solid #B5ACAE; border-top:none; padding:14pt 15pt; display:grid; grid-template-columns:68pt 1fr; gap:18pt; align-items:start; }
+.fb-kicker { font-size:6.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; padding-top:2pt; }
+.fb-name { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.fb-desc { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; margin-bottom:6pt; }
+.fb-mods { font-size:6.5pt; color:#948C8E; font-style:italic; font-family:'DM Sans',Arial,sans-serif; font-weight:400; line-height:1.5; }
+
+/* ── PAGE BREAK — standalone element, no conflicting styles ── */
+.page-break { break-before:page; page-break-before:always; height:0; overflow:visible; }
+
+/* ── PAGE 2 — STEPS ── */
+.steps-wrap { background:#F5F5F5; padding:24pt 44pt 20pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.step { background:#FFFFFF; padding:17pt 15pt; }
+.step-num { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:17pt; color:#39B0E2; line-height:1; margin-bottom:5pt; }
+.step h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.step p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CONTEXT ── */
+.context-band { background:#DFF0FA; padding:20pt 44pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 1fr; gap:32pt; align-items:center; }
+.ctx-quote { font-family:'DM Sans',Arial,sans-serif; font-style:italic; font-weight:400; font-size:11.5pt; line-height:1.6; color:#595153; }
+.ctx-quote em { color:#39B0E2; font-style:italic; font-weight:500; }
+.ctx-details { padding-left:26pt; border-left:1pt solid #B5ACAE; }
+.ctx-item { margin-bottom:6pt; padding-left:12pt; position:relative; font-size:8pt; color:#595153; font-weight:300; line-height:1.5; }
+.ctx-item:last-child { margin-bottom:0; }
+.ctx-item::before { content:''; position:absolute; left:0; top:4pt; width:4.5pt; height:4.5pt; border-radius:50%; background:#39B0E2; }
+
+/* ── PAGE 2 — OUTCOMES ── */
+.outcomes-wrap { background:#FFFFFF; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.outcomes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; height:237pt; overflow:hidden; }
+.outcome { background:#F5F5F5; padding:19pt 15pt; overflow:hidden; }
+.outcome-num { font-family:'DM Sans',Arial,sans-serif; font-weight:400; font-size:9pt; color:#39B0E2; margin-bottom:6pt; letter-spacing:.02em; }
+.outcome h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:7pt; line-height:1.2; letter-spacing:-.02em; }
+.outcome p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CTA ── */
+.cta { background:#3A3335; padding:20pt 44pt; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 188pt; gap:30pt; align-items:center; }
+.cta-kicker { font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; margin-bottom:6pt; }
+.cta-hed { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:16pt; color:white; letter-spacing:-.03em; line-height:1.2; margin-bottom:7pt; }
+.cta-hed em { font-style:italic; font-weight:800; color:#286BB0; }
+.cta-url { font-size:9.5pt; font-weight:700; color:#286BB0; margin-bottom:3pt; }
+.cta-sub { font-size:7.5pt; color:#948C8E; font-weight:300; }
+.cta-r { text-align:right; padding-left:26pt; border-left:1pt solid rgba(255,255,255,.10); }
+.cta-tag { font-size:7.5pt; color:rgba(255,255,255,.32); font-weight:300; line-height:1.5; margin-top:7pt; }
+
+/* Right-size grids to natural content height (Cardinal Rule: no inflated grids).
+   Reclaimed space redistributed into section breathing room below. */
+.pillars-grid { height:208pt; }      /* tallest col = Delivery, 4 modules wrapping to 3 lines */
+.outcomes-grid { height:128pt; }     /* natural ~115 + breathing */
+/* Page 1: absorb reclaimed space as airy section spacing */
+.hero { padding:46pt 44pt 40pt; }
+.pillars-wrap { padding:34pt 44pt 0; }
+/* Page 2: distribute reclaimed space across the three sections */
+.steps-wrap { padding:40pt 44pt 34pt; }
+.context-band { padding:30pt 44pt; }
+.outcomes-wrap { padding:36pt 44pt 0; }
+
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Partner Resource &middot; Customer Journey Solution</div>
+</div></div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Introducing the Customer Journey Solution</div>
+  <div class="hero-cols">
+    <div>
+      <h1>Your whole business,<br><em>finally</em> in one place.</h1>
+      <p class="hero-lead">From the first conversation to the long-term relationship, and every step in between &mdash; a complete customer journey system installed in monday.com. Your sales, delivery, and operations finally run on one connected platform. No custom builds. No multi-year rollouts. Ready to run on day one.</p>
+      <p class="hero-meta">Refined across thousands of hours of internal use and hundreds of customer engagements &mdash; tuned, every time, to fit the business in front of it. 100% native to monday.com.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">14</div><div class="stat-l">built-in modules across the full customer journey</div></div>
+      <div class="stat"><div class="stat-n">30<em>+</em></div><div class="stat-l">industries served across professional services</div></div>
+      <div class="stat"><div class="stat-n">1</div><div class="stat-l">platform &mdash; monday.com, nothing else needed</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pillars-wrap">
+  <div class="kicker">What's included</div>
+  <div class="pillars-grid">
+
+    <div class="pillar">
+      <svg class="p-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="5" fill="#39B0E2" opacity="0.08"/>
+        <path d="M7 18.5l4-4.5 3 3 4-5.5" stroke="#39B0E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20.5" cy="9.5" r="2.5" fill="#39B0E2" opacity="0.75"/>
+        <path d="M19.5 9.5h2M20.5 8.5v2" stroke="white" stroke-width="1.1" stroke-linecap="round"/>
+      </svg>
+      <h3>Sales &amp; Growth</h3>
+      <p>Every lead caught, every opportunity tracked, every deal closed with the right product on the right terms &mdash; and the whole business ready before the ink dries.</p>
+      <div class="pillar-mods">Lead Capture &amp; Qualification &middot; Sales Opportunity Management &middot; Products &amp; Services Catalogue</div>
+    </div>
+
+    <div class="pillar">
+      <svg class="p-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="5" fill="#39B0E2" opacity="0.08"/>
+        <rect x="7" y="6" width="11" height="15" rx="1.5" stroke="#39B0E2" stroke-width="1.4" fill="none"/>
+        <path d="M10 10.5h5M10 13.5h3.5" stroke="#39B0E2" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+        <circle cx="20" cy="19.5" r="3.5" fill="#39B0E2" opacity="0.85"/>
+        <path d="M20 17.8v3.4M18.3 19.5h3.4" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <h3>Won to Paid</h3>
+      <p>From signature to payment to commission. The handoff lands cleanly in delivery, invoicing runs without the usual back-and-forth, and commissions calculate automatically when invoices are paid.</p>
+      <div class="pillar-mods">Post-Sales Handoff &middot; Financial Operations &amp; Invoicing &middot; Sales Commissions</div>
+    </div>
+
+    <div class="pillar">
+      <svg class="p-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="5" fill="#39B0E2" opacity="0.08"/>
+        <rect x="6" y="8" width="12" height="2.5" rx="1" fill="#39B0E2" opacity="0.3"/>
+        <rect x="6" y="12.5" width="8.5" height="2.5" rx="1" fill="#39B0E2" opacity="0.5"/>
+        <rect x="6" y="17" width="10" height="2.5" rx="1" fill="#39B0E2" opacity="0.3"/>
+        <circle cx="21" cy="18" r="3" fill="#39B0E2" opacity="0.85"/>
+        <path d="M19.8 18L21 19.2L22.5 17.2" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Delivery &amp; Operations</h3>
+      <p>Where the work actually happens. Project health, hours burned, capacity, and a workspace where every client collaborates with you &mdash; all connected, all reporting back to the same system sales lives in.</p>
+      <div class="pillar-mods">Project Management &middot; Time Tracking &amp; Profitability &middot; Resource Planning &middot; Project Execution &amp; Guest Collaboration</div>
+    </div>
+
+  </div>
+
+  <div class="foundation-band">
+    <div class="fb-kicker">Across all of it</div>
+    <div>
+      <div class="fb-name">Foundation &amp; Scale</div>
+      <div class="fb-desc">The infrastructure that runs underneath every phase &mdash; clean data, honest dashboards, automation that just works, and a system that teaches your team as they use it.</div>
+      <div class="fb-mods">Master Data &amp; Enrichment &middot; Dashboarding &middot; Scale Kits Workflow Engine &middot; Embedded Learning</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== PAGE BREAK ===== -->
+<div class="page-break"></div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Customer Journey Solution &middot; 2 of 2</div>
+</div></div>
+
+<div class="steps-wrap">
+  <div class="kicker">How it works</div>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">i.</div><h4>Install</h4><p>All 14 modules installed in your monday.com on day one. No blank boards, no months of setup &mdash; a finished system, ready to run.</p></div>
+    <div class="step"><div class="step-num">ii.</div><h4>Learn</h4><p>Twelve hours of structured training covers every module. Reinforced by a full video microlearning library your team can return to any time.</p></div>
+    <div class="step"><div class="step-num">iii.</div><h4>Use</h4><p>Your whole team operates from one connected system from the start. Not a pilot &mdash; the real thing, running live across your business.</p></div>
+    <div class="step"><div class="step-num">iv.</div><h4>Refine</h4><p>Five hours of follow-up support once your team has lived in it. Tune what needs adjusting based on how your business actually uses the system.</p></div>
+  </div>
+</div>
+
+<div class="context-band">
+  <div class="ctx-quote">"Most CRMs are spreadsheets in costume. <em>This one is a system</em> &mdash; with memory, instincts, and follow-through."</div>
+  <div class="ctx-details">
+    <div class="ctx-item">All 14 modules are pre-built, pre-connected, and pre-configured for how service businesses actually operate.</div>
+    <div class="ctx-item">Industry-specific adjustments happen during install &mdash; not left as an exercise for the customer.</div>
+    <div class="ctx-item">Training is part of the package. Your team learns the system, not just the software.</div>
+  </div>
+</div>
+
+<div class="outcomes-wrap">
+  <div class="kicker">What you walk away with</div>
+  <div class="outcomes-grid">
+    <div class="outcome"><div class="outcome-num">First &mdash;</div><h4>A proven system, not a starting point</h4><p>Built from thousands of hours of real implementation. Not a template needing years of tuning &mdash; a finished product that's already been through the hard miles across dozens of industries.</p></div>
+    <div class="outcome"><div class="outcome-num">Second &mdash;</div><h4>A team that knows how to use it</h4><p>Training is built into the package. Your people walk away understanding why the system is built the way it is &mdash; not just which buttons to click &mdash; and how to adapt it as you grow.</p></div>
+    <div class="outcome"><div class="outcome-num">Third &mdash;</div><h4>Time to value in days, not months</h4><p>Installing a finished product means the path from kick-off to a live, connected team is measured in days &mdash; not the months it takes to commission a custom build and iterate until it works.</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div>
+    <div class="cta-kicker">See the full solution</div>
+    <div class="cta-hed">Explore every module &mdash;<br><em>interactively</em></div>
+    <div class="cta-url">magicbuttonlabs.com/customer-journey-overview</div>
+    <div class="cta-sub">Full module breakdowns &middot; What each one solves &middot; How it all connects</div>
+  </div>
+  <div class="cta-r">
+    <svg width="165" height="20" viewBox="0 0 165 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="2" width="24" height="14" rx="3.5" fill="#286BB0" opacity="0.7"/>
+      <path d="M12 5.5L12.6 8.4L15.5 9L12.6 9.6L12 12.5L11.4 9.6L8.5 9L11.4 8.4Z" fill="white" opacity="0.9"/>
+      <text x="30" y="13.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="11.5"><tspan fill="rgba(255,255,255,0.45)">Magic Button</tspan><tspan fill="#286BB0" opacity="0.65"> Labs</tspan></text>
+    </svg>
+    <div class="cta-tag">monday.com Partner<br>Built for service businesses</div>
+  </div>
+</div>
+
+</body>
+</html>
