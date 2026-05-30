@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Customer Journey Solution | Magic Button Labs</title>
-<meta name="description" content="The Customer Journey Solution from Magic Button Labs. From first inbound to renewal and upsell — 14 modules, built natively on monday.com."/>
+<meta name="description" content="The Customer Journey Solution from Magic Button Labs. A real home for every team's work — knitted together so no one ends up in a silo. Built natively on monday.com."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -12,21 +12,34 @@
 <style>
 body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background-image: radial-gradient(circle at 20% 30%, rgba(57,176,226,0.05) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(26,24,19,0.02) 0%, transparent 40%); z-index: 0; }
 .container { max-width: 1180px; margin: 0 auto; padding: 80px 56px 120px; position: relative; z-index: 1; }
-.cj-hero { padding: 96px 0 80px; position: relative; }
+.cj-hero { padding: 96px 0 56px; position: relative; }
 .cj-hero .masthead { margin-bottom: 32px; }
 .cj-hero .masthead .product { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 20px; color: var(--ink); line-height: 1.25; letter-spacing: -0.005em; }
 .cj-hero .masthead .by { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 14px; color: var(--ink-subtle); line-height: 1.4; margin-top: 2px; }
-.cj-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: clamp(48px, 7vw, 92px); line-height: 1.02; letter-spacing: -0.025em; color: var(--ink); max-width: 14ch; margin-bottom: 40px; }
+.cj-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: clamp(48px, 7vw, 92px); line-height: 1.02; letter-spacing: -0.025em; color: var(--ink); max-width: 14ch; margin-bottom: 36px; }
 .cj-hero h1 em { font-style: italic; font-weight: 300; color: var(--accent); }
-.cj-hero .hero-lead { font-size: 21px; line-height: 1.5; color: var(--ink-muted); max-width: 60ch; font-weight: 300; margin-bottom: 56px; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--hairline); margin-top: 24px; }
+.cj-hero .hero-lead { font-size: 21px; line-height: 1.5; color: var(--ink-muted); max-width: 60ch; font-weight: 300; margin-bottom: 0; }
+/* Thesis block — the promise, elevated directly under the headline */
+.promise { margin-top: 48px; padding: 40px 0 0; border-top: 1px solid var(--ink); }
+.promise p { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.28; letter-spacing: -0.02em; color: var(--ink); max-width: 24ch; }
+.promise p em { font-style: italic; color: var(--accent); }
+.promise .promise-sub { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 19px; line-height: 1.5; color: var(--ink-muted); max-width: 60ch; margin-top: 24px; letter-spacing: 0; }
+/* Why customers / most requested */
+.why { margin-top: 56px; padding: 32px 0 0; border-top: 1px solid var(--hairline); display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
+.why .why-kicker { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 17px; color: var(--accent); line-height: 1.3; }
+.why p { font-size: 18px; line-height: 1.55; color: var(--ink-muted); max-width: 64ch; font-weight: 300; }
+.why p strong { color: var(--ink); font-weight: 500; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--hairline); margin-top: 56px; }
 .stat { padding: 28px 32px 28px 0; border-right: 1px solid var(--hairline); }
 .stat:last-child { border-right: none; padding-right: 0; }
 .stat:not(:first-child) { padding-left: 32px; }
 .stat .num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 42px; font-weight: 300; line-height: 1; letter-spacing: -0.02em; color: var(--ink); display: block; margin-bottom: 8px; }
 .stat .num em { font-style: italic; color: var(--accent); }
 .stat .label { font-size: 13px; color: var(--ink-subtle); line-height: 1.4; }
-.journey { margin-top: 32px; padding: 16px 0 8px; }
+.journey { margin-top: 72px; padding: 16px 0 8px; }
+.journey-intro { margin-bottom: 8px; }
+.journey-intro .eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--ink-subtle); display: block; margin-bottom: 10px; }
+.journey-intro p { font-size: 18px; color: var(--ink-muted); max-width: 60ch; font-weight: 300; line-height: 1.5; }
 .journey svg { display: block; width: 100%; height: auto; overflow: visible; }
 .journey .glyph-lg { font-size: 32px; }
 .journey .stop-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 450; font-size: 16px; fill: var(--ink); }
@@ -37,23 +50,30 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 .journey .foundation-band { fill: var(--ink); opacity: 0.06; }
 .journey .foundation-band-label { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 13px; letter-spacing: 0.01em; fill: var(--ink-muted); }
 .journey .loop-arrow { stroke: var(--accent); stroke-width: 1.75; fill: none; }
-.section-map { margin-top: 72px; padding: 32px 0 8px; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 12px 56px; align-items: baseline; }
+/* Transition into the departments */
+.handoff { margin-top: 64px; padding: 36px 0 0; border-top: 1px solid var(--rule); }
+.handoff .eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); display: block; margin-bottom: 14px; }
+.handoff h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: var(--ink); line-height: 1.12; margin-bottom: 16px; max-width: 22ch; }
+.handoff p { font-size: 18px; color: var(--ink-muted); max-width: 64ch; line-height: 1.55; font-weight: 300; }
+.section-map { margin-top: 48px; padding: 32px 0 8px; border-top: 1px solid var(--hairline); display: flex; flex-wrap: wrap; gap: 12px 56px; align-items: baseline; }
 .section-map a { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 26px; letter-spacing: -0.015em; color: var(--ink); text-decoration: none; line-height: 1.3; transition: color 0.2s ease; }
 .section-map a:hover { color: var(--accent); }
-.section-map a .roman { font-style: italic; font-weight: 300; color: var(--accent); margin-right: 6px; }
-.cj-section { margin-top: 96px; }
+.cj-section { margin-top: 88px; }
 .section-header { display: block; padding-bottom: 32px; border-bottom: 1px solid var(--ink); margin-bottom: 40px; }
-.section-num { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 28px; color: var(--accent); }
+.section-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 16px; color: var(--accent); display: block; margin-bottom: 12px; }
 .cj-section-title { display: block; }
 .cj-section-title h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 38px; letter-spacing: -0.02em; color: var(--ink); line-height: 1.05; margin-bottom: 18px; }
 .cj-section-title p { font-size: 18px; color: var(--ink-muted); max-width: 62ch; line-height: 1.5; font-weight: 300; }
-.foundation { margin-top: 96px; background: var(--bg-alt, #DFF0FA); padding: 64px 48px; border: 1px solid var(--hairline); }
-.foundation-header { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: baseline; padding-bottom: 28px; border-bottom: 1px solid var(--rule); margin-bottom: 36px; }
-.foundation-kicker { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 18px; color: var(--accent); line-height: 1.2; }
-.foundation-title h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 30px; letter-spacing: -0.02em; color: var(--ink); line-height: 1.1; margin-bottom: 14px; }
-.foundation-title p { font-size: 17px; color: var(--ink-muted); max-width: 62ch; line-height: 1.5; font-weight: 300; }
+.foundation { margin-top: 96px; background: var(--ink); color: var(--paper); padding: 64px 48px; border: 1px solid var(--ink); position: relative; overflow: hidden; }
+.foundation::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); }
+.foundation-header { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: baseline; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.18); margin-bottom: 36px; }
+.foundation-kicker { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 400; font-size: 18px; color: var(--accent); line-height: 1.25; }
+.foundation-title h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: 30px; letter-spacing: -0.02em; color: var(--paper); line-height: 1.1; margin-bottom: 14px; }
+.foundation-title p { font-size: 17px; color: rgba(255,255,255,0.72); max-width: 64ch; line-height: 1.55; font-weight: 300; }
+.foundation-title p em { font-style: italic; color: var(--accent); }
 .modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
 .modules--four { grid-template-columns: repeat(4, 1fr); }
+.foundation .modules { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.14); }
 .module { background: var(--paper); padding: 24px; position: relative; transition: background 0.3s ease; display: flex; flex-direction: column; gap: 18px; }
 .module:hover { background: var(--bg-alt, #DFF0FA); }
 .module .thumb { aspect-ratio: 16/10; background: var(--bg); border: 1px solid var(--thumb-rule, rgba(58,51,53,0.18)); border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; transition: transform 0.25s ease, box-shadow 0.25s ease; padding: 0; margin: 0; width: 100%; display: block; font: inherit; color: inherit; text-align: left; }
@@ -142,17 +162,17 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
   .stat { border-right: none; border-bottom: 1px solid var(--hairline); padding: 20px 0; }
   .stat:last-child { border-bottom: none; }
   .stat:not(:first-child) { padding-left: 0; }
-  .section-header { grid-template-columns: 1fr; gap: 12px; }
+  .why { grid-template-columns: 1fr; gap: 16px; }
+  .foundation-header { grid-template-columns: 1fr; gap: 8px; padding-bottom: 24px; margin-bottom: 28px; }
   .thesis { padding: 56px 32px; }
   .foundation { padding: 48px 24px; }
-  .foundation-header { grid-template-columns: 1fr; gap: 8px; padding-bottom: 24px; margin-bottom: 28px; }
 }
-@media (max-width: 600px) { .modules, .modules--four { grid-template-columns: 1fr; } .cj-hero { padding: 56px 0 48px; } .foundation { padding: 40px 20px; } .foundation-title h2 { font-size: 26px; } }
-.cj-hero .masthead, .cj-hero h1, .cj-hero .hero-lead, .stats { animation: fadeUp 0.8s ease-out backwards; }
+@media (max-width: 600px) { .modules, .modules--four { grid-template-columns: 1fr; } .cj-hero { padding: 56px 0 40px; } .foundation { padding: 40px 20px; } .foundation-title h2 { font-size: 26px; } }
+.cj-hero .masthead, .cj-hero h1, .cj-hero .hero-lead, .promise { animation: fadeUp 0.8s ease-out backwards; }
 .cj-hero .masthead { animation-delay: 0.1s; }
 .cj-hero h1 { animation-delay: 0.2s; }
-.cj-hero .hero-lead { animation-delay: 0.4s; }
-.stats { animation-delay: 0.6s; }
+.cj-hero .hero-lead { animation-delay: 0.35s; }
+.promise { animation-delay: 0.5s; }
 </style>
 </head>
 <body>
@@ -189,15 +209,30 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
       <span class="by">from Magic Button Labs</span>
     </div>
     <h1>The way every business <em>wishes</em> it ran.</h1>
-    <p class="hero-lead">From the first conversation to the long-term relationship, and every step in between. Built natively on monday.com. Refined across thousands of hours of internal use and hundreds of customer engagements &mdash; tuned, every time, to fit the business in front of it.</p>
-    <div class="stats">
-      <div class="stat"><span class="num">14 <em>modules</em></span><span class="label">Covering the full client lifecycle, from first inbound to renewal and upsell.</span></div>
-      <div class="stat"><span class="num">30+ <em>industries</em></span><span class="label">Hundreds of clients across every industry where the work has a customer on the other end of it.</span></div>
-      <div class="stat"><span class="num">100% <em>native</em></span><span class="label">Built on monday.com. No external tools, no integrations to maintain, no vendor sprawl.</span></div>
+    <p class="hero-lead">From the first conversation to the long-term relationship, and every step in between. Built natively on monday.com.</p>
+
+    <div class="promise">
+      <p>Every team gets a real <em>home</em> for their work &mdash; and none of those homes is an island.</p>
+      <p class="promise-sub">Sales, finance, delivery &mdash; each works in a space focused enough that no one wades through someone else&rsquo;s noise, and connected enough that nothing falls between them. We knit it together behind the scenes, so your people stay heads-down without ending up in silos.</p>
     </div>
   </header>
 
+  <div class="why">
+    <div class="why-kicker">Why the customer journey?</div>
+    <p>Every business runs on its customers. The path from first hello to long-term relationship touches <strong>every team you have</strong> &mdash; which is exactly why it&rsquo;s the right way to organize all of them. It&rsquo;s the one thread that runs through the whole company. Of everything we build, this is the solution clients request most.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="num">14 <em>modules</em></span><span class="label">A home for every part of the client lifecycle, from first inbound to renewal and upsell.</span></div>
+    <div class="stat"><span class="num">30+ <em>industries</em></span><span class="label">Hundreds of clients across every industry where the work has a customer on the other end of it.</span></div>
+    <div class="stat"><span class="num">100% <em>native</em></span><span class="label">Built on monday.com. No external tools, no integrations to maintain, no vendor sprawl.</span></div>
+  </div>
+
   <div class="journey" aria-label="The customer journey">
+    <div class="journey-intro">
+      <span class="eyebrow">The customer&rsquo;s path through your business</span>
+      <p>This is the loop your customer travels &mdash; the simple view from the outside in.</p>
+    </div>
     <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" role="img">
       <title>The customer journey arc</title>
       <defs><marker id="loop-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 8 5 L 0 10 Z" fill="#39B0E2"/></marker></defs>
@@ -219,15 +254,22 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
     </svg>
   </div>
 
-  <nav class="section-map" aria-label="Module groupings">
+  <div class="handoff">
+    <span class="eyebrow">Inside the business</span>
+    <h2>Your customer sees one journey. Your teams each have a home.</h2>
+    <p>That clean loop isn&rsquo;t how the work feels day to day. Each team just does their job &mdash; they don&rsquo;t need to think about what comes before or after, they need a focused set of boards that is home base for their function. Here&rsquo;s where each team lives. The short walkthroughs are made to share: send each team theirs, and let them see their own home before you roll it out.</p>
+  </div>
+
+  <nav class="section-map" aria-label="Team homes">
     <a href="#sales-growth">Sales &amp; Growth</a>
-    <a href="#won-to-paid">Won to Paid</a>
+    <a href="#won-to-paid">Accounting</a>
     <a href="#delivery-operations">Delivery &amp; Operations</a>
   </nav>
 
   <section class="cj-section" id="sales-growth">
     <div class="section-header">
       <div class="cj-section-title">
+        <span class="section-eyebrow">Home base for your sales team</span>
         <h2>Sales &amp; Growth</h2>
         <p>Every lead caught, every opportunity tracked, every deal closed with the right product on the right terms &mdash; and the whole business ready before the ink dries.</p>
       </div>
@@ -296,7 +338,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
   <section class="cj-section" id="won-to-paid">
     <div class="section-header">
       <div class="cj-section-title">
-        <h2>Won to Paid</h2>
+        <span class="section-eyebrow">Home base for your finance team</span>
+        <h2>Accounting</h2>
         <p>From signature to payment to commission. The handoff, the invoice, the payout &mdash; handled, without the usual chaos in between.</p>
       </div>
     </div>
@@ -358,6 +401,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
   <section class="cj-section" id="delivery-operations">
     <div class="section-header">
       <div class="cj-section-title">
+        <span class="section-eyebrow">Home base for your delivery team</span>
         <h2>Delivery &amp; Operations</h2>
         <p>Where the work actually happens. Project health, hours burned, capacity, and a place where every client collaborates with you &mdash; all connected, all visible.</p>
       </div>
@@ -432,10 +476,10 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 
   <aside class="foundation" id="foundation-scale">
     <div class="foundation-header">
-      <div class="foundation-kicker">Across all of it</div>
+      <div class="foundation-kicker">What keeps the homes from becoming islands</div>
       <div class="foundation-title">
         <h2>Foundation &amp; Scale</h2>
-        <p>The infrastructure that runs underneath every phase &mdash; clean data, real visibility, automation that just works, and a system that teaches your team as they use it.</p>
+        <p>This is the layer that lets every team work heads-down in their own space <em>without ending up in silos</em>. Clean shared data, real visibility, automation that just works, and a system that teaches your team as they use it &mdash; we knit it all together behind the scenes, so focus never costs you connection.</p>
       </div>
     </div>
     <div class="modules modules--four">
