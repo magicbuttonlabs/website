@@ -104,7 +104,7 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 **Context:** A 512-byte `customer-journey-v2.html` exists in this Trove alongside the full `customer-journey.html` (63KB, the live page). A tiny stub like this is usually a leftover or a placeholder for a planned rework — exactly the kind of stray file that causes "which one is live?" confusion later.
 **Action needed:** Confirm what it is — delete if leftover, or note its purpose if it's a planned v2 staging file.
 
-### Foundation Build content file — 2-pager side unverified
-**Status:** Open (cross-ref `foundation-build-content.md`)
-**Context:** The Foundation Build content file's 2-pager copy carries ⚠️ markers — reconstructed from a prior session, not verified against an actual `foundation-build-2pager.html` (which isn't in the Trove or a Project yet).
-**Action needed:** Get the Foundation Build 2-pager into the Monday Website Project, then clear the ⚠️ items.
+### Foundation Build content file — 2-pager side NOW VERIFIED
+**Status:** Done 2026-05-30
+**Context:** The Foundation Build content file's 2-pager copy carried ⚠️ markers — reconstructed from a prior session, not verified against an actual `foundation-build-2pager.html`. That 2-pager now exists (built to the framework this session, gate-passing, committed to the instance). The 2-pager copy in `foundation-build-content.md` can have its ⚠️ markers cleared against it.
+**Note:** the build resolved the 2-pager's own structure too — page 2 gained a "Scoped on purpose" do/don't band so it fills the page (the offering's deliberate-scoping message now leads page 2 rather than sitting only in a stat).
