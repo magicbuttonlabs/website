@@ -33,7 +33,7 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ## Journey Diagram
 
-*Visual arc showing six phases of the customer relationship, with a feedback loop labeled "growth feeds the pipeline."*
+*Visual arc showing the three sequential phases of the customer relationship, with a feedback loop labeled "growth feeds the pipeline," and a Foundation & Scale band running underneath all three (cross-cutting, not a fourth step).*
 
 **Phase groups and stops:**
 
@@ -41,14 +41,15 @@ From the first conversation to the long-term relationship, and every step in bet
   - 🌱 Leads
   - 🌳 Opportunities
 - **Won to Paid**
-  - 💰 Accounting
+  - 💰 Invoicing & Pay
 - **Delivery & Operations**
   - 💬 Project Management and Communications
   - 🛠️ Project Execution
-- **Happy Customers**
-  - 💫 Easy Growth
+- **Foundation & Scale** *(band beneath all three — "across all of it")*
 
 **Loop annotation:** *growth feeds the pipeline*
+
+> **Structure note:** The arc reflects the canonical 3+1 structure (see `topic-alignment-website-to-2pager.md` in WEB-STANDARDS): three sequential phases plus Foundation & Scale as a cross-cutting layer. An earlier version showed a fourth sequential band ("Happy Customers → Easy Growth") with no matching page section; that idea is now carried by the feedback loop instead.
 
 ---
 
