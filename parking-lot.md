@@ -52,10 +52,14 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Context:** The Trove is text-only, so a binary PDF can't live here. The primer's "Download PDF" is a disabled placeholder until hosting is decided. Options: commit the PDF to the GitHub repo (Pages deploys from the repo), generate on demand, or host externally.
 **Action needed:** Pick a hosting approach, then wire the primer's download button. (Standards-level decision — resolve in the canon, apply to every offering's primer.)
 
-### Homepage Foundation Build card — point at primer or full page?
-**Status:** Open — deliberate per-offering call
-**Context:** The homepage Foundation Build card currently links to the full `foundation-build.html`. Now that the primer exists as the intended on-ramp, the card could point at the primer instead. Repointing it changes the site's primary funnel entry for this offering, so it was left as-is rather than changed unilaterally.
-**Action needed:** Decide whether the homepage card routes to the primer (on-ramp) or stays on the full page.
+### "Share this overview" links on full pages — design-mode scaffolding
+**Status:** Open — scaffolding, remove on published-mode transition (cross-ref canon `project-context.md` → Website Modes)
+**Context:** All three full pages (`foundation-build.html`, `customer-journey.html`, `workshop.html`) carry a "Share this overview" link to their primer (site → primer). Under the primer's actual role — an *emailable artifact* that drives recipients *to* the full page — that direction is backwards for the published site: a visitor already on the full page is at the destination. But the links are **useful in design mode** (the primer is one tap away while the funnel is being evaluated), so they're kept deliberately, not deleted.
+**Action needed:** On the transition to published/live mode, remove the three "Share this overview" links. Until then they stay as design-mode scaffolding. (This is the concrete case that prompted the Website Modes standard.)
+
+### Homepage offering cards — point at full pages (decided)
+**Status:** Decided 2026-05-30 — cards point at full pages, not primers
+**Context:** Whether homepage offering cards should route to primers (as on-ramps) or full pages. **Resolved:** they point at the **full pages.** Primers are *emailed to people* to drive them to the site — they are not meant to be discovered *from* the site, so the homepage must not route into them. No change needed (cards already point at full pages); recorded so it isn't re-litigated.
 
 ### CJ hero headline divergence (parked — deliberate)
 **Status:** Parked (carried from `topic-alignment-website-to-2pager.md` Gap #2)
