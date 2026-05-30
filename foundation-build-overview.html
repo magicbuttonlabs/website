@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foundation Build — Overview | Magic Button Labs</title>
+<meta name="description" content="Foundation Build — an end-to-end architecture prototype built directly in monday.com. A shareable one-page overview. No migrations, no integrations, no full buildout."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- FOUNDATION BUILD — WEB OVERVIEW (primer) ---- */
+
+/* Document framing — feels like a "sheet" without being a fixed letter page */
+.tp-doc { background: var(--bg); padding-bottom: 24px; }
+
+/* Sticky action bar — share + download */
+.tp-bar {
+  position: sticky; top: var(--nav-h); z-index: 150;
+  background: rgba(245,245,245,0.92);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline);
+}
+.tp-bar-inner {
+  max-width: 880px; margin: 0 auto; padding: 10px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+}
+.tp-bar-label {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.18em; color: var(--ink-subtle);
+}
+.tp-bar-actions { display: flex; gap: 10px; align-items: center; }
+.btn-sm { padding: 9px 18px; font-size: 13px; }
+.btn-ghost {
+  background: transparent; color: var(--ink-muted);
+  border: 1.5px solid rgba(58,51,53,0.18); padding: 7px 16px;
+}
+.btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+.btn-soon { opacity: 0.55; cursor: default; }
+.btn-soon:hover { transform: none; background: var(--ink); }
+.tp-toast {
+  font-size: 12.5px; color: var(--accent-deep); font-weight: 600;
+  opacity: 0; transition: opacity 0.25s; white-space: nowrap;
+}
+.tp-toast.show { opacity: 1; }
+
+/* The sheet */
+.tp-sheet {
+  max-width: 880px; margin: 0 auto; background: var(--paper);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 1px 2px rgba(58,51,53,0.04), 0 18px 50px rgba(58,51,53,0.07);
+  border-radius: 4px; overflow: hidden;
+}
+
+/* Topbar identity strip — mirrors the PDF's dark topbar */
+.tp-top {
+  background: var(--ink); color: rgba(255,255,255,0.62);
+  padding: 13px 44px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.2em;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.tp-top .tp-top-r { color: rgba(255,255,255,0.32); letter-spacing: 0.12em; }
+
+.tp-pad { padding: 48px 44px; }
+
+/* Hero */
+.tp-hero { border-bottom: 1px solid var(--hairline); }
+.tp-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.24em; color: var(--accent);
+  margin-bottom: 16px;
+}
+.tp-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+  font-size: clamp(30px, 5vw, 46px); line-height: 1.05; letter-spacing: -0.025em;
+  color: var(--ink); margin-bottom: 18px; max-width: 16ch;
+}
+.tp-hero h1 em { font-style: normal; color: var(--accent); }
+.tp-lead { font-size: clamp(15px, 2vw, 17px); line-height: 1.6; color: var(--ink-muted); font-weight: 300; max-width: 60ch; margin-bottom: 14px; }
+.tp-meta { font-size: 13px; color: var(--ink-subtle); line-height: 1.6; font-weight: 300; max-width: 56ch; }
+
+/* Stats strip */
+.tp-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+  background: var(--band);
+}
+.tp-stat { padding: 26px 30px; border-right: 1px solid var(--hairline); }
+.tp-stat:last-child { border-right: none; }
+.tp-stat-n {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  font-size: 40px; line-height: 1; color: var(--ink); letter-spacing: -0.03em;
+}
+.tp-stat-l { font-size: 13px; color: var(--ink-muted); line-height: 1.45; margin-top: 8px; }
+
+/* Do / Don't */
+.tp-dd { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+.tp-dd h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 17px;
+  color: var(--ink); margin-bottom: 18px;
+}
+.tp-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+.tp-list li { font-size: 15px; color: var(--ink-muted); line-height: 1.5; padding-left: 28px; position: relative; }
+.tp-list li strong { color: var(--ink); font-weight: 600; }
+.tp-list.is-yes li::before { content: ''; position: absolute; left: 2px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.tp-list.is-no li::before { content: '\00D7'; position: absolute; left: 2px; top: -2px; color: var(--rule); font-weight: 700; font-size: 18px; }
+
+/* Stages */
+.tp-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+  font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.018em; color: var(--ink);
+  margin-bottom: 28px; line-height: 1.15;
+}
+.tp-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+.tp-stage { background: var(--paper); padding: 28px 26px; display: flex; flex-direction: column; gap: 9px; }
+.tp-stage .step { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 20px; color: var(--accent); line-height: 1; }
+.tp-stage h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+.tp-stage p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; }
+
+/* What you get */
+.tp-get { background: var(--band); border-top: 1px solid var(--hairline); }
+.tp-get-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+.tp-get-head { display: flex; flex-direction: column; gap: 10px; }
+.tp-get-head .big { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
+.tp-get-head .big em { font-style: normal; color: var(--accent); }
+.tp-get-list { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+.tp-get-list li { font-size: 15px; color: var(--ink-muted); line-height: 1.5; padding-left: 26px; position: relative; }
+.tp-get-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 9px; height: 9px; border-radius: 2px; background: var(--accent); }
+.tp-outcomes { display: flex; gap: 12px 40px; flex-wrap: wrap; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.tp-outcome { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 450; font-size: clamp(16px, 2vw, 19px); letter-spacing: -0.01em; color: var(--ink); }
+.tp-outcome .dot { color: var(--accent); font-style: italic; font-weight: 300; margin-right: 8px; }
+
+/* In-sheet CTA */
+.tp-cta { background: var(--ink); padding: 40px 44px; }
+.tp-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; color: #fff; line-height: 1.15; margin-bottom: 8px; }
+.tp-cta p { font-size: 15px; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 22px; }
+.tp-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .tp-bar-inner { padding: 9px 18px; }
+  .tp-bar-label { display: none; }
+  .tp-top { padding: 12px 24px; font-size: 10px; letter-spacing: 0.14em; }
+  .tp-top .tp-top-r { display: none; }
+  .tp-pad { padding: 32px 24px; }
+  .tp-stats { grid-template-columns: 1fr; }
+  .tp-stat { border-right: none; border-bottom: 1px solid var(--hairline); }
+  .tp-stat:last-child { border-bottom: none; }
+  .tp-stat { display: flex; align-items: baseline; gap: 16px; padding: 18px 24px; }
+  .tp-stat-n { font-size: 34px; }
+  .tp-stat-l { margin-top: 0; }
+  .tp-dd { grid-template-columns: 1fr; gap: 28px; }
+  .tp-stages { grid-template-columns: 1fr; }
+  .tp-get-grid { grid-template-columns: 1fr; gap: 24px; }
+  .tp-cta { padding: 32px 24px; }
+  .tp-sheet { border-radius: 0; border-left: none; border-right: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li class="hide-mob"><a href="workshop.html">Workshop</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Action bar: share + download -->
+<div class="tp-bar">
+  <div class="tp-bar-inner">
+    <span class="tp-bar-label">Foundation Build · Overview</span>
+    <div class="tp-bar-actions">
+      <span class="tp-toast" id="tp-toast">Link copied</span>
+      <button class="btn btn-ghost btn-sm" id="tp-share">Share with a colleague</button>
+      <a class="btn btn-dark btn-sm btn-soon" id="tp-pdf" title="PDF download coming soon">Download PDF (soon)</a>
+    </div>
+  </div>
+</div>
+
+<div class="tp-doc">
+  <div class="tp-sheet">
+
+    <div class="tp-top">
+      <span>Partner Resource · Foundation Build</span>
+      <span class="tp-top-r">magicbuttonlabs.com</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="tp-pad tp-hero">
+      <div class="tp-eyebrow">Deploy &amp; Build</div>
+      <h1>Build it once. <em>Not twice.</em></h1>
+      <p class="tp-lead">Foundation Build is an end-to-end architecture prototype, built directly in monday.com &mdash; not another planning doc. We don&rsquo;t do migrations, integrations, or full buildouts. We design and prove the scalable structure your team is confident building around.</p>
+      <p class="tp-meta">Design your system before you build it &mdash; so you avoid rework, avoid wasted spend, and get the plan right before you invest.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="tp-stats">
+      <div class="tp-stat"><div class="tp-stat-n">3</div><div class="tp-stat-l">design stages, one working prototype</div></div>
+      <div class="tp-stat"><div class="tp-stat-n">1</div><div class="tp-stat-l">validated starting point your team owns</div></div>
+      <div class="tp-stat"><div class="tp-stat-n">0</div><div class="tp-stat-l">migrations, integrations, or full buildouts</div></div>
+    </div>
+
+    <!-- What this is / isn't -->
+    <div class="tp-pad">
+      <div class="tp-dd">
+        <div>
+          <h3>What we do</h3>
+          <ul class="tp-list is-yes">
+            <li>Build an <strong>end-to-end architecture prototype</strong>, right in monday.com.</li>
+            <li>Show you a <strong>scalable structure</strong> you&rsquo;re confident building around.</li>
+            <li><strong>Validate the path forward</strong> before you commit to a full build.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What we don&rsquo;t do</h3>
+          <ul class="tp-list is-no">
+            <li>Migrations.</li>
+            <li>Integrations.</li>
+            <li>Full buildouts.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stages -->
+    <div class="tp-pad" style="padding-top:0;">
+      <h3 class="tp-section-title">Three stages, one working prototype.</h3>
+      <div class="tp-stages">
+        <div class="tp-stage">
+          <span class="step">i.</span>
+          <h4>Analyze</h4>
+          <p>Understand the work &mdash; how your business actually runs, and what the system has to carry.</p>
+        </div>
+        <div class="tp-stage">
+          <span class="step">ii.</span>
+          <h4>Prototype</h4>
+          <p>Shape the system &mdash; an end-to-end architecture, built and working in monday.com.</p>
+        </div>
+        <div class="tp-stage">
+          <span class="step">iii.</span>
+          <h4>Align</h4>
+          <p>Validate the path forward &mdash; a defined starting point your team owns and can build on.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What you get -->
+    <div class="tp-pad tp-get">
+      <div class="tp-get-grid">
+        <div class="tp-get-head">
+          <span class="tp-eyebrow" style="margin-bottom:2px;">What you get</span>
+          <span class="big">A <em>validated start</em>.</span>
+          <span class="big">A <em>clearer path</em> forward.</span>
+        </div>
+        <ul class="tp-get-list">
+          <li>A working prototype, not another planning doc.</li>
+          <li>A defined starting point your team owns.</li>
+          <li>A prioritized backlog ready to execute.</li>
+        </ul>
+      </div>
+      <div class="tp-outcomes">
+        <span class="tp-outcome"><span class="dot">&mdash;</span>Avoid rework</span>
+        <span class="tp-outcome"><span class="dot">&mdash;</span>Avoid wasted spend</span>
+        <span class="tp-outcome"><span class="dot">&mdash;</span>Get the plan right before you invest</span>
+      </div>
+    </div>
+
+    <!-- In-sheet CTA -->
+    <div class="tp-cta">
+      <h2>Ready to get the plan right?</h2>
+      <p>Design your system before you build it &mdash; then build around a foundation you trust.</p>
+      <div class="tp-cta-actions">
+        <a class="btn btn-accent" href="foundation-build.html">See the full Foundation Build page</a>
+        <a class="btn btn-outline-white" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="workshop.html">Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+<script>
+  // Share: copy current URL to clipboard with a small confirmation
+  (function () {
+    var btn = document.getElementById('tp-share');
+    var toast = document.getElementById('tp-toast');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var url = window.location.href;
+      var done = function () {
+        toast.classList.add('show');
+        setTimeout(function () { toast.classList.remove('show'); }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done).catch(done);
+      } else {
+        var t = document.createElement('textarea');
+        t.value = url; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(t); done();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
