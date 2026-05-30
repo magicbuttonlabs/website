@@ -171,10 +171,16 @@ magicbuttonlabs.com
 
 ## Render Deltas
 
-> Added 2026-05-30 to bring this file to the Page Content Standard (three-block skeleton). How the website (`customer-journey.html`) and the 2-pager (`cj-intro-onepager.html`, in the Claude Project) intentionally diverge, and why. This is the block that prevents silent drift between the two.
+> Added 2026-05-30 to bring this file to the Page Content Standard (three-block skeleton). How the three artifacts intentionally diverge, and why — the website (`customer-journey.html`), the web primer (`customer-journey-overview.html`), and the print 2-pager (`cj-intro-onepager.html`, in the Claude Project). This is the block that prevents silent drift.
+
+### Delta 0 — The three artifacts and their jobs
+- **Full page** (`customer-journey.html`): the depth — all 14 modules with descriptions, the journey diagram, testimonials, thesis. Reader is engaged.
+- **Web primer** (`customer-journey-overview.html`): the on-ramp — a condensed, mobile-friendly, shareable overview that funnels to the full page. Hero + 3 stats + the three team homes (names + one-liners + module names) + Foundation & Scale band + thesis + CTA to full page. Reader is warm, deciding whether to go deeper.
+- **Print 2-pager** (`cj-intro-onepager.html`): the leave-behind PDF. Per the Offering Primer Standard, a QR/link on the PDF points at the primer URL.
+- **Funnel:** PDF → primer → full page → contact. See the canon's "Three Artifacts" in `topic-2pager-framework.md`.
 
 ### Delta 1 — Hero headline differs *(parked — deliberate for now)*
-- **Website:** "The way every business *wishes* it ran."
+- **Website + primer:** "The way every business *wishes* it ran." (the primer follows the website, since it's the on-ramp to it)
 - **2-pager:** "Your whole business, *finally* in one place."
 - **Why / status:** Two headlines for the same product, different emotional register for different reader states. The website headline is considered editorially stronger. Whether to unify them or keep the divergence is **parked** in `topic-alignment-website-to-2pager.md` (Gap #2). Not an accidental mismatch — do not "fix" by syncing without resolving that parked decision.
 
