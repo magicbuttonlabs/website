@@ -207,8 +207,14 @@ magicbuttonlabs.com
 
 ### Delta 6 — CTA target differs by medium
 - **2-pager CTA:** "Explore every module — interactively" → `magicbuttonlabs.com/customer-journey` (drives the reader *to* the website).
+- **Primer CTA:** "See every module — interactively" → primary button to the full page (`customer-journey.html`); Contact secondary. (The primer echoes the 2-pager's promise but its job is to push onward to depth.)
 - **Website CTA:** Drives toward a demo / conversation.
-- **Why:** The artifacts sit at different points in the funnel; the 2-pager's job is to hand off to the website, the website's is to convert.
+- **Why:** The artifacts sit at different points in the funnel; the PDF hands off to the primer/site, the primer hands off to the full page, the full page converts.
+
+### Delta 7 — Primer condenses the journey to three team homes
+- **Website:** Full journey diagram (SVG arc) + three full module sections + Foundation & Scale aside.
+- **Primer:** No diagram. The three groups become compact "team home" cards (name + one-line intro + inline module names), then a Foundation & Scale band. Module *descriptions* are dropped; only names appear.
+- **Why:** The primer is the 30-second scan; the diagram and per-module depth are what the full page delivers. The primer uses the live page's visible label "Accounting" for the finance group (canonical name "Won to Paid"), matching what a colleague lands on.
 
 ---
 
@@ -216,16 +222,16 @@ magicbuttonlabs.com
 
 > Canonical section → where it lives in each artifact. Group vocabulary (Sales & Growth, Won to Paid, Delivery & Operations, Foundation & Scale) is governed by `topic-alignment-website-to-2pager.md` in the canon.
 
-| Canonical section | Website (`customer-journey.html`) | 2-pager (`cj-intro-onepager.html`, in Project) |
-|---|---|---|
-| Hero | headline + lead + 3 stats | page 1 hero (headline + lead + meta + 3 stats) — headline differs, see Delta 1 |
-| Journey diagram | visual arc, 3 phases + Foundation band + loop | — (no diagram; pillar grid carries structure) |
-| i. Sales & Growth | full section, 3 modules w/ descriptions | page 1 pillar card (names only) |
-| ii. Won to Paid | full section, 3 modules w/ descriptions | page 1 pillar card (names only) |
-| iii. Delivery & Operations | full section, 4 modules w/ descriptions | page 1 pillar card (names only) |
-| Foundation & Scale | cross-cutting section, 4 modules | page 1 full-width band beneath pillars |
-| Process steps | — (not on website, see Delta 3) | page 1 four-step grid (Install/Learn/Use/Refine) |
-| Proof / outcomes | testimonials + thesis block | page 2 context band + 3 outcomes |
-| CTA | demo / conversation | page 2 footer → magicbuttonlabs.com/customer-journey |
+| Canonical section | Full page (`customer-journey.html`) | Web primer (`customer-journey-overview.html`) | Print 2-pager (`cj-intro-onepager.html`) |
+|---|---|---|---|
+| Hero | headline + lead + 3 stats | masthead + headline + lead + promise + 3 stats | page 1 hero (headline + lead + meta + 3 stats) — headline differs, see Delta 1 |
+| Journey diagram | visual arc, 3 phases + Foundation band + loop | — (no diagram) | — (pillar grid carries structure) |
+| i. Sales & Growth | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| ii. Won to Paid (shown as "Accounting") | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| iii. Delivery & Operations | full section, 4 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| Foundation & Scale | cross-cutting section, 4 modules | full-width dark band (names only) | page 1 full-width band beneath pillars |
+| Process steps | — (not on website, see Delta 3) | — | page 1 four-step grid (Install/Learn/Use/Refine) |
+| Proof / outcomes | testimonials + thesis block | thesis block only | page 2 context band + 3 outcomes |
+| CTA | demo / conversation | primary → full page; secondary → contact | page 2 footer → magicbuttonlabs.com/customer-journey |
 
-**Canonical group names are locked** across both artifacts: Sales & Growth · Won to Paid · Delivery & Operations · Foundation & Scale. Don't rename on one without the other, and check the alignment doc first.
+**Canonical group names are locked** across all artifacts: Sales & Growth · Won to Paid · Delivery & Operations · Foundation & Scale. The live page and primer currently show "Accounting" as the visible label for the Won to Paid group — keep page and primer in step on that. Don't rename on one without the others, and check the alignment doc first.
