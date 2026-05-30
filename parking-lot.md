@@ -8,6 +8,16 @@ Site-specific open decisions and deferred items for the live magicbuttonlabs.com
 
 ## Done — logged for continuity
 
+### All three offering primers built + wired live
+**Status:** Done 2026-05-30
+**What:** Per the Offering Primer Standard (canon), built a web primer for each of the three offering pages, each wired with a "Share this overview" link from its full page, each using the shared design system + "Share with a colleague" + placeholder "Download PDF (soon)":
+- `foundation-build-overview.html` ← linked from `foundation-build.html`
+- `customer-journey-overview.html` ← linked from `customer-journey.html` (CTA band)
+- `workshop-overview.html` ← linked from `workshop.html` (CTA band)
+Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per the standard.
+**Workshop content file:** `workshop-content.md` was created to the Page Content Standard first (it had none), then the primer built from it.
+**Verified live:** the deploy pipeline (Trove → live site) was confirmed working this session — `foundation-build-overview.html` loads on magicbuttonlabs.com.
+
 ### Foundation Build web primer built + wired
 **Status:** Done 2026-05-30
 **What:** Built `foundation-build-overview.html` — a responsive, mobile-friendly web "primer" version of the Foundation Build 2-pager (the on-ramp in the print-PDF → primer → full-page funnel). Uses shared `styles.css`, MBL design system, a "Share with a colleague" action (copies URL), and a placeholder "Download PDF (soon)" button. Wired `foundation-build.html` to link to it ("Share this overview" in the hero). The primer/page/PDF trio pattern was recorded in the canon's `topic-2pager-framework.md` ("The Three Artifacts").
