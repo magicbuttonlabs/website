@@ -47,10 +47,13 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Context:** The primer reuses 2-pager-only strings that were reconstructed, not verified against an actual print 2-pager file: the topbar/identity-strip label ("Partner Resource · Foundation Build"), the hero meta line, and the 3/1/0 stats. The primer now renders these live on the site, but they're still ⚠️ in the content file.
 **Action needed:** Once the real Foundation Build print 2-pager is in the Monday Website Project, verify these strings against it and clear the ⚠️ markers in `foundation-build-content.md` — then reconcile the primer if anything differs.
 
-### PDF hosting for "Download PDF" (parked — also a standards question)
-**Status:** Parked (cross-ref canon `topic-2pager-framework.md` → Three Artifacts → "Open: PDF hosting")
-**Context:** The Trove is text-only, so a binary PDF can't live here. The primer's "Download PDF" is a disabled placeholder until hosting is decided. Options: commit the PDF to the GitHub repo (Pages deploys from the repo), generate on demand, or host externally.
-**Action needed:** Pick a hosting approach, then wire the primer's download button. (Standards-level decision — resolve in the canon, apply to every offering's primer.)
+### PDF hosting for "Download PDF" — RESOLVED (build-on-push via GitHub Action)
+**Status:** Done 2026-05-30
+**What:** PDFs are generated at deploy time by a GitHub Action and served from GitHub Pages — no binary ever lives in the Trove. Architecture:
+- Three slim 2-pager HTML sources committed to the instance: `customer-journey-2pager.html`, `foundation-build-2pager.html`, `workshop-2pager.html` (~16KB each; they `<link>` a shared `fonts-2pager.css`).
+- `build-2pager-pdfs.py` (committed) generates `fonts-2pager.css` from the npm `@fontsource` packages at build time, then renders each HTML → `downloads/*.pdf` via Playwright/Chromium, running the validation gate (2 pages, Letter). Build fails if the gate fails.
+- The three primers' "Download PDF" buttons now point at `downloads/<slug>-2pager.pdf` (live).
+**⚠️ ONE MANUAL STEP REMAINING:** `deploy.yml` could not be written from this session (GitHub blocks workflow-file writes via the Trove integration). The render step must be added to `.github/workflows/deploy.yml` by hand — see the "deploy.yml manual edit" item below. **Until that edit lands, the PDFs are NOT generated and the download buttons will 404.**
 
 ### "Share this overview" links on full pages — design-mode scaffolding
 **Status:** Open — scaffolding, remove on published-mode transition (cross-ref canon `project-context.md` → Website Modes)
