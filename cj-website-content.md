@@ -166,3 +166,60 @@ Get Started guides on every board, every folder, every workspace — plus a stru
 
 Built on monday.com. Made to fit.
 magicbuttonlabs.com
+
+---
+
+## Render Deltas
+
+> Added 2026-05-30 to bring this file to the Page Content Standard (three-block skeleton). How the website (`customer-journey.html`) and the 2-pager (`cj-intro-onepager.html`, in the Claude Project) intentionally diverge, and why. This is the block that prevents silent drift between the two.
+
+### Delta 1 — Hero headline differs *(parked — deliberate for now)*
+- **Website:** "The way every business *wishes* it ran."
+- **2-pager:** "Your whole business, *finally* in one place."
+- **Why / status:** Two headlines for the same product, different emotional register for different reader states. The website headline is considered editorially stronger. Whether to unify them or keep the divergence is **parked** in `topic-alignment-website-to-2pager.md` (Gap #2). Not an accidental mismatch — do not "fix" by syncing without resolving that parked decision.
+
+### Delta 2 — Stats worded per medium *(same numbers, different phrasing)*
+- **Shared numbers:** 14 / 30+ / 1.
+- **Website:** "14 modules — covering the full client lifecycle…" · "30+ industries — hundreds of clients…" · "100% native — built on monday.com…"
+- **2-pager:** "14 — built-in solutions across the full customer journey" · "30+ — industries served across professional services" · "1 — platform: monday.com, nothing else needed"
+- **Why:** Same proof points, phrasing tuned to each medium's density. The website "100% native" maps to the 2-pager "1 platform" — same idea, different framing. Keep aligned on *number and meaning*, allow phrasing to differ.
+
+### Delta 3 — Process steps live on the 2-pager only
+- **2-pager:** Owns the four-step process — **Install · Learn · Use · Refine** (page 1). This is the 2-pager's job per the framework.
+- **Website:** Does not repeat the four steps as a section; the journey diagram and module depth carry the experience instead.
+- **Why:** Per `topic-alignment-website-to-2pager.md`, the 2-pager owns the process steps; the website owns module-level detail and interactivity. Don't port the Install/Learn/Use/Refine grid onto the website.
+
+### Delta 4 — Modules: full detail on website, names-only on 2-pager
+- **Website:** All 14 modules with full descriptions, grouped under the three sequential sections + Foundation & Scale.
+- **2-pager:** Pillar cards name the three groups (+ Foundation & Scale band) with module names listed inline; no per-module descriptions.
+- **Why:** The 2-pager is the 30-second summary; the website delivers the depth its CTA promises. (Whether 2-pager pillar cards keep the module sublists at all is itself parked — see 2-pager framework Open Questions.)
+
+### Delta 5 — Outcomes + context block are 2-pager page-2 only
+- **2-pager page 2:** A context/proof band (quote + supporting points) and three outcomes — "A proven system, not a starting point" · "A team that knows how to use it" · "Time to value in days, not months" — then one CTA.
+- **Website:** Carries proof via inline testimonials and the thesis block rather than a discrete outcomes grid.
+- **Why:** Page-2 outcomes are the 2-pager's "should I act?" close. The website's equivalent persuasion is distributed (testimonials, thesis, module depth).
+
+### Delta 6 — CTA target differs by medium
+- **2-pager CTA:** "Explore every module — interactively" → `magicbuttonlabs.com/customer-journey` (drives the reader *to* the website).
+- **Website CTA:** Drives toward a demo / conversation.
+- **Why:** The artifacts sit at different points in the funnel; the 2-pager's job is to hand off to the website, the website's is to convert.
+
+---
+
+## Section Map
+
+> Canonical section → where it lives in each artifact. Group vocabulary (Sales & Growth, Won to Paid, Delivery & Operations, Foundation & Scale) is governed by `topic-alignment-website-to-2pager.md` in the canon.
+
+| Canonical section | Website (`customer-journey.html`) | 2-pager (`cj-intro-onepager.html`, in Project) |
+|---|---|---|
+| Hero | headline + lead + 3 stats | page 1 hero (headline + lead + meta + 3 stats) — headline differs, see Delta 1 |
+| Journey diagram | visual arc, 3 phases + Foundation band + loop | — (no diagram; pillar grid carries structure) |
+| i. Sales & Growth | full section, 3 modules w/ descriptions | page 1 pillar card (names only) |
+| ii. Won to Paid | full section, 3 modules w/ descriptions | page 1 pillar card (names only) |
+| iii. Delivery & Operations | full section, 4 modules w/ descriptions | page 1 pillar card (names only) |
+| Foundation & Scale | cross-cutting section, 4 modules | page 1 full-width band beneath pillars |
+| Process steps | — (not on website, see Delta 3) | page 1 four-step grid (Install/Learn/Use/Refine) |
+| Proof / outcomes | testimonials + thesis block | page 2 context band + 3 outcomes |
+| CTA | demo / conversation | page 2 footer → magicbuttonlabs.com/customer-journey |
+
+**Canonical group names are locked** across both artifacts: Sales & Growth · Won to Paid · Delivery & Operations · Foundation & Scale. Don't rename on one without the other, and check the alignment doc first.
