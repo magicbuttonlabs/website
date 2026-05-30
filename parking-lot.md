@@ -46,10 +46,10 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **What:** Both `cj-website-content.md` and `foundation-build-content.md` were backfilled to describe all three artifacts (full page + web primer + print PDF). Each gained a "Delta 0 — the three artifacts and their jobs," a primer-specific delta, and a section map with a dedicated web-primer column. All three offering content files (incl. `workshop-content.md`, built fresh) are now consistent on the three-artifact model.
 **Note:** Foundation Build's ⚠️ markers remain — the primer reuses the 2-pager's identity strip / hero meta / 3-1-0 stats, still unverified against an actual print 2-pager (see the ⚠️ item below).
 
-### Foundation Build primer — identity strings still unverified (⚠️)
-**Status:** Open (cross-ref `foundation-build-content.md` ⚠️ markers)
-**Context:** The primer reuses 2-pager-only strings that were reconstructed, not verified against an actual print 2-pager file: the topbar/identity-strip label ("Partner Resource · Foundation Build"), the hero meta line, and the 3/1/0 stats. The primer now renders these live on the site, but they're still ⚠️ in the content file.
-**Action needed:** Once the real Foundation Build print 2-pager is in the Monday Website Project, verify these strings against it and clear the ⚠️ markers in `foundation-build-content.md` — then reconcile the primer if anything differs.
+### Foundation Build primer — identity strings NOW VERIFIED
+**Status:** Done 2026-05-30
+**Context:** The primer reused 2-pager-only strings (topbar label "Partner Resource · Foundation Build", hero meta line, 3/1/0 stats) that had been reconstructed, not verified. The actual print 2-pager `foundation-build-2pager.html` was built to the framework this session and committed to the instance — the strings now match a real, gate-passing 2-pager. The 2-pager's page-1 stats are 3 / 1 / 0 (the "0" carries "migrations, integrations, or full buildouts"), and the do/don't lives in a dedicated page-2 "Scoped on purpose" band.
+**Note:** primer ⚠️ markers in `foundation-build-content.md` can be cleared (see that file).
 
 ### PDF hosting for "Download PDF" — RESOLVED (build-on-push via GitHub Action)
 **Status:** Done 2026-05-30
