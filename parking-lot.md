@@ -8,6 +8,11 @@ Site-specific open decisions and deferred items for the live magicbuttonlabs.com
 
 ## Done — logged for continuity
 
+### Foundation Build web primer built + wired
+**Status:** Done 2026-05-30
+**What:** Built `foundation-build-overview.html` — a responsive, mobile-friendly web "primer" version of the Foundation Build 2-pager (the on-ramp in the print-PDF → primer → full-page funnel). Uses shared `styles.css`, MBL design system, a "Share with a colleague" action (copies URL), and a placeholder "Download PDF (soon)" button. Wired `foundation-build.html` to link to it ("Share this overview" in the hero). The primer/page/PDF trio pattern was recorded in the canon's `topic-2pager-framework.md` ("The Three Artifacts").
+**Naming locked:** `foundation-build-overview.html` — this URL is what a QR code will encode, so don't rename without regenerating codes.
+
 ### CJ content file brought to the Page Content Standard
 **Status:** Done 2026-05-30
 **What:** `cj-website-content.md` upgraded to the three-block skeleton (Shared copy · Render deltas · Section map) defined by the Page Content Standard in the canon's `project-context.md`. Existing copy was left untouched; the Render Deltas (6) and Section Map blocks were added. Deltas were sourced from the real CJ 2-pager (`cj-intro-onepager.html`) in the Claude Project, not guessed.
@@ -16,6 +21,26 @@ Site-specific open decisions and deferred items for the live magicbuttonlabs.com
 ---
 
 ## Open
+
+### Foundation Build content file — add primer as a third artifact
+**Status:** Open (cross-ref `foundation-build-content.md`)
+**Context:** The Foundation Build content file's render deltas and section map predate the web primer (`foundation-build-overview.html`). They currently describe a two-artifact world (website + 2-pager); now there are three (full page + web primer + print PDF), per the canon's "Three Artifacts" pattern.
+**Action needed:** Update `foundation-build-content.md` — add the primer to the section map, and record any primer-vs-page-vs-PDF deltas (e.g. the primer's single-CTA-to-full-page treatment, the "sheet" framing). Do this alongside clearing the ⚠️ items below so the file is verified in one pass.
+
+### Foundation Build primer — identity strings still unverified (⚠️)
+**Status:** Open (cross-ref `foundation-build-content.md` ⚠️ markers)
+**Context:** The primer reuses 2-pager-only strings that were reconstructed, not verified against an actual print 2-pager file: the topbar/identity-strip label ("Partner Resource · Foundation Build"), the hero meta line, and the 3/1/0 stats. The primer now renders these live on the site, but they're still ⚠️ in the content file.
+**Action needed:** Once the real Foundation Build print 2-pager is in the Monday Website Project, verify these strings against it and clear the ⚠️ markers in `foundation-build-content.md` — then reconcile the primer if anything differs.
+
+### PDF hosting for "Download PDF" (parked — also a standards question)
+**Status:** Parked (cross-ref canon `topic-2pager-framework.md` → Three Artifacts → "Open: PDF hosting")
+**Context:** The Trove is text-only, so a binary PDF can't live here. The primer's "Download PDF" is a disabled placeholder until hosting is decided. Options: commit the PDF to the GitHub repo (Pages deploys from the repo), generate on demand, or host externally.
+**Action needed:** Pick a hosting approach, then wire the primer's download button. (Standards-level decision — resolve in the canon, apply to every offering's primer.)
+
+### Homepage Foundation Build card — point at primer or full page?
+**Status:** Open — deliberate per-offering call
+**Context:** The homepage Foundation Build card currently links to the full `foundation-build.html`. Now that the primer exists as the intended on-ramp, the card could point at the primer instead. Repointing it changes the site's primary funnel entry for this offering, so it was left as-is rather than changed unilaterally.
+**Action needed:** Decide whether the homepage card routes to the primer (on-ramp) or stays on the full page.
 
 ### CJ hero headline divergence (parked — deliberate)
 **Status:** Parked (carried from `topic-alignment-website-to-2pager.md` Gap #2)
