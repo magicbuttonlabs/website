@@ -42,11 +42,6 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **What:** Both `cj-website-content.md` and `foundation-build-content.md` were backfilled to describe all three artifacts (full page + web primer + print PDF). Each gained a "Delta 0 — the three artifacts and their jobs," a primer-specific delta, and a section map with a dedicated web-primer column. All three offering content files (incl. `workshop-content.md`, built fresh) are now consistent on the three-artifact model.
 **Note:** Foundation Build's ⚠️ markers remain — the primer reuses the 2-pager's identity strip / hero meta / 3-1-0 stats, still unverified against an actual print 2-pager (see the ⚠️ item below).
 
-### Foundation Build content file — add primer as a third artifact
-**Status:** Open (cross-ref `foundation-build-content.md`)
-**Context:** The Foundation Build content file's render deltas and section map predate the web primer (`foundation-build-overview.html`). They currently describe a two-artifact world (website + 2-pager); now there are three (full page + web primer + print PDF), per the canon's "Three Artifacts" pattern.
-**Action needed:** Update `foundation-build-content.md` — add the primer to the section map, and record any primer-vs-page-vs-PDF deltas (e.g. the primer's single-CTA-to-full-page treatment, the "sheet" framing). Do this alongside clearing the ⚠️ items below so the file is verified in one pass.
-
 ### Foundation Build primer — identity strings still unverified (⚠️)
 **Status:** Open (cross-ref `foundation-build-content.md` ⚠️ markers)
 **Context:** The primer reuses 2-pager-only strings that were reconstructed, not verified against an actual print 2-pager file: the topbar/identity-strip label ("Partner Resource · Foundation Build"), the hero meta line, and the 3/1/0 stats. The primer now renders these live on the site, but they're still ⚠️ in the content file.
