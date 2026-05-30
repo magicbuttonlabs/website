@@ -83,8 +83,15 @@ How the three artifacts intentionally diverge, and why — the full page (`found
 - **Why:** Different height constraints. Not a vocabulary difference — same stages, same order.
 
 ### Delta D — Actions / CTA
-- **Website:** Two hero buttons (Contact Us · Get monday.com) plus a closing CTA band with two buttons.
+- **Website:** Two hero buttons (Contact Us · Get monday.com) plus a closing CTA band with two buttons. Hero now also carries a "Share this overview" link to the primer.
+- **Primer:** Single primary CTA to the full page ("See the full Foundation Build page"), Contact secondary. Plus the action-bar "Share with a colleague" + "Download PDF (soon)".
 - **2-pager:** One CTA only (framework rule: more than one CTA dilutes the action). ⚠️ Verify which single CTA the 2-pager uses.
+
+### Delta E — Primer keeps the do/don't AND the stat
+- **Website:** Two-column do/don't, no stat strip.
+- **Primer:** Carries *both* — the 3/1/0 stat strip (from the 2-pager hero) *and* the two-column do/don't (from the website). It has room the dense print hero doesn't, so it doesn't have to choose.
+- **2-pager:** Stat strip only; the do/don't is folded into the "0" stat (Delta A).
+- **Why:** The primer is the synthesis surface — web-flexible layout means it can show the credibility stats and the honest-scoping do/don't side by side. This is the one place all of it coexists.
 
 ---
 
@@ -92,16 +99,18 @@ How the three artifacts intentionally diverge, and why — the full page (`found
 
 Canonical section → where it lives in each artifact. For the CJ-style canonical *group* vocabulary (Sales & Growth, etc.) see `topic-alignment-website-to-2pager.md`; Foundation Build uses its own stage names (Analyze / Prototype / Align), which are product-specific and not part of the CJ four-group structure.
 
-| Canonical section | Website (`foundation-build.html`) | 2-pager (`foundation-build-2pager.html` ⚠️) |
-|---|---|---|
-| Hero | `.fb-hero` (headline + lead + actions) | Page 1 hero (headline + lead + meta + 3 stats) |
-| What this is/isn't | `.fb-not-grid` two-column do/don't | Folded into hero stat "0" (Delta A) |
-| Design stages (i/ii/iii) | `.fb-stages` 3-col grid | Page 1 pillar grid (Analyze/Prototype/Align) |
-| What you get | `.fb-get` band + `.fb-outcomes` | Page 2 outcomes |
-| CTA | `.cta-band` (2 buttons) | Page 2 CTA footer (1 CTA) |
+| Canonical section | Full page (`foundation-build.html`) | Web primer (`foundation-build-overview.html`) | Print 2-pager (`foundation-build-2pager.html` ⚠️) |
+|---|---|---|---|
+| Identity strip | — | dark topbar "Partner Resource · Foundation Build" ⚠️ | page 1 topbar ⚠️ |
+| Hero | `.fb-hero` (headline + lead + actions) | headline + lead + meta line | page 1 hero (headline + lead + meta + 3 stats) |
+| Stats (3/1/0) | — (Delta B) | 3-stat strip | page 1 hero stat strip |
+| What this is/isn't | `.fb-not-grid` two-column do/don't | two-column do/don't (kept) | folded into hero stat "0" (Delta A) |
+| Design stages (i/ii/iii) | `.fb-stages` 3-col grid | 3-stage grid | page 1 pillar grid (Analyze/Prototype/Align) |
+| What you get | `.fb-get` band + `.fb-outcomes` | "what you get" band + outcomes | page 2 outcomes |
+| CTA | `.cta-band` (2 buttons) + hero "Share this overview" | single CTA → full page; Contact secondary | page 2 CTA footer (1 CTA) |
 
-**Stage names are canonical:** i. Analyze · ii. Prototype · iii. Align. Used identically on both artifacts. Do not rename on one without the other.
+**Stage names are canonical:** i. Analyze · ii. Prototype · iii. Align. Used identically across all artifacts. Do not rename on one without the others.
 
 ---
 
-*Established: 2026-05-30. First page content file built to the Page Content Standard. Reference implementation for the three-block skeleton. Website side verified; 2-pager side pending file availability (⚠️ markers).*
+*Established: 2026-05-30. First page content file built to the Page Content Standard. Reference implementation for the three-block skeleton. Website side verified; web primer live; 2-pager side pending file availability (⚠️ markers). Backfilled with the web primer as a third artifact 2026-05-30.*
