@@ -55,6 +55,27 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 - The three primers' "Download PDF" buttons now point at `downloads/<slug>-2pager.pdf` (live).
 **⚠️ ONE MANUAL STEP REMAINING:** `deploy.yml` could not be written from this session (GitHub blocks workflow-file writes via the Trove integration). The render step must be added to `.github/workflows/deploy.yml` by hand — see the "deploy.yml manual edit" item below. **Until that edit lands, the PDFs are NOT generated and the download buttons will 404.**
 
+### deploy.yml manual edit — add the PDF render step (⚠️ ACTION NEEDED)
+**Status:** Open — must be done by hand (GitHub blocks workflow writes via Trove)
+**Context:** The existing `.github/workflows/deploy.yml` uploads the repo root and deploys to Pages. The PDF render must run *before* the `upload-pages-artifact` step so `downloads/*.pdf` is swept into the same deploy. The deploy mechanism and triggers stay untouched — this is purely additive.
+**Action needed:** In `deploy.yml`, after the `Checkout` step and before `Setup Pages`, add:
+```yaml
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Render 2-pager PDFs
+        run: |
+          pip install playwright pypdf
+          playwright install --with-deps chromium
+          python build-2pager-pdfs.py
+```
+Everything else in the file is unchanged. Once committed, the next push renders all three PDFs and the download buttons go live.
+
 ### "Share this overview" links on full pages — design-mode scaffolding
 **Status:** Open — scaffolding, remove on published-mode transition (cross-ref canon `project-context.md` → Website Modes)
 **Context:** All three full pages (`foundation-build.html`, `customer-journey.html`, `workshop.html`) carry a "Share this overview" link to their primer (site → primer). Under the primer's actual role — an *emailable artifact* that drives recipients *to* the full page — that direction is backwards for the published site: a visitor already on the full page is at the destination. But the links are **useful in design mode** (the primer is one tap away while the funnel is being evaluated), so they're kept deliberately, not deleted.
