@@ -38,9 +38,9 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Action needed:** Resolve the rename (incl. singular/plural), then sweep page + primer + nav/footer/homepage entry points together. Until then, the primer is correct-as-of-build but will need a copy pass when the name settles.
 
 ### Content files — add primer as a third artifact (CJ + Foundation Build)
-**Status:** Open (cross-ref `cj-website-content.md`, `foundation-build-content.md`)
-**Context:** Both content files predate their web primers. Their render deltas + section maps still describe a two-artifact world; now there are three (full page + web primer + print PDF). `workshop-content.md` was built fresh and already includes the primer in its section map.
-**Action needed:** Update the CJ and Foundation Build content files — add the primer to each section map and record primer-specific deltas. (Foundation Build's is already noted below; CJ needs the same.)
+**Status:** Done 2026-05-30
+**What:** Both `cj-website-content.md` and `foundation-build-content.md` were backfilled to describe all three artifacts (full page + web primer + print PDF). Each gained a "Delta 0 — the three artifacts and their jobs," a primer-specific delta, and a section map with a dedicated web-primer column. All three offering content files (incl. `workshop-content.md`, built fresh) are now consistent on the three-artifact model.
+**Note:** Foundation Build's ⚠️ markers remain — the primer reuses the 2-pager's identity strip / hero meta / 3-1-0 stats, still unverified against an actual print 2-pager (see the ⚠️ item below).
 
 ### Foundation Build content file — add primer as a third artifact
 **Status:** Open (cross-ref `foundation-build-content.md`)
