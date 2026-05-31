@@ -103,7 +103,7 @@
 | Who this is for | 3 buyer profiles | omitted | — |
 | CTA | waitlist + private session | primary → full page; secondary → contact/waitlist | — |
 
-**Naming note:** Until the rename resolves, treat "Workshop" and "Builders Blueprint Series Training" as the same offering. Resolve the parked decision (and "Builder" vs "Builders") before renaming the file or sweeping entry-point labels.
+**Naming note:** "Builders" (plural, no apostrophe) is locked across all surfaces incl. the 2-pager (2026-05-30). "Workshop" and "Builders Blueprint Series Training" remain the same offering; the only deferred item is the optional `workshop.html` → `builders-blueprint.html` file rename.
 
 ---
 
