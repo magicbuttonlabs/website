@@ -67,10 +67,10 @@
 
 > How the artifacts intentionally diverge. NOTE: a print 2-pager does not exist for Workshop yet; deltas below are full-page vs. web primer only. Add 2-pager deltas if/when one is built.
 
-### Delta 1 — Naming is unresolved across artifacts *(active flux)*
-- **Full page:** titled "Builders Blueprint Series Training"; body still says "this workshop"; nav/footer/homepage entry points say "Workshop."
-- **Primer:** follows the page — identity label "Builders Blueprint Series Training," but the sticky bar and the funnel still use "Workshop" where the rest of the site does.
-- **Why / status:** The rename from "Workshop" to "Builders Blueprint Series Training" is partial and parked (incl. "Builder" vs "Builders"). Do NOT unify silently — resolve the parked rename first, then sweep page + primer + entry points together.
+### Delta 1 — Naming *(resolved: plural "Builders," 2026-05-30)*
+- **Decision:** the offering label is **"Builders Blueprint Series"** — plural, no apostrophe — everywhere it appears as a name. The print 2-pager was updated off the earlier singular "Builder's."
+- **Entry points:** top-nav "Builders Blueprint," footer + homepage card "Builders Blueprint Series" (chrome swept 2026-05-30). The full page title remains "Builders Blueprint Series Training."
+- **Still open:** the *file* rename (`workshop.html` → `builders-blueprint.html`) is deferred as its own chrome sweep — the visible label is settled; the filename is cosmetic. See `parking-lot.md`.
 
 ### Delta 2 — Pricing is on the full page, not the primer
 - **Full page:** full pricing grid ($500 group / $2,500 private) with perk lists.
