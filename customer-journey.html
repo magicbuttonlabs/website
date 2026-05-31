@@ -52,6 +52,15 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 .journey-foundation .jf-sep { width: 1px; height: 18px; background: rgba(255,255,255,0.18); flex-shrink: 0; }
 .journey-foundation .jf-tail { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 15px; color: rgba(255,255,255,0.6); }
 .journey-mobile { display: none; }
+.journey-mobile { position: relative; padding-left: 28px; }
+.journey-mobile .jm-rail { position: absolute; left: 4px; top: 6px; bottom: 56px; width: 6px; background: linear-gradient(to bottom, rgba(57,176,226,0.3), var(--accent)); border-radius: 3px; }
+.journey-mobile .jm-phase { border: 1px solid var(--hairline); border-radius: 4px; padding: 12px 14px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 7px; }
+.journey-mobile .jm-phase.cust { background: var(--band); }
+.journey-mobile .jm-phase.acct { background: var(--band-deeper); }
+.journey-mobile .jm-tag { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-subtle); }
+.journey-mobile .jm-tag.acct { color: var(--accent-deep); }
+.journey-mobile .jm-stops { font-size: 14px; color: var(--ink); }
+.journey-mobile .jm-loop { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 13px; color: var(--accent); margin: 2px 0 12px; }
 .journey .loop-label { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 350; font-size: 14px; fill: var(--accent); }
 .journey .band { fill: var(--band); }
 .journey .band-deeper { fill: var(--band-deeper); }
