@@ -52,13 +52,13 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Action needed:** Bump footer-bottom to 2026 on all 11 pages in one chrome sweep. Low effort; fold into the next chrome pass or do standalone.
 
 ### Workshop naming flux — resolve before sweeping primer + entry points
-**Status:** Open — PARTIAL DECISION 2026-05-30 (cross-ref `workshop-content.md` Delta 1)
-**Context:** The Workshop offering is mid-rename, with three variants now in play:
-- **"Workshop"** — nav, footer, homepage card, full-page filename (`workshop.html`).
-- **"Builders Blueprint Series" / "Builders Blueprint Series Training"** (plural, no apostrophe) — used throughout `workshop-overview.html` (title, eyebrow, topbar, bar label).
-- **"Builder's Blueprint Series"** (singular, apostrophe) — chosen for the **print 2-pager** this session (Ethan's call), so the PDF leads the rename in this new direction.
-**⚠️ Known mismatch created this session:** the `workshop-overview.html` primer says "Builders" (plural) but its "Download PDF" now serves a 2-pager titled "Builder's" (singular). A visitor sees one name on the page and a different one on the document. Deliberate, logged, not silently reconciled.
-**Action needed:** Lock the name (incl. Workshop-vs-Blueprint and singular-vs-plural), then sweep in one pass: full page + filename, primer, the 2-pager, and nav/footer/homepage entry points. The 2-pager currently leads; everything else trails.
+**Status:** Open — PARTIAL DECISION 2026-05-30 (cross-ref `workshop-content.md` Delta 1); chrome moved off "Workshop" to "Builders Blueprint" 2026-05-30 during the AI Workshop launch
+**Context:** The Workshop offering is mid-rename. Variants in play:
+- **"Workshop"** — was the nav/footer/homepage label; as of 2026-05-30 the **nav and footer no longer say "Workshop" anywhere** (renamed during the AI Training Workshop launch to disambiguate the two workshops). Still trailing on the old name: the full-page **filename** (`workshop.html`) and the homepage Enable-group "monday.com Training" card.
+- **"Builders Blueprint" (nav) / "Builders Blueprint Series" (footer)** (plural, no apostrophe) — NOW the live chrome label on all 11 pages. Matches `workshop-overview.html` (also plural).
+- **"Builder's Blueprint Series"** (singular, apostrophe) — chosen for the **print 2-pager** (Ethan's call), so the PDF leads toward the singular form.
+**⚠️ Unresolved fork — singular vs plural:** chrome + primer say "Builders" (plural); the 2-pager says "Builder's" (singular). A visitor still sees one form on the site and another on the downloaded PDF. Deliberate, logged, not silently reconciled. ("Workshop-vs-Blueprint" is now effectively settled in favour of Blueprint, since the chrome carries it.)
+**Action needed:** Lock the form (singular vs plural). Then sweep in one pass: the full-page **filename** (`workshop.html` → likely `builders-blueprint.html`), the 2-pager, the homepage card, and re-confirm nav/footer/primer. ⚠️ If the filename changes, that is itself another chrome sweep — every nav/footer link to `workshop.html` across all 11 pages, plus `ai-workshop.html`'s reciprocal cross-link.
 
 ### Content files — add primer as a third artifact (CJ + Foundation Build)
 **Status:** Done 2026-05-30
