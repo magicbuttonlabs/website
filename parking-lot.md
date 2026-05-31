@@ -32,14 +32,15 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
-### AI Training Workshop — offering live, trio incomplete
-**Status:** Open — page + chrome live 2026-05-30; primer + 2-pager + content file still to build
-**What landed this session:** `ai-workshop.html` created (conformed: links `styles.css`, page-specific `<style>` block only, standard chrome) and wired in as a co-equal **fourth** offering — nav + footer Solutions swept across all 11 pages, the canon's Shared Chrome Contract updated to four offerings, and reciprocal cross-links between `workshop.html` and `ai-workshop.html` (each page's "Also available / Newer to monday.com" note now points at the other instead of `contact.html`).
-**Trio still owed (Offering Primer + Page Content standards):**
-- `ai-workshop-content.md` — the source-of-truth content file (three-block skeleton: Shared copy · Render deltas · Section map). The live page is the upstream artifact; extract from it. Not yet created.
-- `ai-workshop-overview.html` — the web primer (NOT a chrome entry; emailable artifact). Build from the content file once it exists.
-- `ai-workshop-2pager.html` + PDF — the print 2-pager per `topic-2pager-framework.md` (Playwright/Chromium, base64 fonts, validation gate). HTML source lives in the Claude Project; add it to `build-2pager-pdfs.py` as a 4th render → `downloads/ai-workshop-2pager.pdf`. The deploy render step (see the deploy.yml item) then covers it.
-**Booking note:** the AI page books via Calendly (`calendly.com/brandon-gauby-mbl/ai-training`), unlike Builders Blueprint's monday-form waitlist. Confirm that's intended before launch.
+### AI Training Workshop — offering live, full trio shipped
+**Status:** Done 2026-05-30
+**What landed:** `ai-workshop.html` launched as a co-equal **fourth** offering (nav + footer swept across all 11 pages; canon Shared Chrome Contract updated to four offerings; reciprocal cross-links with `workshop.html`; homepage Enable group split into two co-equal cards). The full **trio** is now built and wired:
+- `ai-workshop-content.md` — source-of-truth content file (Shared copy · Render deltas · Section map), extracted from the live page. **Done.**
+- `ai-workshop-overview.html` — web primer (shared `styles.css` + standard chrome; "Share with a colleague"; "Download PDF" → `downloads/ai-workshop-2pager.pdf`; primary CTA → full page). **Done.**
+- `ai-workshop-2pager.html` — print 2-pager built to `topic-2pager-framework.md` (slim, links `fonts-2pager.css`; Playwright/Chromium; validation gate PASS at 2× Letter; both pages eyeballed clean, no dead-space). Added to `build-2pager-pdfs.py` `DOCS` as the 4th render → `downloads/ai-workshop-2pager.pdf`. **Done.**
+- Full page → primer "Share this overview" design-mode link added for parity. **Done.**
+**Still gated on the shared deploy step:** the PDF only materializes once the one-time `deploy.yml` render step lands (see that item) — same dependency as the other three 2-pagers.
+**Booking note (still open):** the AI page books via Calendly (`calendly.com/brandon-gauby-mbl/ai-training`); the footer Connect list still surfaces the Builders Blueprint "Workshop Waitlist" monday form. Confirm the intended AI booking path before launch.
 
 ### Homepage "Enable" group — split into two co-equal training cards
 **Status:** Done 2026-05-30
