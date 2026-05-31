@@ -33,7 +33,7 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ## Journey Diagram
 
-*Horizontal rail showing the three sequential phases of the customer relationship as two visual tiers — the two customer-facing phases (Sales & Growth, Delivery & Operations) in the lighter band shade, with the Accounting phase set apart in the deeper shade between them. Five stops sit along a directional rail (a tapering accent line ending in an arrowhead, reading left to right). A feedback loop labeled "growth feeds the pipeline" arcs over the top, and the Foundation & Scale band runs underneath all three (cross-cutting, not a fourth step).*
+*Horizontal rail showing the three sequential phases of the customer relationship as two visual tiers — the two customer-facing phases (Sales & Growth, Delivery & Operations) in the lighter band shade, with the Accounting phase set apart in the deeper shade between them. Five stops sit along a directional rail (a tapering accent line ending in an arrowhead, reading left to right). A feedback loop labeled "growth feeds the pipeline" arcs over the top. Beneath the rail sits a single dark band carrying a connective-promise line — NOT the Foundation & Scale section. (Mobile: the rail stacks the three phase cards vertically with an accent rail bounded to the cards, then the loop note, then the connective-promise band.)*
 
 **Phase groups and stops:**
 
@@ -45,15 +45,16 @@ From the first conversation to the long-term relationship, and every step in bet
 - **Delivery & Operations** *(customer-facing — lighter band)*
   - 💬 Project Management
   - 🛠️ Project Execution
-- **Foundation & Scale** *(band beneath all three — "across all of it")*
 
-**Foundation band line (diagram only):** Foundation & Scale — *so nothing falls between teams*
+**Connective-promise band (diagram only):** One connected system — *across every stage, across every team*
 
 **Loop annotation:** *growth feeds the pipeline*
 
-> **Wording note:** The diagram's stop under the Accounting phase reads **Get Paid** (matching the live page), not "Invoicing & Pay." The full module name in the section below remains "Financial Operations and Invoicing." The diagram band leads with the section's real name (Foundation & Scale) plus a plain-language tail; the standalone term "connectivity layer" was considered as a band label and is parked (see site parking lot) pending a decision on whether to elevate it as canonical vocabulary across all three artifacts.
+> **Flow / placement note (2026-05-30):** The diagram is the page's *outside-in, simple* moment — its caption is literally "the simple view from the outside in." The named **Foundation & Scale** layer is the page's most *internal* concept (the buyer is told the customer never sees it), so it must NOT appear on the diagram; it would contradict the caption and pre-empt the "Inside the business" pivot. What the buyer *does* want near the diagram is the reassurance that the stages and teams are connected — so the band below the rail carries a plain-language **connective promise** ("One connected system — across every stage, across every team") in the same outside-in voice, not the Foundation & Scale name. Foundation & Scale debuts only in its own dark section at the bottom, after the team sections, where "the connective layer — so nothing falls between teams" finally has teams to connect. The diagram no longer depicts the "+1": the *section* structure is unchanged (Foundation & Scale still exists as its own cross-cutting section), the diagram just stops previewing it.
 
-> **Structure note:** The arc reflects the canonical 3+1 structure (see `topic-alignment-website-to-2pager.md` in WEB-STANDARDS): three sequential phases plus Foundation & Scale as a cross-cutting layer. An earlier version showed a fourth sequential band ("Happy Customers → Easy Growth") with no matching page section; that idea is now carried by the feedback loop instead.
+> **Wording note:** The diagram's stop under the Accounting phase reads **Get Paid** (matching the live page), not "Invoicing & Pay." The full module name in the section below remains "Financial Operations and Invoicing." The bottom Foundation & Scale section's kicker reads "The connective layer — so nothing falls between teams." The standalone term "connectivity/connective layer" as canonical vocabulary is parked (see site parking lot) pending a decision on whether to elevate it across all three artifacts.
+
+> **Structure note:** The three sequential phases reflect the canonical structure (see `topic-alignment-website-to-2pager.md` in WEB-STANDARDS). Foundation & Scale remains a cross-cutting layer in the page's section structure (its own dark aside), but is no longer drawn on the diagram (see flow note above). An earlier version showed a fourth sequential band ("Happy Customers → Easy Growth") with no matching page section; that idea is carried by the feedback loop instead.
 
 ---
 
