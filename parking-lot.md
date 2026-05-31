@@ -32,6 +32,11 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### CJ journey diagram — "connectivity layer" as candidate canonical vocab (parked)
+**Status:** Parked 2026-05-30
+**Context:** The CJ journey diagram was rebuilt this session (horizontal arc → responsive directional rail; two-tier band shading for customer-facing vs. Accounting; mobile stacked variant). The diagram's Foundation band now reads **"Foundation & Scale — so nothing falls between teams,"** and the lower Foundation section's kicker was aligned to **"The connective layer — so nothing falls between teams."** During design, the standalone term **"the connectivity layer"** was considered as the band's name. It was *not* adopted as canonical because the group/layer vocabulary is governed by `topic-alignment-website-to-2pager.md` (Foundation & Scale is the locked name across website + primer + 2-pager), and elevating "connectivity layer" would mean changing all three artifacts plus the alignment doc.
+**Action needed:** Decide whether "connectivity/connective layer" should become canonical framing for the Foundation & Scale layer across all artifacts (then update the alignment doc first, then propagate), or remain page-level descriptive copy only. Until decided, "Foundation & Scale" stays the locked name; the connective-layer phrasing is descriptive tail copy on the CJ full page only. Do NOT propagate the phrase to the primer or 2-pager without resolving this.
+
 ### AI Training Workshop — offering live, full trio shipped
 **Status:** Done 2026-05-30
 **What landed:** `ai-workshop.html` launched as a co-equal **fourth** offering (nav + footer swept across all 11 pages; canon Shared Chrome Contract updated to four offerings; reciprocal cross-links with `workshop.html`; homepage Enable group split into two co-equal cards). The full **trio** is now built and wired:
