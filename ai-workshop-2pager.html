@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Training Workshop — Magic Button Labs</title>
+<link rel="stylesheet" href="fonts-2pager.css">
+<style>
+@page { size:8.5in 11in; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { margin:0; padding:0; }
+body { font-family:'DM Sans',Arial,sans-serif; background:#F5F5F5; color:#3A3335; }
+
+/* ── SHARED ── */
+.topbar { background:#3A3335; height:38pt; padding:0 44pt; display:table; width:100%; table-layout:fixed; }
+.tb-row { display:table-row; height:38pt; }
+.tb-l, .tb-r { display:table-cell; vertical-align:middle; }
+.tb-r { text-align:right; font-size:7pt; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#948C8E; }
+
+.kicker { font-size:7pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#948C8E; margin-bottom:12pt; }
+
+/* ── PAGE 1 — HERO ── */
+.hero { background:#FFFFFF; padding:34pt 44pt 30pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.hero-eyebrow { font-size:7.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:14pt; }
+.hero-cols { display:grid; grid-template-columns:1fr 168pt; gap:32pt; }
+.hero h1 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:34pt; line-height:1.06; letter-spacing:-.03em; color:#3A3335; margin-bottom:15pt; }
+.hero h1 em { color:#39B0E2; font-style:italic; font-weight:800; }
+.hero-lead { font-size:10pt; line-height:1.6; color:#595153; font-weight:300; margin-bottom:11pt; }
+.hero-meta { font-size:8pt; color:#948C8E; line-height:1.6; font-weight:300; }
+.hero-stats { padding-left:18pt; border-left:1pt solid #B5ACAE; }
+.stat { padding:9pt 0; border-bottom:1pt solid rgba(58,51,53,.10); }
+.stat:last-child { border-bottom:none; }
+.stat-n { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:24pt; line-height:1; color:#3A3335; letter-spacing:-.03em; margin-bottom:3pt; }
+.stat-n em { color:#39B0E2; font-style:normal; }
+.stat-l { font-size:7pt; color:#948C8E; line-height:1.3; font-weight:400; }
+
+/* ── PAGE 1 — PILLARS ── */
+.pillars-wrap { background:#F5F5F5; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+
+/* ── PAGE 1 — FOUNDATION & SCALE BAND ── */
+.foundation-band { margin-top:1.5pt; background:#DFF0FA; border:1pt solid #B5ACAE; border-top:none; padding:14pt 15pt; display:grid; grid-template-columns:68pt 1fr; gap:18pt; align-items:start; }
+.fb-kicker { font-size:6.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; padding-top:2pt; }
+.fb-name { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.fb-desc { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE BREAK ── */
+.page-break { break-before:page; page-break-before:always; height:0; overflow:visible; }
+
+/* ── PAGE 2 — STEPS ── */
+.steps-wrap { background:#F5F5F5; padding:24pt 44pt 20pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.step { background:#FFFFFF; padding:17pt 15pt; }
+.step-num { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:17pt; color:#39B0E2; line-height:1; margin-bottom:5pt; }
+.step h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:5pt; letter-spacing:-.02em; }
+.step p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CONTEXT ── */
+.context-band { background:#DFF0FA; padding:20pt 44pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 1fr; gap:32pt; align-items:center; }
+.ctx-quote { font-family:'DM Sans',Arial,sans-serif; font-style:italic; font-weight:400; font-size:11.5pt; line-height:1.6; color:#595153; }
+.ctx-quote em { color:#39B0E2; font-style:italic; font-weight:500; }
+.ctx-details { padding-left:26pt; border-left:1pt solid #B5ACAE; }
+.ctx-item { margin-bottom:6pt; padding-left:12pt; position:relative; font-size:8pt; color:#595153; font-weight:300; line-height:1.5; }
+.ctx-item:last-child { margin-bottom:0; }
+.ctx-item::before { content:''; position:absolute; left:0; top:4pt; width:4.5pt; height:4.5pt; border-radius:50%; background:#39B0E2; }
+
+/* ── PAGE 2 — OUTCOMES ── */
+.outcomes-wrap { background:#FFFFFF; padding:22pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.outcomes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; height:237pt; overflow:hidden; }
+.outcome { background:#F5F5F5; padding:19pt 15pt; overflow:hidden; }
+.outcome-num { font-family:'DM Sans',Arial,sans-serif; font-weight:400; font-size:9pt; color:#39B0E2; margin-bottom:6pt; letter-spacing:.02em; }
+.outcome h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:7pt; line-height:1.2; letter-spacing:-.02em; }
+.outcome p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CTA ── */
+.cta { background:#3A3335; padding:20pt 44pt; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 188pt; gap:30pt; align-items:center; }
+.cta-kicker { font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; margin-bottom:6pt; }
+.cta-hed { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-style:normal; font-size:16pt; color:white; letter-spacing:-.03em; line-height:1.2; margin-bottom:7pt; }
+.cta-hed em { font-style:italic; font-weight:800; color:#286BB0; }
+.cta-url { font-size:9.5pt; font-weight:700; color:#286BB0; margin-bottom:3pt; }
+.cta-sub { font-size:7.5pt; color:#948C8E; font-weight:300; }
+.cta-r { text-align:right; padding-left:26pt; border-left:1pt solid rgba(255,255,255,.10); }
+.cta-tag { font-size:7.5pt; color:rgba(255,255,255,.32); font-weight:300; line-height:1.5; margin-top:7pt; }
+
+/* ── AI WORKSHOP SPECIFICS ── */
+.hero { padding:28pt 44pt 26pt; }
+.pillars-wrap { padding:34pt 44pt 0; }
+/* 5-lab curriculum: single-row 5-col grid */
+.labs-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.lab { background:#FFFFFF; padding:16pt 12pt 17pt; }
+.lab-num { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-size:7pt; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:8pt; }
+.lab h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:10.5pt; color:#3A3335; margin-bottom:6pt; line-height:1.15; letter-spacing:-.01em; }
+.lab p { font-size:7pt; line-height:1.5; color:#595153; font-weight:300; }
+/* how-it-works on page 1 */
+.how-wrap { background:#FFFFFF; padding:28pt 44pt 0; }
+.who-wrap { background:#F5F5F5; padding:52pt 44pt 0; }
+.who-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.who { background:#FFFFFF; padding:18pt 15pt; }
+.who-role { font-family:'DM Sans',Arial,sans-serif; font-weight:400; font-size:8pt; color:#39B0E2; margin-bottom:6pt; letter-spacing:.02em; }
+.who h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:10.5pt; color:#3A3335; margin-bottom:6pt; line-height:1.2; letter-spacing:-.02em; }
+.who p { font-size:7.5pt; line-height:1.55; color:#595153; font-weight:300; }
+/* page 2 */
+.context-band { padding:38pt 44pt; }
+.outcomes-wrap { padding:56pt 44pt 40pt; }
+.outcomes-grid { height:auto; }
+
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Partner Resource &middot; AI Training Workshop</div>
+</div></div>
+
+<div class="hero">
+  <div class="hero-eyebrow">monday.com AI Training Workshop</div>
+  <div class="hero-cols">
+    <div>
+      <h1>You&rsquo;re paying for AI now.<br>Let&rsquo;s make it <em>pay you back.</em></h1>
+      <p class="hero-lead">monday.com made AI core to the platform &mdash; Sidekick, Vibe, Workflows, Agents and Notetaker all run on the AI credits you&rsquo;re now buying. This hands-on workshop puts your team inside a live account and teaches them to actually use all five, so those credits turn into real output instead of a line item.</p>
+      <p class="hero-meta">Delivered live on Zoom, led by a monday.com expert, with hands-on labs in a pre-built account.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">5</div><div class="stat-l">AI tools &mdash; Sidekick, Vibe, Workflows, Agents, Notetaker</div></div>
+      <div class="stat"><div class="stat-n">90&ndash;120</div><div class="stat-l">minutes &mdash; one focused live session</div></div>
+      <div class="stat"><div class="stat-n">$250</div><div class="stat-l">per seat &mdash; private team sessions available</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pillars-wrap">
+  <div class="kicker">Five labs &mdash; concept, live demo, then you build</div>
+  <div class="labs-grid">
+    <div class="lab"><div class="lab-num">Lab 01</div><h4>Core AI</h4><p>How monday&rsquo;s AI works and how credits are spent &mdash; so nothing gets wasted.</p></div>
+    <div class="lab"><div class="lab-num">Lab 02</div><h4>AI Blocks</h4><p>AI columns that summarize, categorize and generate inside your boards.</p></div>
+    <div class="lab"><div class="lab-num">Lab 03</div><h4>Sidekick</h4><p>Your in-platform assistant &mdash; build and answer in plain language.</p></div>
+    <div class="lab"><div class="lab-num">Lab 04</div><h4>Vibe</h4><p>Describe what you want and build working monday apps &mdash; no code.</p></div>
+    <div class="lab"><div class="lab-num">Lab 05</div><h4>AI Agents</h4><p>Hand off real, multi-step work to agents that act on your boards.</p></div>
+  </div>
+  <div class="foundation-band">
+    <div class="fb-kicker">Also covered</div>
+    <div>
+      <div class="fb-name">AI Notetaker &amp; Workflows</div>
+      <div class="fb-desc">Turn meetings and routine processes into monday items and actions automatically &mdash; so the whole platform works for you, not just the boards you touch by hand.</div>
+    </div>
+  </div>
+</div>
+
+<div class="how-wrap">
+  <div class="kicker">How every lab works</div>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">i.</div><h4>Learn it</h4><p>We teach the concept &mdash; what the tool does, and when to reach for it.</p></div>
+    <div class="step"><div class="step-num">ii.</div><h4>See it</h4><p>We show it live in a real monday.com account &mdash; not a screenshot.</p></div>
+    <div class="step"><div class="step-num">iii.</div><h4>Build it</h4><p>Your team builds it themselves in a pre-built account &mdash; the way it sticks.</p></div>
+  </div>
+</div>
+
+<!-- ===== PAGE BREAK ===== -->
+<div class="page-break"></div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">AI Training Workshop &middot; 2 of 2</div>
+</div></div>
+
+<div class="context-band">
+  <div class="ctx-quote">&ldquo;AI is core to monday.com now &mdash; your credits are ticking either way. <em>The teams that win</em> aren&rsquo;t the ones that bought the most credits. They&rsquo;re the ones who actually know how to use the tools.&rdquo;</div>
+  <div class="ctx-details">
+    <div class="ctx-item">The AI features are right there in your boards &mdash; and nobody on the team has opened them.</div>
+    <div class="ctx-item">Credits get consumed every month &mdash; but you can&rsquo;t point to what they actually bought.</div>
+    <div class="ctx-item">Sidekick, Vibe and Agents sound powerful &mdash; but no one&rsquo;s sure where to start.</div>
+  </div>
+</div>
+
+<div class="who-wrap">
+  <div class="kicker">Who it&rsquo;s for</div>
+  <div class="who-grid">
+    <div class="who"><div class="who-role">The monday.com champion</div><h4>Run the account</h4><p>Everyone&rsquo;s asking what the new AI features do. Walk out able to answer &mdash; and to show them.</p></div>
+    <div class="who"><div class="who-role">The leader paying the bill</div><h4>Own the spend</h4><p>You&rsquo;re buying AI credits whether the team uses them or not. This turns that spend into real output.</p></div>
+    <div class="who"><div class="who-role">The team ready to move faster</div><h4>Do the work</h4><p>You&rsquo;ve heard AI can take work off your plate. This is the session that shows your team exactly how.</p></div>
+  </div>
+</div>
+
+<div class="outcomes-wrap">
+  <div class="kicker">What your team walks away with</div>
+  <div class="outcomes-grid">
+    <div class="outcome"><div class="outcome-num">First &mdash;</div><h4>AI your team actually uses</h4><p>They built with all five tools in a real account during the labs. No more guessing what Sidekick, Vibe or Agents are for &mdash; they know, and they&rsquo;ll keep using them.</p></div>
+    <div class="outcome"><div class="outcome-num">Second &mdash;</div><h4>Credits that earn their keep</h4><p>Every monthly credit maps to real output &mdash; summaries written, apps built, work handed to agents &mdash; instead of quietly expiring at the end of the month.</p></div>
+    <div class="outcome"><div class="outcome-num">Third &mdash;</div><h4>A faster way to work</h4><p>The repetitive parts of monday.com start happening with AI instead of by hand. Covered by the Magic Guarantee: we work with you until your team is confident.</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div>
+    <div class="cta-kicker">Ready to put your AI credits to work?</div>
+    <div class="cta-hed">Book the workshop &mdash;<br><em>and put your AI to work</em></div>
+    <div class="cta-url">magicbuttonlabs.com/ai-workshop-overview</div>
+    <div class="cta-sub">$250 per seat &middot; Private team sessions available &middot; Covered by the Magic Guarantee</div>
+  </div>
+  <div class="cta-r">
+    <svg width="165" height="20" viewBox="0 0 165 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="2" width="24" height="14" rx="3.5" fill="#286BB0" opacity="0.7"/>
+      <path d="M12 5.5L12.6 8.4L15.5 9L12.6 9.6L12 12.5L11.4 9.6L8.5 9L11.4 8.4Z" fill="white" opacity="0.9"/>
+      <text x="30" y="13.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="11.5"><tspan fill="rgba(255,255,255,0.45)">Magic Button</tspan><tspan fill="#286BB0" opacity="0.65"> Labs</tspan></text>
+    </svg>
+    <div class="cta-tag">monday.com Partner<br>Led by a monday.com expert</div>
+  </div>
+</div>
+
+</body>
+</html>
