@@ -230,7 +230,7 @@ magicbuttonlabs.com
 | Canonical section | Full page (`customer-journey.html`) | Web primer (`customer-journey-overview.html`) | Print 2-pager (`cj-intro-onepager.html`) |
 |---|---|---|---|
 | Hero | headline + lead + 3 stats | masthead + headline + lead + promise + 3 stats | page 1 hero (headline + lead + meta + 3 stats) — headline differs, see Delta 1 |
-| Journey diagram | visual arc, 3 phases + Foundation band + loop | — (no diagram) | — (pillar grid carries structure) |
+| Journey diagram | visual rail, 3 phases + connective-promise band + loop (no Foundation & Scale on the diagram — see flow note) | — (no diagram) | — (pillar grid carries structure) |
 | i. Sales & Growth | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
 | ii. Won to Paid (shown as "Accounting") | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
 | iii. Delivery & Operations | full section, 4 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
