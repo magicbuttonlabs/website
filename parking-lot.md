@@ -98,8 +98,8 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 
 ### "Share this overview" links on full pages — design-mode scaffolding
 **Status:** Open — scaffolding, remove on published-mode transition (cross-ref canon `project-context.md` → Website Modes)
-**Context:** All three full pages (`foundation-build.html`, `customer-journey.html`, `workshop.html`) carry a "Share this overview" link to their primer (site → primer). Under the primer's actual role — an *emailable artifact* that drives recipients *to* the full page — that direction is backwards for the published site: a visitor already on the full page is at the destination. But the links are **useful in design mode** (the primer is one tap away while the funnel is being evaluated), so they're kept deliberately, not deleted.
-**Action needed:** On the transition to published/live mode, remove the three "Share this overview" links. Until then they stay as design-mode scaffolding. (This is the concrete case that prompted the Website Modes standard.)
+**Context:** All four full pages (`foundation-build.html`, `customer-journey.html`, `workshop.html`, `ai-workshop.html`) carry a "Share this overview" link to their primer (site → primer). Under the primer's actual role — an *emailable artifact* that drives recipients *to* the full page — that direction is backwards for the published site: a visitor already on the full page is at the destination. But the links are **useful in design mode** (the primer is one tap away while the funnel is being evaluated), so they're kept deliberately, not deleted.
+**Action needed:** On the transition to published/live mode, remove the four "Share this overview" links. Until then they stay as design-mode scaffolding. (This is the concrete case that prompted the Website Modes standard.)
 
 ### Homepage offering cards — point at full pages (decided)
 **Status:** Decided 2026-05-30 — cards point at full pages, not primers
