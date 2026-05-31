@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Solutions | Magic Button Labs</title>
+<meta name="description" content="Everything Magic Button Labs offers to help you go further with monday.com — from training and architecture design to full solution builds and managed services."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- SOLUTIONS — page-specific ---- */
+
+.sol-hero { padding: 80px 0 56px; border-bottom: 1px solid var(--hairline); }
+.sol-hero h1 { margin-bottom: 20px; }
+.sol-hero .lead { max-width: 60ch; }
+
+/* Offering groups — duplicated from index.html pending a styles.css promotion pass */
+.offer-group { margin-top: 44px; }
+.group-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.group-head .stage { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); white-space: nowrap; }
+.group-head .rule { flex: 1; height: 1px; background: var(--hairline); }
+.solutions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+.solutions-grid--1 { grid-template-columns: 1fr; }
+.sol-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; transition: background 0.2s; }
+.sol-card:hover { background: var(--band); }
+.sol-card h3 { margin-bottom: 12px; }
+.sol-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+.sol-card--wide { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.sol-card--wide .sol-card-body { display: flex; flex-direction: column; }
+.sol-card--wide .sol-card-body p { margin-bottom: 0; max-width: 72ch; }
+
+/* Key stats/pricing line below description */
+.sol-card-meta { font-size: 12.5px; color: var(--ink-subtle); letter-spacing: 0.03em; margin-bottom: 24px; }
+
+@media (max-width: 900px) {
+  .solutions-grid { grid-template-columns: 1fr; }
+  .sol-card--wide { grid-template-columns: 1fr; gap: 22px; align-items: start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li><a href="solutions.html" class="active">Solutions</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="sol-hero">
+  <div class="wrap">
+    <span class="eyebrow">What we offer</span>
+    <h1 class="display">Everything you need to go further with monday.com</h1>
+    <p class="lead">Whether you want to learn, build, or have us do it for you &mdash; we have a path.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+
+    <div class="offer-group">
+      <div class="group-head"><span class="stage">Enable</span><span class="rule"></span></div>
+      <div class="solutions-grid">
+        <div class="sol-card">
+          <h3 class="card-title">Builders Blueprint Series</h3>
+          <p>The same training our architects go through. Learn how to build scalable monday.com systems from the ground up &mdash; whether you&rsquo;re building on your own, alongside us, or just want to get more out of what you have.</p>
+          <div class="sol-card-meta">8 sessions &middot; Group from $500 &middot; Covered by the Magic Guarantee</div>
+          <a class="btn btn-outline" href="workshop.html">Learn more &rarr;</a>
+        </div>
+        <div class="sol-card">
+          <h3 class="card-title">AI Training Workshop</h3>
+          <p>monday.com made AI core to the platform. This hands-on workshop teaches your team to actually use all five AI tools &mdash; Sidekick, Vibe, Workflows, Agents and Notetaker &mdash; so the credits you&rsquo;re now paying for turn into real output.</p>
+          <div class="sol-card-meta">5 AI tools &middot; 90&ndash;120 min &middot; From $250/seat &middot; Magic Guarantee</div>
+          <a class="btn btn-outline" href="ai-workshop.html">Learn more &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-group">
+      <div class="group-head"><span class="stage">Deploy &amp; Build</span><span class="rule"></span></div>
+      <div class="solutions-grid">
+        <div class="sol-card">
+          <h3 class="card-title">Foundation Build</h3>
+          <p>An end-to-end architecture prototype, built directly in monday.com &mdash; not another planning doc. No migrations, no integrations, no full buildout. Just the scalable structure your team is confident building around, and a prioritized backlog ready to execute.</p>
+          <div class="sol-card-meta">3 stages: Analyze &middot; Prototype &middot; Align</div>
+          <a class="btn btn-outline" href="foundation-build.html">Learn more &rarr;</a>
+        </div>
+        <div class="sol-card">
+          <h3 class="card-title">Customer Journey Solution</h3>
+          <p>Our flagship build &mdash; 14 modules covering your full client lifecycle from first inbound to renewal. Built natively on monday.com across hundreds of real engagements.</p>
+          <div class="sol-card-meta">14 modules &middot; 30+ industries &middot; 100% native on monday.com</div>
+          <a class="btn btn-outline" href="customer-journey.html">Explore the solution &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-group">
+      <div class="group-head"><span class="stage">Support &amp; Maintain</span><span class="rule"></span></div>
+      <div class="solutions-grid solutions-grid--1">
+        <div class="sol-card sol-card--wide">
+          <div class="sol-card-body">
+            <h3 class="card-title">Custom Work &amp; Managed Services</h3>
+            <p>Whatever else you need from monday.com, we can help. Migrations, integrations, full go-live builds, custom &ldquo;as-built&rdquo; training, and ongoing admin or development &mdash; delivered as hour-based packages or a managed service.</p>
+          </div>
+          <a class="btn btn-outline" href="contact.html">Get in touch &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Ready to get started?</h2>
+      <p>No matter your industry, we&rsquo;ve seen it before and we know how to help set up monday.com perfectly for your business.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Builders Blueprint Series</a></li><li><a href="ai-workshop.html">AI Training Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
