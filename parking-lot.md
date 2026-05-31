@@ -32,6 +32,14 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### Solutions overview page — needed for nav consolidation and CTA band destinations
+**Status:** Open — new page to build
+**Context:** The top nav currently lists four offerings as individual links (Foundation Build · Customer Journey · Builders Blueprint · AI Workshop), which is getting horizontally too long. A `solutions.html` overview page would let the nav collapse to a single "Solutions" link and give all four offering pages a meaningful place to send curious visitors who want to compare rather than convert.
+**CTA band note (2026-05-30):** `customer-journey.html` and `foundation-build.html` previously had a third CTA-band button cross-linking to a sibling offering ("See the Builders Blueprint Series" / "See the Customer Journey Solution"). Both were removed this session — the pattern was too linear and pointed at the wrong offerings. When `solutions.html` exists, add back a third ghost button on each offering page's CTA band: "See all solutions" → `solutions.html`.
+**Action needed:** Design and build `solutions.html`. Then: (1) Collapse the four individual nav items into a single "Solutions" link → `solutions.html`; (2) add the "See all solutions" third button to the CTA bands of `customer-journey.html`, `foundation-build.html`, and the two workshop pages if appropriate.
+
+
+
 ### CJ journey diagram — "connectivity layer" as candidate canonical vocab (parked)
 **Status:** Parked 2026-05-30
 **Context:** The CJ journey diagram was rebuilt this session (horizontal arc → responsive directional rail; two-tier band shading for customer-facing vs. Accounting; mobile stacked variant). The diagram's Foundation band now reads **"Foundation & Scale — so nothing falls between teams,"** and the lower Foundation section's kicker was aligned to **"The connective layer — so nothing falls between teams."** During design, the standalone term **"the connectivity layer"** was considered as the band's name. It was *not* adopted as canonical because the group/layer vocabulary is governed by `topic-alignment-website-to-2pager.md` (Foundation & Scale is the locked name across website + primer + 2-pager), and elevating "connectivity layer" would mean changing all three artifacts plus the alignment doc.
