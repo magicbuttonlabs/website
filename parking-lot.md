@@ -41,10 +41,9 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 - `ai-workshop-2pager.html` + PDF — the print 2-pager per `topic-2pager-framework.md` (Playwright/Chromium, base64 fonts, validation gate). HTML source lives in the Claude Project; add it to `build-2pager-pdfs.py` as a 4th render → `downloads/ai-workshop-2pager.pdf`. The deploy render step (see the deploy.yml item) then covers it.
 **Booking note:** the AI page books via Calendly (`calendly.com/brandon-gauby-mbl/ai-training`), unlike Builders Blueprint's monday-form waitlist. Confirm that's intended before launch.
 
-### Homepage "Enable" group — represent the AI Workshop as a co-equal training
-**Status:** Open — homepage-copy decision
-**Context:** The homepage "What we offer" section is a stage-grouped narrative, not a 1:1 mirror of the nav. The **Enable** group currently holds a single umbrella "monday.com Training" card linking only to `workshop.html`. With the AI Training Workshop now a co-equal offering ("not to be downplayed" — Ethan, this session), the homepage doesn't yet reflect it.
-**Recommendation:** split the Enable group into a two-card grid (mirroring Deploy & Build) — "Builders Blueprint Series" → `workshop.html` and "AI Training Workshop" → `ai-workshop.html` — with short blurbs drawn from each page (not invented). Needs sign-off: it's homepage marketing copy. Cards point at full pages, per the resolved cards-routing decision below.
+### Homepage "Enable" group — split into two co-equal training cards
+**Status:** Done 2026-05-30
+**What:** The Enable group's single umbrella "monday.com Training" card was split into a two-card grid (mirroring Deploy & Build): **Builders Blueprint Series** &rarr; `workshop.html` (reusing the existing training-card blurb, which already described this offering) and **AI Training Workshop** &rarr; `ai-workshop.html` (blurb taken from the AI page's own summary line, not invented). Both cards point at full pages, per the cards-routing decision below.
 
 ### Site-wide copyright year — © 2025 → 2026
 **Status:** Open — chrome (footer-bottom), site-wide
