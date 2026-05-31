@@ -32,6 +32,25 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### AI Training Workshop — offering live, trio incomplete
+**Status:** Open — page + chrome live 2026-05-30; primer + 2-pager + content file still to build
+**What landed this session:** `ai-workshop.html` created (conformed: links `styles.css`, page-specific `<style>` block only, standard chrome) and wired in as a co-equal **fourth** offering — nav + footer Solutions swept across all 11 pages, the canon's Shared Chrome Contract updated to four offerings, and reciprocal cross-links between `workshop.html` and `ai-workshop.html` (each page's "Also available / Newer to monday.com" note now points at the other instead of `contact.html`).
+**Trio still owed (Offering Primer + Page Content standards):**
+- `ai-workshop-content.md` — the source-of-truth content file (three-block skeleton: Shared copy · Render deltas · Section map). The live page is the upstream artifact; extract from it. Not yet created.
+- `ai-workshop-overview.html` — the web primer (NOT a chrome entry; emailable artifact). Build from the content file once it exists.
+- `ai-workshop-2pager.html` + PDF — the print 2-pager per `topic-2pager-framework.md` (Playwright/Chromium, base64 fonts, validation gate). HTML source lives in the Claude Project; add it to `build-2pager-pdfs.py` as a 4th render → `downloads/ai-workshop-2pager.pdf`. The deploy render step (see the deploy.yml item) then covers it.
+**Booking note:** the AI page books via Calendly (`calendly.com/brandon-gauby-mbl/ai-training`), unlike Builders Blueprint's monday-form waitlist. Confirm that's intended before launch.
+
+### Homepage "Enable" group — represent the AI Workshop as a co-equal training
+**Status:** Open — homepage-copy decision
+**Context:** The homepage "What we offer" section is a stage-grouped narrative, not a 1:1 mirror of the nav. The **Enable** group currently holds a single umbrella "monday.com Training" card linking only to `workshop.html`. With the AI Training Workshop now a co-equal offering ("not to be downplayed" — Ethan, this session), the homepage doesn't yet reflect it.
+**Recommendation:** split the Enable group into a two-card grid (mirroring Deploy & Build) — "Builders Blueprint Series" → `workshop.html` and "AI Training Workshop" → `ai-workshop.html` — with short blurbs drawn from each page (not invented). Needs sign-off: it's homepage marketing copy. Cards point at full pages, per the resolved cards-routing decision below.
+
+### Site-wide copyright year — © 2025 → 2026
+**Status:** Open — chrome (footer-bottom), site-wide
+**Context:** Every page's footer-bottom still reads "© 2025 by Magic Button Labs, LLC." `ai-workshop.html` was conformed to 2025 to stay byte-identical with the rest rather than fork one page to 2026. It's a year stale across the whole site.
+**Action needed:** Bump footer-bottom to 2026 on all 11 pages in one chrome sweep. Low effort; fold into the next chrome pass or do standalone.
+
 ### Workshop naming flux — resolve before sweeping primer + entry points
 **Status:** Open — PARTIAL DECISION 2026-05-30 (cross-ref `workshop-content.md` Delta 1)
 **Context:** The Workshop offering is mid-rename, with three variants now in play:
