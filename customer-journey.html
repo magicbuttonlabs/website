@@ -688,6 +688,10 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 (function(){var lb=document.getElementById('lightbox'),fr=document.getElementById('lightbox-frame'),cl=document.getElementById('lightbox-close');function open(id){fr.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';lb.classList.add('open');document.body.style.overflow='hidden';}function close(){lb.classList.remove('open');fr.src='';document.body.style.overflow='';}document.querySelectorAll('.module .thumb').forEach(function(b){b.addEventListener('click',function(){var id=b.getAttribute('data-video');if(id)open(id);});});cl.addEventListener('click',close);lb.addEventListener('click',function(e){if(e.target===lb)close();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});})();
 </script>
 
+<script>
+(function(){var j=document.querySelector('.journey');if(!j)return;if(!('IntersectionObserver' in window)){j.classList.add('rail-animate');return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){j.classList.add('rail-animate');io.disconnect();}});},{threshold:0.35});io.observe(j);})();
+</script>
+
 <script src="testimonials.js" defer></script>
 </body>
 </html>
