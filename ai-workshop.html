@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>monday.com AI Training Workshop | Magic Button Labs</title>
+<meta name="description" content="monday.com made AI core to the platform. This hands-on workshop teaches your team to actually use all five AI tools — Sidekick, Vibe, Workflows, Agents and Notetaker — so the credits you're now paying for turn into real output."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+
+<style>
+/* ---- AI WORKSHOP-SPECIFIC STYLES ---- */
+
+.workshop-hero{padding:80px 0 72px;border-bottom:1px solid var(--hairline);}
+.workshop-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.workshop-hero-copy h1{margin-bottom:24px;}
+.workshop-hero-copy .subhead{margin-bottom:36px;}
+.workshop-hero-copy .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.workshop-hero-stat{display:flex;flex-direction:column;gap:16px;}
+.ws-stat-big{background:var(--ink);color:#fff;padding:40px 44px;display:flex;flex-direction:column;gap:8px;}
+.ws-stat-big .num{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(48px,6vw,72px);font-weight:300;letter-spacing:-0.04em;line-height:1;color:#fff;}
+.ws-stat-big .num em{font-style:normal;color:var(--accent);}
+.ws-stat-big .label{font-size:14px;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.55;}
+.ws-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.ws-stat-mini{background:var(--band);border:1px solid var(--hairline);padding:24px 28px;}
+.ws-stat-mini .mini-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.02em;color:var(--ink);line-height:1;margin-bottom:6px;}
+.ws-stat-mini .mini-label{font-size:12.5px;color:var(--ink-subtle);}
+.problem-band{background:var(--band);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);padding:64px 0;}
+.problem-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.problem-copy h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:clamp(24px,3vw,34px);letter-spacing:-0.02em;color:var(--ink);line-height:1.2;margin-bottom:20px;}
+.problem-copy p{font-size:15.5px;color:var(--ink-muted);line-height:1.75;font-weight:300;}
+.problem-copy p + p{margin-top:14px;}
+.problem-signs{display:flex;flex-direction:column;gap:0;}
+.problem-sign{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--hairline);}
+.problem-sign:first-child{border-top:1px solid var(--hairline);}
+.problem-sign .sign-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.problem-sign p{font-size:14.5px;color:var(--ink-muted);line-height:1.6;margin:0;}
+.problem-sign p strong{color:var(--ink);font-weight:600;}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
+.price-card{background:var(--paper);border:1px solid var(--hairline);padding:44px 40px;position:relative;transition:border-color 0.2s;display:flex;flex-direction:column;}
+.price-card:hover{border-color:rgba(57,176,226,0.35);}
+.price-card.featured{border-color:var(--accent);background:var(--band);}
+.price-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--ink-subtle);margin-bottom:20px;display:block;}
+.price-card.featured .price-label{color:var(--accent);}
+.price-amount{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:300;letter-spacing:-0.03em;color:var(--ink);line-height:1;margin-bottom:6px;}
+.price-amount em{font-style:normal;font-size:15px;font-weight:400;letter-spacing:0;color:var(--ink-muted);margin-left:2px;}
+.price-desc{font-size:14.5px;color:var(--ink-muted);line-height:1.65;margin:20px 0 28px;font-weight:300;}
+.price-perks{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;flex:1;}
+.price-perks li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ink-muted);line-height:1.5;}
+.price-perks li::before{content:'';display:block;width:16px;height:16px;border-radius:50%;background:rgba(57,176,226,0.15);border:1.5px solid var(--accent);flex-shrink:0;margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%2339B0E2' stroke-width='1.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:10px;background-position:center;background-repeat:no-repeat;}
+.format-note{margin-top:32px;padding:20px 24px;background:var(--paper);border:1px solid var(--hairline);border-left:3px solid var(--accent);font-size:14.5px;color:var(--ink-muted);line-height:1.65;}
+.format-note strong{color:var(--ink);font-weight:600;}
+.format-note a{color:var(--accent);}
+.guarantee-band{background:var(--ink);padding:80px 0;}
+.guarantee-inner{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;}
+.guarantee-badge{width:120px;height:120px;border-radius:50%;border:2px solid rgba(57,176,226,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0;gap:4px;padding:16px;}
+.badge-top{font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--accent);}
+.badge-word{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;line-height:1;}
+.badge-word em{font-style:normal;color:var(--accent);}
+.guarantee-copy h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:clamp(24px,3vw,34px);letter-spacing:-0.02em;color:#fff;line-height:1.15;margin-bottom:16px;}
+.guarantee-copy p{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;font-weight:300;max-width:60ch;}
+.walkaway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-top:48px;}
+.walkaway-card{background:var(--paper);padding:44px 36px;transition:background 0.25s ease;}
+.walkaway-card:hover{background:var(--band);}
+.walkaway-icon{font-size:28px;margin-bottom:20px;display:block;}
+.walkaway-card h3{margin-bottom:12px;}
+.walkaway-card p{font-size:14.5px;color:var(--ink-muted);line-height:1.65;}
+/* Five-lab curriculum grid */
+.labs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-top:48px;}
+.lab-card{background:var(--paper);padding:30px 24px;transition:background 0.2s;}
+.lab-card:hover{background:var(--band);}
+.lab-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--accent);margin-bottom:14px;}
+.lab-card h3{margin-bottom:10px;font-size:16px;}
+.lab-card p{font-size:13px;color:var(--ink-muted);line-height:1.6;}
+@media (max-width:1000px){.labs-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:900px){
+  .workshop-hero-inner{grid-template-columns:1fr;}
+  .workshop-hero-stat{display:none;}
+  .problem-inner{grid-template-columns:1fr;gap:40px;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .guarantee-inner{grid-template-columns:1fr;gap:32px;}
+  .guarantee-badge{display:none;}
+  .walkaway-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){.labs-grid{grid-template-columns:1fr;}}
+.workshop-hero-copy h1{animation:fadeUp 0.7s ease-out 0.05s backwards;}
+.workshop-hero-copy .subhead{animation:fadeUp 0.7s ease-out 0.18s backwards;}
+.workshop-hero-copy .hero-actions{animation:fadeUp 0.7s ease-out 0.3s backwards;}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li><a href="foundation-build.html">Foundation Build</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li><a href="workshop.html">Builders Blueprint</a></li>
+      <li><a href="ai-workshop.html" class="active">AI Workshop</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="workshop-hero">
+  <div class="wrap">
+    <div class="workshop-hero-inner">
+      <div class="workshop-hero-copy">
+        <span class="eyebrow">monday.com AI Training Workshop</span>
+        <h1 class="display">You&rsquo;re paying for AI now. Let&rsquo;s make it <em>pay you back.</em></h1>
+        <p class="subhead">monday.com made AI core to the platform &mdash; Sidekick, Vibe, Workflows, Agents and Notetaker all run on the AI credits you&rsquo;re now buying. This hands-on workshop puts your team inside a live account and teaches them to actually use all five, so those credits turn into real output instead of a line item.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="https://calendly.com/brandon-gauby-mbl/ai-training" target="_blank" rel="noopener">Book the Workshop</a>
+          <a class="btn btn-outline" href="contact.html">Ask About a Private Session</a>
+        </div>
+      </div>
+      <div class="workshop-hero-stat" aria-hidden="true">
+        <div class="ws-stat-big">
+          <span class="num"><em>5</em> AI tools</span>
+          <span class="label">Sidekick &middot; Vibe &middot; Workflows &middot; Agents &middot; Notetaker. One live, hands-on session &mdash; concept, demo, then you build.</span>
+        </div>
+        <div class="ws-stat-row">
+          <div class="ws-stat-mini">
+            <div class="mini-num">90&ndash;120 min</div>
+            <div class="mini-label">One focused live session on Zoom</div>
+          </div>
+          <div class="ws-stat-mini">
+            <div class="mini-num">$250 <span style="font-size:13px;font-weight:400;color:var(--ink-subtle);">/ seat</span></div>
+            <div class="mini-label">Hands-on labs in a pre-built account</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="problem-band">
+  <div class="wrap">
+    <div class="problem-inner">
+      <div class="problem-copy">
+        <span class="eyebrow">Why now</span>
+        <h2>AI is core to monday.com now. Your credits are ticking either way.</h2>
+        <p>With the 2026 rollout, AI became part of the platform&rsquo;s core. Sidekick, Vibe, Notetaker, Workflows and Agents all draw down AI credits &mdash; and those credits don&rsquo;t roll over from month to month.</p>
+        <p>The accounts that win aren&rsquo;t the ones that bought the most credits. They&rsquo;re the ones whose teams actually know how to use the tools. This workshop closes that gap in a single session.</p>
+      </div>
+      <div class="problem-signs">
+        <div class="problem-sign"><span class="sign-icon">&#x1F4CA;</span><p><strong>The AI features are right there in your boards</strong> &mdash; and nobody on the team has opened them.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F4B8;</span><p><strong>Credits get consumed every month</strong> &mdash; but you can&rsquo;t point to what they actually bought you.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F916;</span><p><strong>Sidekick, Vibe and Agents sound powerful</strong> &mdash; but no one&rsquo;s sure where to start or what they really do.</p></div>
+        <div class="problem-sign"><span class="sign-icon">&#x1F4AC;</span><p><strong>&ldquo;Can AI just do this for us?&rdquo;</strong> &mdash; and the honest answer is &ldquo;probably, but I&rsquo;d have to figure out how.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="section-title">Learn it. See it. Build it.</h2>
+    <p class="lead">Every lab follows the same structure: we teach the concept, show you what it looks like live in a real account, then put your team inside a pre-built environment to build it themselves &mdash; the way it actually sticks.</p>
+    <p style="font-size:15px;color:var(--ink-muted);line-height:1.75;font-weight:300;margin-top:16px;max-width:68ch;">One live session, 90&ndash;120 minutes on Zoom. Five short labs, each self-contained, each ending with something your team has built with their own hands. Bring the whole team or join as an individual &mdash; the format works either way.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section-sm">
+  <div class="wrap">
+    <span class="eyebrow">The curriculum</span>
+    <h2 class="section-title">Five labs. Five AI tools. One working system.</h2>
+    <p class="lead" style="margin-bottom:0;">From the AI fundamentals to autonomous agents &mdash; everything monday.com&rsquo;s AI Work Platform now puts at your fingertips.</p>
+    <div class="labs-grid">
+      <div class="lab-card"><div class="lab-num">Lab 01</div><h3 class="card-title">Core AI</h3><p>How monday&rsquo;s AI works, where it lives, and how credits are spent &mdash; so every later lab makes sense and nothing gets wasted.</p></div>
+      <div class="lab-card"><div class="lab-num">Lab 02</div><h3 class="card-title">AI Blocks</h3><p>Put AI to work inside your boards with AI columns that summarize, categorize and generate content automatically.</p></div>
+      <div class="lab-card"><div class="lab-num">Lab 03</div><h3 class="card-title">Sidekick</h3><p>Your in-platform assistant. Ask it to build, explain and answer questions about your account in plain language.</p></div>
+      <div class="lab-card"><div class="lab-num">Lab 04</div><h3 class="card-title">Vibe</h3><p>Describe what you want and build working monday apps with AI &mdash; no code, just prompts.</p></div>
+      <div class="lab-card"><div class="lab-num">Lab 05</div><h3 class="card-title">AI Agents</h3><p>Hand off real, multi-step work to agents that act on your boards while your team stays focused.</p></div>
+    </div>
+    <div class="format-note">
+      <strong>Also covered:</strong> AI Notetaker and AI-infused Workflows &mdash; turning meetings and routine processes into monday items and actions automatically, so the whole platform works for you.
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">The outcome</span>
+    <h2 class="section-title">Your team leaves using the tools you&rsquo;re already paying for.</h2>
+    <p class="lead">Not a demo they forget by Friday. A team that built with each tool themselves &mdash; and knows exactly when to reach for which.</p>
+    <div class="walkaway-grid">
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F916;</span><h3 class="card-title">AI your team actually uses</h3><p>They built with all five tools in a real account during the labs. No more guessing what Sidekick, Vibe or Agents are for &mdash; they know, and they&rsquo;ll keep using them.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4B8;</span><h3 class="card-title">Credits that earn their keep</h3><p>Every monthly credit maps to real output &mdash; summaries written, apps built, work handed to agents &mdash; instead of quietly expiring at the end of the month.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x26A1;</span><h3 class="card-title">A faster way to work</h3><p>The repetitive parts of monday.com &mdash; updates, categorizing, drafting, follow-ups &mdash; start happening with AI instead of by hand.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Pricing and format</span>
+    <h2 class="section-title">Live on Zoom. Led by a monday.com expert. Built around your team.</h2>
+    <p class="lead">One focused session that covers all five AI tools &mdash; with hands-on labs the whole way through.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <span class="price-label">Per Seat</span>
+        <div class="price-amount">$250 <em>per seat</em></div>
+        <p class="price-desc">Join an upcoming session. One live, 90&ndash;120 minute workshop covering all five AI tools, with hands-on labs and open Q&amp;A in a pre-built account.</p>
+        <ul class="price-perks">
+          <li>Live 90&ndash;120 min session on Zoom</li>
+          <li>Hands-on labs in a pre-built account</li>
+          <li>All five AI tools covered end to end</li>
+          <li>Open Q&amp;A with a monday.com expert</li>
+        </ul>
+        <a class="btn btn-outline" href="https://calendly.com/brandon-gauby-mbl/ai-training" target="_blank" rel="noopener">Book Your Seat</a>
+      </div>
+      <div class="price-card featured">
+        <span class="price-label">Private Team Session</span>
+        <div class="price-amount">Custom</div>
+        <p class="price-desc">Your team, your account, your workflows. We tailor the labs to how your team actually works and deliver it privately, at a pace that fits your rollout.</p>
+        <ul class="price-perks">
+          <li>Private session for your team only</li>
+          <li>Agenda tailored to your use cases</li>
+          <li>Labs mapped to your own boards</li>
+          <li>Flexible scheduling</li>
+        </ul>
+        <a class="btn btn-dark" href="contact.html">Ask About a Private Session</a>
+      </div>
+    </div>
+    <div class="format-note">
+      <strong>Newer to monday.com itself?</strong> The Builders Blueprint Series covers core architecture &mdash; boards, automations, dashboards and more. <a href="workshop.html">See the Builders Blueprint Series &rarr;</a> Ask us about pairing it with this AI workshop.
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<div class="guarantee-band">
+  <div class="wrap">
+    <div class="guarantee-inner">
+      <div class="guarantee-badge" aria-hidden="true">
+        <span class="badge-top">The</span>
+        <span class="badge-word">Magic<br><em>&#9733;</em></span>
+        <span class="badge-top">Guarantee</span>
+      </div>
+      <div class="guarantee-copy">
+        <span class="eyebrow" style="color:rgba(57,176,226,0.8);">The Magic Guarantee</span>
+        <h2>We work with you until your team is confident. No exceptions.</h2>
+        <p>Do the labs. Ask the questions. If your team doesn&rsquo;t leave confident using monday.com&rsquo;s AI tools, we keep working with you until they are &mdash; and you&rsquo;re welcome at the next session at no extra cost.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Who this is for</span>
+    <h2 class="section-title">Built for teams stepping into the AI Work Platform.</h2>
+    <p class="lead">Whether you run the account or signed off on it &mdash; if you&rsquo;re responsible for getting value out of monday.com&rsquo;s AI, this is for you.</p>
+    <div class="walkaway-grid" style="margin-top:40px;">
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F511;</span><h3 class="card-title">The monday.com champion</h3><p>You run the account, and everyone&rsquo;s asking what the new AI features do. Walk out able to answer &mdash; and to show them.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F4BC;</span><h3 class="card-title">The leader paying the bill</h3><p>You&rsquo;re buying AI credits now whether the team uses them or not. This is how you turn that spend into real output.</p></div>
+      <div class="walkaway-card"><span class="walkaway-icon">&#x1F9F1;</span><h3 class="card-title">The team ready to move faster</h3><p>You&rsquo;ve heard AI can take work off your plate. This is the hands-on session that shows your team exactly how.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Ready to put your AI credits to work?</h2>
+      <p>$250 per seat. Private team sessions available. Covered by the Magic Guarantee.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="https://calendly.com/brandon-gauby-mbl/ai-training" target="_blank" rel="noopener">Book the Workshop</a>
+      <a class="btn btn-outline-white" href="contact.html">Ask About a Private Session</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Builders Blueprint Series</a></li><li><a href="ai-workshop.html">AI Training Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
