@@ -33,21 +33,25 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ## Journey Diagram
 
-*Visual arc showing the three sequential phases of the customer relationship, with a feedback loop labeled "growth feeds the pipeline," and a Foundation & Scale band running underneath all three (cross-cutting, not a fourth step).*
+*Horizontal rail showing the three sequential phases of the customer relationship as two visual tiers — the two customer-facing phases (Sales & Growth, Delivery & Operations) in the lighter band shade, with the Accounting phase set apart in the deeper shade between them. Five stops sit along a directional rail (a tapering accent line ending in an arrowhead, reading left to right). A feedback loop labeled "growth feeds the pipeline" arcs over the top, and the Foundation & Scale band runs underneath all three (cross-cutting, not a fourth step).*
 
 **Phase groups and stops:**
 
-- **Sales & Growth**
+- **Sales & Growth** *(customer-facing — lighter band)*
   - 🌱 Leads
   - 🌳 Opportunities
-- **Won to Paid**
-  - 💰 Invoicing & Pay
-- **Delivery & Operations**
+- **Won to Paid** *(shown as "Accounting" — back office, deeper band)*
+  - 💰 Get Paid
+- **Delivery & Operations** *(customer-facing — lighter band)*
   - 💬 Project Management
   - 🛠️ Project Execution
 - **Foundation & Scale** *(band beneath all three — "across all of it")*
 
+**Foundation band line (diagram only):** Foundation & Scale — *so nothing falls between teams*
+
 **Loop annotation:** *growth feeds the pipeline*
+
+> **Wording note:** The diagram's stop under the Accounting phase reads **Get Paid** (matching the live page), not "Invoicing & Pay." The full module name in the section below remains "Financial Operations and Invoicing." The diagram band leads with the section's real name (Foundation & Scale) plus a plain-language tail; the standalone term "connectivity layer" was considered as a band label and is parked (see site parking lot) pending a decision on whether to elevate it as canonical vocabulary across all three artifacts.
 
 > **Structure note:** The arc reflects the canonical 3+1 structure (see `topic-alignment-website-to-2pager.md` in WEB-STANDARDS): three sequential phases plus Foundation & Scale as a cross-cutting layer. An earlier version showed a fourth sequential band ("Happy Customers → Easy Growth") with no matching page section; that idea is now carried by the feedback loop instead.
 
