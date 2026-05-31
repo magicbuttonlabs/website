@@ -33,22 +33,24 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ## Journey Diagram
 
-*Horizontal rail showing the three sequential phases of the customer relationship as two visual tiers — the two customer-facing phases (Sales & Growth, Delivery & Operations) in the lighter band shade, with the Accounting phase set apart in the deeper shade between them. Five stops sit along a directional rail (a tapering accent line ending in an arrowhead, reading left to right). A feedback loop labeled "growth feeds the pipeline" arcs over the top. Beneath the rail sits a single dark band carrying a connective-promise line — NOT the Foundation & Scale section. (Mobile: the rail stacks the three phase cards vertically with an accent rail bounded to the cards, then the loop note, then the connective-promise band.)*
+*Horizontal rail showing the three sequential phases of the customer relationship in a single light band. The phases are separated by hairline dividers (not by shading); the Accounting phase is marked as back office by a small italic "back office" tag under its accent-deep label, rather than by a deeper fill. (An earlier version shaded Accounting in a deeper band tier; that was dropped 2026-05-31 because the deeper fill misread as "selected/highlighted" rather than "a different kind of phase" — see shading note.) Five stops sit along a directional rail (a tapering accent line ending in an arrowhead, reading left to right) — the rail passes BENEATH the glyphs as a baseline, not through them. A feedback loop labeled "growth feeds the pipeline" arcs over the top. Beneath the rail sits a single rounded charcoal band carrying a connective-promise line — NOT the Foundation & Scale section. (Mobile: the rail stacks the three phase cards vertically with an accent rail bounded to the cards, then the loop note, then the connective-promise band; the Accounting card matches the others' light fill with an accent-deep "back office" tag.)*
 
 **Phase groups and stops:**
 
-- **Sales & Growth** *(customer-facing — lighter band)*
+- **Sales & Growth** *(customer-facing)*
   - 🌱 Leads
   - 🌳 Opportunities
-- **Won to Paid** *(shown as "Accounting" — back office, deeper band)*
+- **Won to Paid** *(shown as "Accounting" — marked "back office")*
   - 💰 Get Paid
-- **Delivery & Operations** *(customer-facing — lighter band)*
+- **Delivery & Operations** *(customer-facing)*
   - 💬 Project Management
   - 🛠️ Project Execution
 
 **Connective-promise band (diagram only):** One connected system — *across every stage, across every team*
 
 **Loop annotation:** *growth feeds the pipeline*
+
+> **Shading note (2026-05-31):** Phases are distinguished by hairline dividers + label color, not by band shading. Accounting (the back-office phase between two customer-facing ones) carries a small italic "back office" tag under its accent-deep label. The previous deeper-blue tier was removed because it read as emphasis/selection rather than category. The band beneath the rail is a rounded, inset charcoal (#2A2528, not pure ink) with centered text, to match the mobile cards' treatment and sit in the composition rather than as a hard full-bleed slab against the near-white page. The rail sits beneath the glyphs as a baseline.
 
 > **Flow / placement note (2026-05-30):** The diagram is the page's *outside-in, simple* moment — its caption is literally "the simple view from the outside in." The named **Foundation & Scale** layer is the page's most *internal* concept (the buyer is told the customer never sees it), so it must NOT appear on the diagram; it would contradict the caption and pre-empt the "Inside the business" pivot. What the buyer *does* want near the diagram is the reassurance that the stages and teams are connected — so the band below the rail carries a plain-language **connective promise** ("One connected system — across every stage, across every team") in the same outside-in voice, not the Foundation & Scale name. Foundation & Scale debuts only in its own dark section at the bottom, after the team sections, where "the connective layer — so nothing falls between teams" finally has teams to connect. The diagram no longer depicts the "+1": the *section* structure is unchanged (Foundation & Scale still exists as its own cross-cutting section), the diagram just stops previewing it.
 
