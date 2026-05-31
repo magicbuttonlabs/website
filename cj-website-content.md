@@ -48,7 +48,7 @@ From the first conversation to the long-term relationship, and every step in bet
 
 **Connective-promise band (diagram only):** One connected system — *across every stage, across every team*
 
-**Loop annotation:** *growth feeds the pipeline*
+**Loop annotation:** *happy customers buy more*
 
 > **Shading note (2026-05-31):** Phases are distinguished by hairline dividers + label color, not by band shading. Accounting (the back-office phase between two customer-facing ones) carries a small italic "back office" tag under its accent-deep label. The previous deeper-blue tier was removed because it read as emphasis/selection rather than category. The band beneath the rail is a rounded, inset charcoal (#2A2528, not pure ink) with centered text, to match the mobile cards' treatment and sit in the composition rather than as a hard full-bleed slab against the near-white page. The rail sits beneath the glyphs as a baseline.
 
