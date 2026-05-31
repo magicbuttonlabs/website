@@ -43,7 +43,7 @@ From the first conversation to the long-term relationship, and every step in bet
 - **Won to Paid**
   - 💰 Invoicing & Pay
 - **Delivery & Operations**
-  - 💬 Project Management and Communications
+  - 💬 Project Management
   - 🛠️ Project Execution
 - **Foundation & Scale** *(band beneath all three — "across all of it")*
 
