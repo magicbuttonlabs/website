@@ -1,8 +1,8 @@
 # Workshop (Builders Blueprint Series Training) — Page Content
 
-> **What this is:** Source of truth for the Workshop offering's copy. Built to the Page Content Standard (Shared copy · Render deltas · Section map). The live page is `workshop.html`; the web primer is `workshop-overview.html`. A print 2-pager does not exist yet.
+> **What this is:** Source of truth for the Workshop offering's copy. Built to the Page Content Standard (Shared copy · Render deltas · Section map). The live page is `workshop.html`; the web primer is `workshop-overview.html`; the print 2-pager is `workshop-2pager.html` (rendered to PDF at deploy time).
 >
-> **Naming flux (2026-05-30):** This offering is mid-rename. The page is titled **"Builders Blueprint Series Training,"** but entry-point labels across the site (top nav, footer, homepage card, CTA buttons on other pages) still say **"Workshop,"** and the file is still `workshop.html`. There's also an unresolved **"Builder" vs "Builders"** (singular/plural) question. See `parking-lot.md`. Copy below reflects the live page as of this date; revisit when the rename settles.
+> **Naming (updated 2026-05-30):** The **"Builder" vs "Builders"** question is **resolved — plural "Builders" (no apostrophe), locked everywhere** including the print 2-pager. Top-nav reads "Builders Blueprint," footer and homepage card read "Builders Blueprint Series," and the full page title remains "Builders Blueprint Series Training." The file is still `workshop.html`; an optional rename to `builders-blueprint.html` is parked as its own chrome sweep. See `parking-lot.md`.
 
 ---
 
