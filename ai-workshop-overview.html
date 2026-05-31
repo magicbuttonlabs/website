@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Training Workshop — Overview | Magic Button Labs</title>
+<meta name="description" content="monday.com AI Training Workshop — a shareable one-page overview. Five hands-on labs across Sidekick, Vibe, Workflows, Agents and Notetaker, so the AI credits you're already paying for turn into real output."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- AI TRAINING WORKSHOP — WEB OVERVIEW (primer) ---- */
+.tp-doc { background: var(--bg); padding-bottom: 24px; }
+
+.tp-bar { position: sticky; top: var(--nav-h); z-index: 150; background: rgba(245,245,245,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--hairline); }
+.tp-bar-inner { max-width: 880px; margin: 0 auto; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.tp-bar-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--ink-subtle); }
+.tp-bar-actions { display: flex; gap: 10px; align-items: center; }
+.btn-sm { padding: 9px 18px; font-size: 13px; }
+.btn-ghost { background: transparent; color: var(--ink-muted); border: 1.5px solid rgba(58,51,53,0.18); padding: 7px 16px; }
+.btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+.tp-toast { font-size: 12.5px; color: var(--accent-deep); font-weight: 600; opacity: 0; transition: opacity 0.25s; white-space: nowrap; }
+.tp-toast.show { opacity: 1; }
+
+.tp-sheet { max-width: 880px; margin: 0 auto; background: var(--paper); border: 1px solid var(--hairline); box-shadow: 0 1px 2px rgba(58,51,53,0.04), 0 18px 50px rgba(58,51,53,0.07); border-radius: 4px; overflow: hidden; }
+
+.tp-top { background: var(--ink); color: rgba(255,255,255,0.62); padding: 13px 44px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; display: flex; justify-content: space-between; align-items: center; }
+.tp-top .tp-top-r { color: rgba(255,255,255,0.32); letter-spacing: 0.12em; }
+
+.tp-pad { padding: 48px 44px; }
+
+/* Hero */
+.tp-hero { border-bottom: 1px solid var(--hairline); }
+.tp-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.24em; color: var(--accent); margin-bottom: 16px; }
+.tp-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: clamp(28px, 4.6vw, 44px); line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 18px; max-width: 18ch; }
+.tp-hero h1 em { font-style: italic; font-weight: 700; color: var(--accent); }
+.tp-lead { font-size: clamp(15px, 2vw, 17px); line-height: 1.6; color: var(--ink-muted); font-weight: 300; max-width: 62ch; }
+
+/* Stats */
+.tp-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); background: var(--band); }
+.tp-stat { padding: 24px 28px; border-right: 1px solid var(--hairline); }
+.tp-stat:last-child { border-right: none; }
+.tp-stat-n { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 36px; line-height: 1; color: var(--ink); letter-spacing: -0.03em; }
+.tp-stat-l { font-size: 12.5px; color: var(--ink-muted); line-height: 1.45; margin-top: 8px; }
+
+/* Problem (one line) */
+.tp-problem { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(18px, 2.4vw, 24px); line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); max-width: 32ch; }
+.tp-problem em { font-style: italic; color: var(--accent); }
+.tp-problem-sub { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; font-weight: 300; max-width: 60ch; margin-top: 14px; }
+
+/* How it works */
+.tp-how { display: flex; gap: 12px 40px; flex-wrap: wrap; margin-top: 22px; }
+.tp-how span { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 450; font-size: clamp(15px, 2vw, 18px); color: var(--ink); }
+.tp-how span .i { color: var(--accent); font-style: italic; font-weight: 300; margin-right: 8px; }
+
+/* Curriculum */
+.tp-section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(20px, 2.6vw, 26px); letter-spacing: -0.018em; color: var(--ink); margin-bottom: 22px; line-height: 1.15; }
+.tp-curriculum { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+.tp-sess { background: var(--paper); padding: 18px 16px; display: flex; flex-direction: column; gap: 6px; }
+.tp-sess .n { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: var(--accent); }
+.tp-sess h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.25; }
+.tp-also { margin-top: 16px; font-size: 13.5px; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
+.tp-also strong { color: var(--ink); font-weight: 600; }
+
+/* Pricing one-liner + guarantee */
+.tp-meta-band { background: var(--band); border-top: 1px solid var(--hairline); padding: 32px 44px; display: flex; flex-direction: column; gap: 14px; }
+.tp-price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(18px, 2.4vw, 24px); letter-spacing: -0.015em; color: var(--ink); }
+.tp-price em { font-style: italic; color: var(--accent); }
+.tp-guarantee { font-size: 14px; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
+.tp-guarantee strong { color: var(--ink); font-weight: 600; }
+
+/* CTA */
+.tp-cta { background: var(--ink); padding: 40px 44px; }
+.tp-cta h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; color: #fff; line-height: 1.15; margin-bottom: 8px; }
+.tp-cta p { font-size: 15px; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 22px; }
+.tp-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .tp-bar-inner { padding: 9px 18px; }
+  .tp-bar-label { display: none; }
+  .tp-top { padding: 12px 24px; font-size: 10px; letter-spacing: 0.14em; }
+  .tp-top .tp-top-r { display: none; }
+  .tp-pad { padding: 32px 24px; }
+  .tp-stats { grid-template-columns: 1fr; }
+  .tp-stat { border-right: none; border-bottom: 1px solid var(--hairline); display: flex; align-items: baseline; gap: 14px; padding: 16px 24px; }
+  .tp-stat:last-child { border-bottom: none; }
+  .tp-stat-l { margin-top: 0; }
+  .tp-curriculum { grid-template-columns: repeat(2, 1fr); }
+  .tp-meta-band { padding: 28px 24px; }
+  .tp-cta { padding: 32px 24px; }
+  .tp-sheet { border-radius: 0; border-left: none; border-right: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li><a href="foundation-build.html">Foundation Build</a></li>
+      <li><a href="customer-journey.html">Customer Journey</a></li>
+      <li><a href="workshop.html">Builders Blueprint</a></li>
+      <li><a href="ai-workshop.html">AI Workshop</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="tp-bar">
+  <div class="tp-bar-inner">
+    <span class="tp-bar-label">AI Training Workshop · Overview</span>
+    <div class="tp-bar-actions">
+      <span class="tp-toast" id="tp-toast">Link copied</span>
+      <button class="btn btn-ghost btn-sm" id="tp-share">Share with a colleague</button>
+      <a class="btn btn-dark btn-sm" id="tp-pdf" href="downloads/ai-workshop-2pager.pdf" target="_blank" rel="noopener" download>Download PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="tp-doc">
+  <div class="tp-sheet">
+
+    <div class="tp-top">
+      <span>Partner Resource · AI Training Workshop</span>
+      <span class="tp-top-r">magicbuttonlabs.com</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="tp-pad tp-hero">
+      <div class="tp-eyebrow">monday.com AI Training Workshop</div>
+      <h1>You&rsquo;re paying for AI now. Let&rsquo;s make it <em>pay you back.</em></h1>
+      <p class="tp-lead">monday.com made AI core to the platform &mdash; Sidekick, Vibe, Workflows, Agents and Notetaker all run on the AI credits you&rsquo;re now buying. This hands-on workshop puts your team inside a live account and teaches them to actually use all five, so those credits turn into real output instead of a line item.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="tp-stats">
+      <div class="tp-stat"><div class="tp-stat-n">5</div><div class="tp-stat-l">AI tools &mdash; Sidekick, Vibe, Workflows, Agents, Notetaker</div></div>
+      <div class="tp-stat"><div class="tp-stat-n">90&ndash;120</div><div class="tp-stat-l">minutes &mdash; one focused live session on Zoom</div></div>
+      <div class="tp-stat"><div class="tp-stat-n">$250</div><div class="tp-stat-l">per seat &mdash; hands-on labs in a pre-built account</div></div>
+    </div>
+
+    <!-- Problem -->
+    <div class="tp-pad">
+      <p class="tp-problem">AI is core to monday.com now. <em>Your credits are ticking either way.</em></p>
+      <p class="tp-problem-sub">Sidekick, Vibe, Notetaker, Workflows and Agents all draw down credits that don&rsquo;t roll over month to month. The teams that win aren&rsquo;t the ones who bought the most &mdash; they&rsquo;re the ones who know how to use them. This closes that gap in one session.</p>
+      <div class="tp-how">
+        <span><span class="i">i.</span>Learn it</span>
+        <span><span class="i">ii.</span>See it</span>
+        <span><span class="i">iii.</span>Build it</span>
+      </div>
+    </div>
+
+    <!-- Curriculum -->
+    <div class="tp-pad" style="padding-top:0;">
+      <h3 class="tp-section-title">Five labs. Five AI tools. One working system.</h3>
+      <div class="tp-curriculum">
+        <div class="tp-sess"><span class="n">01</span><h4>Core AI</h4></div>
+        <div class="tp-sess"><span class="n">02</span><h4>AI Blocks</h4></div>
+        <div class="tp-sess"><span class="n">03</span><h4>Sidekick</h4></div>
+        <div class="tp-sess"><span class="n">04</span><h4>Vibe</h4></div>
+        <div class="tp-sess"><span class="n">05</span><h4>AI Agents</h4></div>
+      </div>
+      <p class="tp-also"><strong>Also covered:</strong> AI Notetaker and AI-infused Workflows &mdash; meetings and routine processes become monday items and actions automatically.</p>
+    </div>
+
+    <!-- Pricing + guarantee -->
+    <div class="tp-meta-band">
+      <div class="tp-price">Per seat <em>$250</em> &middot; Private team sessions available</div>
+      <div class="tp-guarantee"><strong>The Magic Guarantee:</strong> if your team doesn&rsquo;t leave confident using monday.com&rsquo;s AI tools, we keep working with you until they are &mdash; and you&rsquo;re welcome at the next session at no extra cost.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="tp-cta">
+      <h2>Ready to put your AI credits to work?</h2>
+      <p>Live on Zoom, led by a monday.com expert, built around your team.</p>
+      <div class="tp-cta-actions">
+        <a class="btn btn-accent" href="ai-workshop.html">See the full workshop</a>
+        <a class="btn btn-outline-white" href="https://calendly.com/brandon-gauby-mbl/ai-training" target="_blank" rel="noopener">Book the Workshop</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Builders Blueprint Series</a></li><li><a href="ai-workshop.html">AI Training Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('tp-share');
+    var toast = document.getElementById('tp-toast');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var url = window.location.href;
+      var done = function () {
+        toast.classList.add('show');
+        setTimeout(function () { toast.classList.remove('show'); }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done).catch(done);
+      } else {
+        var t = document.createElement('textarea');
+        t.value = url; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(t); done();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
