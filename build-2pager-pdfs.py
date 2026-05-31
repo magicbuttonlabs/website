@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DOWNLOADS = os.path.join(ROOT, "downloads")
 FONT_CSS = os.path.join(ROOT, "fonts-2pager.css")
 
-DOCS = ["customer-journey-2pager", "foundation-build-2pager", "workshop-2pager"]
+DOCS = ["customer-journey-2pager", "foundation-build-2pager", "workshop-2pager", "ai-workshop-2pager"]
 
 FONTS = [
     ("Plus Jakarta Sans", "400", "normal", "plus-jakarta-sans-latin-400-normal.woff2"),
