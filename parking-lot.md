@@ -70,9 +70,9 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 ### PDF hosting for "Download PDF" — RESOLVED (build-on-push via GitHub Action)
 **Status:** Done 2026-05-30
 **What:** PDFs are generated at deploy time by a GitHub Action and served from GitHub Pages — no binary ever lives in the Trove. Architecture:
-- Three slim 2-pager HTML sources committed to the instance: `customer-journey-2pager.html`, `foundation-build-2pager.html`, `workshop-2pager.html` (~16KB each; they `<link>` a shared `fonts-2pager.css`).
+- Four slim 2-pager HTML sources committed to the instance: `customer-journey-2pager.html`, `foundation-build-2pager.html`, `workshop-2pager.html`, `ai-workshop-2pager.html` (~16KB each; they `<link>` a shared `fonts-2pager.css`).
 - `build-2pager-pdfs.py` (committed) generates `fonts-2pager.css` from the npm `@fontsource` packages at build time, then renders each HTML → `downloads/*.pdf` via Playwright/Chromium, running the validation gate (2 pages, Letter). Build fails if the gate fails.
-- The three primers' "Download PDF" buttons now point at `downloads/<slug>-2pager.pdf` (live).
+- The four primers' "Download PDF" buttons now point at `downloads/<slug>-2pager.pdf` (live).
 **⚠️ ONE MANUAL STEP REMAINING:** `deploy.yml` could not be written from this session (GitHub blocks workflow-file writes via the Trove integration). The render step must be added to `.github/workflows/deploy.yml` by hand — see the "deploy.yml manual edit" item below. **Until that edit lands, the PDFs are NOT generated and the download buttons will 404.**
 
 ### deploy.yml manual edit — add the PDF render step (⚠️ ACTION NEEDED)
