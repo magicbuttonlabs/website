@@ -235,25 +235,32 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
       <span class="eyebrow">The customer&rsquo;s path through your business</span>
       <p>This is the loop your customer travels &mdash; the simple view from the outside in.</p>
     </div>
-    <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" role="img">
-      <title>The customer journey arc</title>
-      <defs><marker id="loop-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 8 5 L 0 10 Z" fill="#39B0E2"/></marker></defs>
-      <rect class="band" x="20" y="120" width="420" height="120" rx="6"/>
-      <text class="group-label" x="230" y="152" text-anchor="middle">Sales &amp; Growth</text>
-      <rect class="band-deeper" x="450" y="120" width="180" height="120" rx="6"/>
-      <text class="group-label" x="540" y="152" text-anchor="middle">Accounting</text>
-      <rect class="band" x="640" y="120" width="420" height="120" rx="6"/>
-      <text class="group-label" x="850" y="152" text-anchor="middle">Delivery &amp; Operations</text>
-      <rect class="foundation-band" x="20" y="252" width="1040" height="34" rx="6"/>
-      <text class="foundation-band-label" x="540" y="274" text-anchor="middle">Foundation &amp; Scale &mdash; across all of it</text>
-      <path class="loop-arrow" d="M 970 116 C 970 18, 270 18, 270 116" marker-end="url(#loop-head)"/>
-      <text class="loop-label" x="630" y="14" text-anchor="middle">growth feeds the pipeline</text>
-      <text class="glyph-lg" x="120" y="186" text-anchor="middle" dominant-baseline="middle">🌱</text><text class="stop-title" x="120" y="220" text-anchor="middle">Leads</text>
-      <text class="glyph-lg" x="340" y="186" text-anchor="middle" dominant-baseline="middle">🌳</text><text class="stop-title" x="340" y="220" text-anchor="middle">Opportunities</text>
-      <text class="glyph-lg" x="540" y="186" text-anchor="middle" dominant-baseline="middle">💰</text><text class="stop-title" x="540" y="220" text-anchor="middle">Get Paid</text>
-      <text class="glyph-lg" x="740" y="186" text-anchor="middle" dominant-baseline="middle">💬</text><text class="stop-title" x="740" y="220" text-anchor="middle">Project Management</text>
-      <text class="glyph-lg" x="960" y="186" text-anchor="middle" dominant-baseline="middle">🛠️</text><text class="stop-title" x="960" y="220" text-anchor="middle">Project Execution</text>
+    <svg viewBox="0 0 1040 150" xmlns="http://www.w3.org/2000/svg" role="img" class="journey-rail">
+      <title>The customer journey rail</title>
+      <defs>
+        <linearGradient id="rail-taper" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#39B0E2" stop-opacity="0.25"/>
+          <stop offset="1" stop-color="#39B0E2" stop-opacity="0.85"/>
+        </linearGradient>
+        <marker id="loop-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 8 5 L 0 10 Z" fill="#39B0E2"/></marker>
+      </defs>
+      <rect class="band" x="0" y="0" width="410" height="150" rx="6"/>
+      <rect class="band-deeper" x="410" y="0" width="220" height="150" rx="6"/>
+      <rect class="band" x="630" y="0" width="410" height="150" rx="6"/>
+      <text class="group-label" x="205" y="26" text-anchor="middle">Sales &amp; Growth</text>
+      <text class="group-label acct" x="520" y="26" text-anchor="middle">Accounting</text>
+      <text class="group-label" x="835" y="26" text-anchor="middle">Delivery &amp; Operations</text>
+      <path class="loop-arrow" d="M 930 -2 C 930 -54 110 -54 110 -2" marker-end="url(#loop-head)"/>
+      <text class="loop-label" x="520" y="-44" text-anchor="middle">growth feeds the pipeline</text>
+      <path d="M70 85.2 L955 82 L955 90 L70 86.8 Z" fill="url(#rail-taper)"/>
+      <path d="M951 78 l16 8 l-16 8 Z" fill="#39B0E2"/>
+      <text class="glyph-lg" x="110" y="96" text-anchor="middle" dominant-baseline="middle">🌱</text><text class="stop-title" x="110" y="128" text-anchor="middle">Leads</text>
+      <text class="glyph-lg" x="300" y="96" text-anchor="middle" dominant-baseline="middle">🌳</text><text class="stop-title" x="300" y="128" text-anchor="middle">Opportunities</text>
+      <text class="glyph-lg" x="520" y="96" text-anchor="middle" dominant-baseline="middle">💰</text><text class="stop-title" x="520" y="128" text-anchor="middle">Get Paid</text>
+      <text class="glyph-lg" x="740" y="96" text-anchor="middle" dominant-baseline="middle">💬</text><text class="stop-title" x="740" y="128" text-anchor="middle">Project Management</text>
+      <text class="glyph-lg" x="930" y="96" text-anchor="middle" dominant-baseline="middle">🛠️</text><text class="stop-title" x="930" y="128" text-anchor="middle">Project Execution</text>
     </svg>
+    <div class="journey-foundation"><span class="jf-name">Foundation &amp; Scale</span><span class="jf-sep"></span><span class="jf-tail">so nothing falls between teams</span></div>
   </div>
 
   <div class="handoff">
