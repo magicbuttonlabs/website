@@ -33,10 +33,21 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 ## Open
 
 ### Solutions overview page — needed for nav consolidation and CTA band destinations
-**Status:** Open — new page to build
-**Context:** The top nav currently lists four offerings as individual links (Foundation Build · Customer Journey · Builders Blueprint · AI Workshop), which is getting horizontally too long. A `solutions.html` overview page would let the nav collapse to a single "Solutions" link and give all four offering pages a meaningful place to send curious visitors who want to compare rather than convert.
-**CTA band note (2026-05-30):** `customer-journey.html` and `foundation-build.html` previously had a third CTA-band button cross-linking to a sibling offering ("See the Builders Blueprint Series" / "See the Customer Journey Solution"). Both were removed this session — the pattern was too linear and pointed at the wrong offerings. When `solutions.html` exists, add back a third ghost button on each offering page's CTA band: "See all solutions" → `solutions.html`.
-**Action needed:** Design and build `solutions.html`. Then: (1) Collapse the four individual nav items into a single "Solutions" link → `solutions.html`; (2) add the "See all solutions" third button to the CTA bands of `customer-journey.html`, `foundation-build.html`, and the two workshop pages if appropriate.
+**Status:** Done 2026-05-31
+**What landed:** `solutions.html` built (Enable / Deploy & Build / Support & Maintain groups, richer cards with meta lines, standard chrome). Nav swept across all 13 pages — 4 individual offering links replaced with single "Solutions" → `solutions.html`. CTA bands on `customer-journey.html` and `foundation-build.html` restored with "See all solutions" as the third button.
+**Still open:** Workshop/AI Workshop CTA bands — see item below.
+
+### Workshop + AI Workshop CTA bands — "See all solutions" decision pending
+**Status:** Open
+**Context:** `workshop.html` and `ai-workshop.html` both have 3-button CTA bands where slot 3 is a second conversion action ("Book a Private Session" / "Ask About a Private Session" → contact.html). Adding "See all solutions" as a 4th button would be cluttered; replacing slot 3 removes a conversion path. Decision needed before touching these.
+**Options:** (a) Replace slot 3 with "See all solutions" — cleaner, slight conversion trade-off; (b) Keep as-is — these pages already have a strong conversion pattern and the nav now handles discovery.
+
+### `testimonials.html` — stale chrome, needs full refresh
+**Status:** Open
+**Context:** `testimonials.html` was not on the standard chrome — its nav had only two offering links (Workshop + Customer Journey, both old labels) and its footer listed only CJ, Workshop, and "Implementation" (predates the current four-offering structure). Nav was patched this session (now shows Solutions). Footer and CTA band still need to be brought to the current standard.
+**Action needed:** Full chrome refresh on `testimonials.html` — standard footer (4-offering Solutions col, Company col, Connect col) + CTA band aligned with current pattern.
+
+
 
 
 
