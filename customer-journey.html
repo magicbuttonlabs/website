@@ -85,12 +85,14 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; bac
 .journey.rail-animate .jm-rail { animation: railDrawV 1.0s cubic-bezier(0.22,0.61,0.36,1) both; }
 .journey.rail-animate .loop-arrow { stroke-dasharray: 100; animation: loopDraw 0.85s cubic-bezier(0.22,0.61,0.36,1) 0.8s both; }
 .journey.rail-animate .loop-head-tip { animation: loopTip 0.4s ease-out 1.4s both; }
+.journey.rail-animate .loop-label { animation: loopLabel 0.6s ease-out 0.85s both; }
 @keyframes railDraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes railArrow { 0%, 72% { opacity: 0; transform: scale(0.6); } 86% { opacity: 1; transform: scale(1.15); } 100% { opacity: 1; transform: scale(1); } }
 @keyframes railDrawV { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes loopDraw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
 @keyframes loopTip { from { opacity: 0; } to { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .journey.rail-animate .rail-fill, .journey.rail-animate .rail-arrow, .journey.rail-animate .jm-rail, .journey.rail-animate .loop-arrow, .journey.rail-animate .loop-head-tip { animation: none !important; } }
+@keyframes loopLabel { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .journey.rail-animate .rail-fill, .journey.rail-animate .rail-arrow, .journey.rail-animate .jm-rail, .journey.rail-animate .loop-arrow, .journey.rail-animate .loop-head-tip, .journey.rail-animate .loop-label { animation: none !important; } }
 /* Transition into the departments */
 .handoff { margin-top: 64px; padding: 36px 0 0; border-top: 1px solid var(--rule); }
 .handoff .eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); display: block; margin-bottom: 14px; }
