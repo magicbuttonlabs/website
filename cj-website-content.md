@@ -72,7 +72,7 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ---
 
-## i. Sales & Growth
+## 1. Sales & Growth
 
 **Section intro:**
 Every lead caught, every opportunity tracked, every deal closed with the right product on the right terms — and the whole business ready before the ink dries.
