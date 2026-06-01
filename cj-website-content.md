@@ -64,9 +64,9 @@ From the first conversation to the long-term relationship, and every step in bet
 
 ## Section Navigation
 
-- i. Sales & Growth
-- ii. Won to Paid
-- iii. Delivery & Operations
+- 1. Sales & Growth
+- 2. Won to Paid
+- 3. Delivery & Operations
 
 > **Diagram thread note (2026-05-31):** On the live page (`customer-journey.html`) the section-map links carry small leading glyphs mirroring the diagram's stops for each phase — Sales & Growth 🌱🌳, Accounting 💰, Delivery & Operations 💬🛠️ — as a visual thread connecting the outside-in diagram to the team-home sections below it. The glyphs are decorative (`aria-hidden`, so screen readers read only the team name); keep them in sync if the diagram's stop glyphs ever change. Primer and 2-pager are unaffected.
 
