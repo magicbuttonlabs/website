@@ -237,9 +237,9 @@ magicbuttonlabs.com
 |---|---|---|---|
 | Hero | headline + lead + 3 stats | masthead + headline + lead + promise + 3 stats | page 1 hero (headline + lead + meta + 3 stats) — headline differs, see Delta 1 |
 | Journey diagram | visual rail, 3 phases + connective-promise band + loop (no Foundation & Scale on the diagram — see flow note) | — (no diagram) | — (pillar grid carries structure) |
-| i. Sales & Growth | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
-| ii. Won to Paid (shown as "Accounting") | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
-| iii. Delivery & Operations | full section, 4 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| 1. Sales & Growth | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| 2. Won to Paid (shown as "Accounting") | full section, 3 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
+| 3. Delivery & Operations | full section, 4 modules w/ descriptions | team-home card (names only) | page 1 pillar card (names only) |
 | Foundation & Scale | cross-cutting section, 4 modules | full-width dark band (names only) | page 1 full-width band beneath pillars |
 | Process steps | — (not on website, see Delta 3) | — | page 1 four-step grid (Install/Learn/Use/Refine) |
 | Proof / outcomes | testimonials + thesis block | thesis block only | page 2 context band + 3 outcomes |
