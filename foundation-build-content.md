@@ -109,7 +109,7 @@ Canonical section → where it lives in each artifact. For the CJ-style canonica
 | What you get | `.fb-get` band + `.fb-outcomes` | "what you get" band + outcomes | page 2 outcomes |
 | CTA | `.cta-band` (2 buttons) + hero "Share this overview" | single CTA → full page; Contact secondary | page 2 CTA footer (1 CTA) |
 
-**Stage names are canonical:** i. Analyze · ii. Prototype · iii. Align. Used identically across all artifacts. Do not rename on one without the others.
+**Stage names are canonical:** 01. Analyze · 02. Prototype · 03. Align. Used identically across all artifacts. Do not rename on one without the others.
 
 ---
 
