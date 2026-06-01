@@ -90,7 +90,7 @@ Define what you sell once. Sales picks from the menu, delivery knows what was pr
 
 ---
 
-## ii. Won to Paid
+## 2. Won to Paid
 
 **Section intro:**
 From signature to payment to commission. The handoff, the invoice, the payout — handled, without the usual chaos in between.
