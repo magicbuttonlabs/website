@@ -105,7 +105,7 @@ Canonical section → where it lives in each artifact. For the CJ-style canonica
 | Hero | `.fb-hero` (headline + lead + actions) | headline + lead + meta line | page 1 hero (headline + lead + meta + 3 stats) |
 | Stats (3/1/0) | — (Delta B) | 3-stat strip | page 1 hero stat strip |
 | What this is/isn't | `.fb-not-grid` two-column do/don't | two-column do/don't (kept) | folded into hero stat "0" (Delta A) |
-| Design stages (i/ii/iii) | `.fb-stages` 3-col grid | 3-stage grid | page 1 pillar grid (Analyze/Prototype/Align) |
+| Design stages (01/02/03) | `.fb-stages` 3-col grid | 3-stage grid | page 1 pillar grid (Analyze/Prototype/Align) |
 | What you get | `.fb-get` band + `.fb-outcomes` | "what you get" band + outcomes | page 2 outcomes |
 | CTA | `.cta-band` (2 buttons) + hero "Share this overview" | single CTA → full page; Contact secondary | page 2 CTA footer (1 CTA) |
 
