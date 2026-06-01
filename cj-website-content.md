@@ -108,7 +108,7 @@ The delivery team starts prepping the moment a deal is real. No more "we just si
 
 ---
 
-## iii. Delivery & Operations
+## 3. Delivery & Operations
 
 **Section intro:**
 Where the work actually happens. Project health, hours burned, capacity, and a place where every client collaborates with you — all connected, all visible.
