@@ -37,9 +37,9 @@ The canonical prose, section by section. Both artifacts draw from this. A string
 
 ### The design stages
 - **Section title:** Three stages, one working prototype.
-- **i. Analyze** — Understand the work — how your business actually runs, and what the system has to carry. *(2-pager longer variant ⚠️: "Before a single board is shaped, we map the real shape of the work.")*
-- **ii. Prototype** — Shape the system — an end-to-end architecture, built and working in monday.com. *(2-pager longer variant ⚠️: "A real prototype you can see and click through, not a diagram on a slide.")*
-- **iii. Align** — Validate the path forward — a defined starting point your team owns and can build on.
+- **01. Analyze** — Understand the work — how your business actually runs, and what the system has to carry. *(2-pager longer variant ⚠️: "Before a single board is shaped, we map the real shape of the work.")*
+- **02. Prototype** — Shape the system — an end-to-end architecture, built and working in monday.com. *(2-pager longer variant ⚠️: "A real prototype you can see and click through, not a diagram on a slide.")*
+- **03. Align** — Validate the path forward — a defined starting point your team owns and can build on.
 
 ### What you get
 - **Headline pair:** A *validated start*. / A *clearer path* forward.
