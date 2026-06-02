@@ -5,5 +5,71 @@
     "company": "Tutela Solutions",
     "featured": true,
     "tags": ["customer-journey"]
+  },
+  {
+    "id": "mbl-t-001",
+    "quote": "This definitely meets and if not exceeds expectations. Hats off to you for manifesting what has been in my head for over a year and bringing it to fruition and making it a reality. I'm so pumped, I can't even tell you.",
+    "name": "Construction & trades",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-002",
+    "quote": "The other company basically told me they don't help build out. The fact that you guys do — I want to fly to wherever you are and kiss the ground you walk on. For a small company, this is a huge help.",
+    "name": "Entertainment",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-003",
+    "quote": "As far as standing tools up goes, this is one of the best experiences that I've had. Truly.",
+    "name": "Advertising agency",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-004",
+    "quote": "No, this is great. This is actually really fun, to be honest.",
+    "name": "Home services",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-005",
+    "quote": "I'm excited to keep playing with this — when you start doing it in real time and working with the software, it really does make an impact.",
+    "name": "Financial services",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-006",
+    "quote": "Thank you for the strategy-to-execution templates — they're like candy for us, we've been digging into it.",
+    "name": "Professional association",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-007",
+    "quote": "I'm geeking out right now. I love it. I love it so much.",
+    "name": "Creative agency",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-008",
+    "quote": "I think we still chose the right partner.",
+    "name": "Business consulting",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-009",
+    "quote": "This is great. This is great work.",
+    "name": "Technical services",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-010",
+    "quote": "It's one of those magic button things — that was the best. I appreciate all that you guys are doing.",
+    "name": "Construction & trades",
+    "company": "monday.com client"
+  },
+  {
+    "id": "mbl-t-011",
+    "quote": "We're all on the same page now. And this is good, good stuff.",
+    "name": "Financial services",
+    "company": "monday.com client"
   }
 ]
