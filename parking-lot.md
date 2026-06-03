@@ -155,10 +155,10 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 
 > First native blog post shipped — the **Anti-Patterns** launch, first run through the content engine (`topic-content-engine.md` in the canon, currently a temporary tenant there). Post: `blog-monday-portfolio-rollup-doesnt-scale.html`. Provenance + LinkedIn/email drafts: `blog-anti-patterns-source.md`.
 
-### Founder review of the first Anti-Patterns post
-**Status:** Open — review before the distribution push
-**Context:** `blog-monday-portfolio-rollup-doesnt-scale.html` is published and featured on `blog.html`, drafted from the call corpus (pattern lane, de-identified). It makes pointed but defensible claims about monday.com's portfolio/project solution. The LinkedIn + email versions sit in `blog-anti-patterns-source.md` ready to go.
-**Action needed:** Ethan read-through; greenlight (or soften) the post and the claims before the LinkedIn/email push.
+### Founder review of the first Anti-Patterns post — RESOLVED 2026-06-02
+**Status:** Done — published. Greenlit ("publish it"); the site isn't the live DNS target yet, so this is low-risk.
+**Context:** `blog-monday-portfolio-rollup-doesnt-scale.html` is published and featured on `blog.html` (pattern lane, de-identified; claims defensible and on-tape). The `status` flag was cleared to `published` in both the post and `blog-anti-patterns-source.md`.
+**Distribution note:** the LinkedIn + email drafts (in `blog-anti-patterns-source.md`) are ready, but they link to the blog URL — hold the push until the site is the live destination (DNS still points to the old Wix site).
 
 ### Blog post hero images — no image pipeline yet
 **Status:** Open
