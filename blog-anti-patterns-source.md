@@ -10,7 +10,7 @@
 
 ## Entry 1 — "The portfolio rollup that doesn't scale"
 
-**Status:** Published 2026-06-02 (pending founder review) · **Lane:** Pattern · **Blog post:** `blog-monday-portfolio-rollup-doesnt-scale.html`
+**Status:** Published 2026-06-02 · **Lane:** Pattern · **Blog post:** `blog-monday-portfolio-rollup-doesnt-scale.html`
 
 ### The anti-pattern
 monday.com's Work Management **portfolio-and-project solution**: every project board rolls up into a single high-level "portfolio" board via a connected-boards column. It's the default most Monday reps and consultants reach for, it demos beautifully, and it's an upsell to Work Management Enterprise. It breaks at scale.
