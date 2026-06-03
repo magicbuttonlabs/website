@@ -153,7 +153,9 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 
 ## Blog / Content engine (added 2026-06-02)
 
-> First native blog post shipped — the **Anti-Patterns** launch, first run through the content engine (`topic-content-engine.md` in the canon, currently a temporary tenant there). Post: `blog-monday-portfolio-rollup-doesnt-scale.html`. Provenance + LinkedIn/email drafts: `blog-anti-patterns-source.md`.
+> First native blog post shipped — the **Anti-Patterns** launch, first run through the content engine. Post: `blog-monday-portfolio-rollup-doesnt-scale.html`.
+>
+> **Relocation note (2026-06-03):** the content engine standard and all four segment/cluster source docs were moved out of this instance (and the web-standards canon) into the new **Marketing Team Trove** (`magicbuttonlabs/team-marketing`) and renamed to its `source-*.md` convention — e.g. `blog-anti-patterns-source.md` → `source-anti-patterns.md`. The published blog post files still live here; their `POST META → source:` comment pointers now name the old filenames and are slightly stale (harmless — they're comments). For provenance + the LinkedIn/email drafts, look in the Marketing Trove, not here.
 
 ### Founder review of the first Anti-Patterns post — RESOLVED 2026-06-02
 **Status:** Done — published. Greenlit ("publish it"); the site isn't the live DNS target yet, so this is low-risk.
