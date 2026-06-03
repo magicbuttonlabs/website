@@ -449,3 +449,103 @@ h3.card-title {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* === TESTIMONIAL MARQUEE (shared component) === */
+.tm-section {
+  padding: 64px 0;
+  background: var(--band);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  overflow: hidden;
+}
+.tm-head {
+  max-width: var(--max-w);
+  margin: 0 auto 28px;
+  padding: var(--gap);
+}
+.tm-head .eyebrow { margin-bottom: 8px; }
+.tm-head h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  line-height: 1.15;
+}
+/* Edge fade so cards ease in/out instead of clipping hard */
+.tm-marquee {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.tm-track {
+  display: flex;
+  width: max-content;
+  animation: tm-scroll 80s linear infinite;
+}
+/* Each set carries one trailing gap (padding-right) so translateX(-50%)
+   advances by exactly one set — seamless, no half-gap jump. */
+.tm-set {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+}
+.tm-marquee:hover .tm-track,
+.tm-marquee:focus-within .tm-track { animation-play-state: paused; }
+.tm-card {
+  flex: 0 0 340px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tm-card blockquote {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: italic;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+.tm-card blockquote::before {
+  content: "\201C";
+  color: var(--accent);
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 0;
+  vertical-align: -8px;
+  margin-right: 2px;
+}
+.tm-attr { display: flex; flex-direction: column; gap: 2px; margin-top: auto; }
+.tm-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.tm-company {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-subtle);
+}
+.tm-more { text-align: center; margin-top: 32px; }
+@keyframes tm-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+/* Respect reduced-motion: stop the scroll, let users swipe through instead */
+@media (prefers-reduced-motion: reduce) {
+  .tm-marquee { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tm-track { animation: none; }
+}
+@media (max-width: 600px) {
+  .tm-card { flex-basis: 280px; padding: 22px 24px; }
+}
