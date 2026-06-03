@@ -120,6 +120,24 @@
 
   // --- Boot ------------------------------------------------------
 
+  function renderMarquee(el, list) {
+    if (!list.length) return;
+    var cards = list.map(function (t) {
+      return '<figure class="tm-card">' +
+               "<blockquote>" + esc(t.quote) + "</blockquote>" +
+               '<figcaption class="tm-attr"><span class="tm-name">' + esc(t.name) + "</span>" +
+               (t.company ? '<span class="tm-company">' + esc(t.company) + "</span>" : "") +
+             "</figcaption></figure>";
+    }).join("");
+    // Two identical sets: the first is read by AT, the second is a visual-only
+    // clone for a seamless loop (CSS animates the track by exactly one set).
+    el.innerHTML =
+      '<div class="tm-track">' +
+        '<div class="tm-set">' + cards + "</div>" +
+        '<div class="tm-set" aria-hidden="true">' + cards + "</div>" +
+      "</div>";
+  }
+
   function render(list) {
     if (!Array.isArray(list)) return;
     document.querySelectorAll('[data-testimonials]').forEach(function (el) {
