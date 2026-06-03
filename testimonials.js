@@ -146,6 +146,7 @@
         case "featured-quote": renderFeaturedQuote(el, list); break;
         case "list":           renderList(el, list); break;
         case "wall":           renderWall(el, list); break;
+        case "marquee":        renderMarquee(el, list); break;
       }
     });
   }
