@@ -63,5 +63,39 @@ Truthful/qualitative only ("call after call," "company after company," "we've li
 
 ---
 
+---
+
+## Entry 2 — "Y'all made a mess of monday"
+
+**Status:** Draft / intro seeded · **Lane:** Pattern · **Blog post:** `blog-monday-instance-mess.html` *(slug TBD)*
+
+### The anti-pattern
+A monday.com instance that grew organically — boards pile up, notifications get ignored, columns multiply without anyone fully agreeing on what they mean. The team either stops using the system or uses it in ways that weren't intended. Almost universal; almost never talked about honestly.
+
+### Provenance
+Pattern lane — de-identified. Source: field observation across multiple engagements. *(AI-QB corpus extraction pending; use frequency framing standard below.)*
+
+### Frequency framing
+Qualitative/truthful: "almost everyone does this," "we've seen it across every type of team." Do not invent a precise count.
+
+### Seeded intro draft (approved tone — do not rewrite without cause)
+
+> Let's be honest — y'all made a mess of monday. 😆
+>
+> Don't worry, so did we the first time. Now everyone oohs and ahhs when they see our instance.
+>
+> We learn by doing. I renovated my bathroom, and by the end I knew exactly what not to do. Unfortunately, that baseboard in the corner still doesn't look quite right.
+
+**Tone notes:** Direct address + self-deprecating admission collapses expert/client distance immediately. The bathroom/baseboard detail is specific and human — preserve it. Short sentences with rhythm. The arc is: roast → shared redemption → honest humility. This is the voice the whole post should sustain.
+
+### Synthesis (to develop)
+*TBD — needs corpus extraction. Core argument: organic growth is predictable, not shameful; renovation is a defined process, not a rebuild from scratch. The anti-pattern is letting the mess persist, not making the mess.*
+
+### Atomized channel drafts
+*TBD — draft the blog post first; waterfall to LinkedIn + email from there.*
+
+---
+
 ## Changelog
+- **2026-06-02 — Entry 2 seeded (monday instance mess).** Intro draft approved in conversation; captured with tone notes. Post not yet written; corpus extraction pending.
 - **2026-06-02 — Created; Entry 1 (portfolio rollup) drafted and shipped across blog + LinkedIn + email.** First run through the content engine; launch piece for the Anti-Patterns segment.
