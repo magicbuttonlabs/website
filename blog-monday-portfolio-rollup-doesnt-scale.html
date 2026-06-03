@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- POST META
+title:     The monday.com portfolio rollup that doesn't scale (and what we build instead)
+slug:      monday-portfolio-rollup-doesnt-scale
+segment:   Anti-Patterns
+category:  Anti-Patterns
+date:      2026-06-02
+authors:   Ethan Foulkes
+excerpt:   The portfolio-and-project rollup is the setup most monday.com reps and consultants reach for first. It demos beautifully — then it breaks. Here's how it fails at scale, and the native-board approach we use instead.
+hero:      (none yet — text hero; real image is a follow-up, see parking-lot.md)
+reading:   7 min
+source:    Content engine — Anti-Patterns pillar source doc (blog-anti-patterns-source.md). Pattern lane, de-identified.
+status:    published (pending founder review)
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The monday.com portfolio rollup that doesn&rsquo;t scale | Magic Button Labs</title>
+<meta name="description" content="The portfolio-and-project rollup is the setup most monday.com reps and consultants reach for first. It demos beautifully — then it breaks. Here's how it fails at scale, and the native-board approach we use instead."/>
+<link rel="canonical" href="https://www.magicbuttonlabs.com/blog-monday-portfolio-rollup-doesnt-scale.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="The monday.com portfolio rollup that doesn't scale (and what we build instead)"/>
+<meta property="og:description" content="It demos beautifully, then it breaks. How the default monday.com portfolio rollup fails at scale — and what we build instead."/>
+<meta property="og:url" content="https://www.magicbuttonlabs.com/blog-monday-portfolio-rollup-doesnt-scale.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The monday.com portfolio rollup that doesn't scale"/>
+<meta name="twitter:description" content="It demos beautifully, then it breaks. How the default monday.com portfolio rollup fails at scale — and what we build instead."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* --- Article template (Anti-Patterns / blog post v1) ---
+   Promote to styles.css once a second post confirms the pattern (see topic-blog-standard.md §5). */
+.post-hero { padding: 72px 0 40px; border-bottom: 1px solid var(--hairline); }
+.post-hero .wrap { max-width: 760px; }
+.post-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: clamp(28px, 4vw, 44px); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 18px 0 0; }
+.post-hero-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 22px; font-size: 13px; color: var(--ink-subtle); }
+.post-hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--rule); }
+.post-article { padding: 56px 0 72px; }
+.post-article .wrap { max-width: 720px; }
+.post-article p { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.72; color: var(--ink-muted); font-weight: 400; margin: 0 0 22px; }
+.post-article h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.015em; color: var(--ink); line-height: 1.3; margin: 44px 0 16px; }
+.post-article h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 18px; color: var(--ink); margin: 28px 0 10px; }
+.post-article strong { color: var(--ink); font-weight: 600; }
+.post-article ol, .post-article ul { margin: 0 0 22px; padding-left: 22px; }
+.post-article li { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.7; color: var(--ink-muted); margin-bottom: 12px; }
+.post-article li strong { color: var(--ink); }
+.pullquote { margin: 36px 0; padding: 8px 0 8px 26px; border-left: 3px solid var(--accent); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: clamp(19px, 2.3vw, 23px); line-height: 1.4; letter-spacing: -0.01em; color: var(--ink); }
+.takeaways { margin: 44px 0 8px; padding: 28px 30px; background: var(--band); border: 1px solid var(--hairline); border-left: 3px solid var(--accent); }
+.takeaways h3 { margin-top: 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); }
+.takeaways ul { margin: 0; padding-left: 20px; }
+.takeaways li { font-size: 15.5px; line-height: 1.6; }
+.post-byline { display: flex; align-items: center; gap: 12px; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 14px; color: var(--ink-muted); }
+.post-byline strong { color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+.post-related { background: var(--bg); border-top: 1px solid var(--hairline); padding: 56px 0; }
+.post-related .wrap { max-width: 760px; }
+.post-related .eyebrow { color: var(--accent); }
+.related-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+.related-links a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--paper); border: 1px solid var(--hairline); padding: 12px 18px; text-decoration: none; transition: border-color 0.18s, color 0.18s; }
+.related-links a:hover { border-color: var(--accent); color: var(--accent); }
+.related-links a.soon { color: var(--ink-subtle); border-style: dashed; pointer-events: none; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.back-to-blog::before { content: '\2190'; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="post-hero">
+  <div class="wrap">
+    <a class="back-to-blog" href="blog.html">All posts</a>
+    <span class="eyebrow" style="display:block;margin-top:18px;">Anti-Patterns</span>
+    <h1>The monday.com portfolio rollup that doesn&rsquo;t scale (and what we build instead)</h1>
+    <div class="post-hero-meta">
+      <span>By Ethan Foulkes</span><span class="dot"></span>
+      <span>June 2, 2026</span><span class="dot"></span>
+      <span>7 min read</span>
+    </div>
+  </div>
+</section>
+<article class="post-article">
+  <div class="wrap">
+    <p>It always looks great in the demo. You&rsquo;re shown a single high-level &ldquo;portfolio&rdquo; board where every project rolls up into one clean view &mdash; timelines, progress, status, all in one place. Leadership nods. You buy Work Management Enterprise to get it. And for the first few projects, it works.</p>
+    <p>We&rsquo;ve watched this play out on call after call. We&rsquo;ve also watched it break, company after company. So we don&rsquo;t build portfolios this way &mdash; very intentionally &mdash; even though it&rsquo;s the setup most monday.com reps and consultants reach for first. Here&rsquo;s what goes wrong, and what we do instead.</p>
+
+    <h2>The setup almost everyone reaches for</h2>
+    <p>It&rsquo;s monday.com&rsquo;s Work Management &ldquo;portfolio and project&rdquo; solution: individual project boards roll up into a high-level portfolio board through a connected-boards column that points at all of them. It&rsquo;s the out-of-the-box answer, it demos beautifully, and it&rsquo;s an easy upsell to Enterprise. None of that makes it the right foundation to scale on.</p>
+
+    <h2>Where it breaks</h2>
+    <h3>1. One private board can break the whole view</h3>
+    <p>The rollup is a single connected-boards column wired to every project board. The moment someone locks one board down &mdash; makes it private, or shareable to a guest &mdash; those connections can break, and <strong>everyone loses the high-level rollup</strong>, not just the board that changed. We&rsquo;ve had clients live through this, and untangling it has taken monday.com&rsquo;s own support weeks. Permissioning is the single most common way we see this architecture fall over.</p>
+    <h3>2. It recalculates in your browser</h3>
+    <p>The aggregate isn&rsquo;t computed once and stored. It&rsquo;s recalculated on the front end &mdash; your machine queries every source board and rebuilds the rolled-up board on the fly. That&rsquo;s fine for a handful of projects. As the portfolio grows, it gets slow and unreliable, because the work scales with every board you add.</p>
+    <h3>3. Deletes leave litter</h3>
+    <p>Delete a project board and its portfolio row disappears with it &mdash; but not the other way around. Delete the portfolio item and the board stays behind. So the more your team actually uses the system, the more orphaned entries pile up, with no clean way to clear them. At scale, the &ldquo;single source of truth&rdquo; slowly fills with clutter.</p>
+    <h3>4. The double-license trap</h3>
+    <p>To get the portfolio solution, you bought Work Management Enterprise on top of the rest of your monday.com. When it doesn&rsquo;t hold up and the reporting gets rebuilt natively, the honest question follows: <em>then why are we paying for both?</em> Most of the time, you don&rsquo;t need to.</p>
+
+    <div class="pullquote">Executives don&rsquo;t want an aggregated summary of all the weeds. They want to think about the high-level boards strategically. They don&rsquo;t need it all rolling up.</div>
+
+    <h2>The deeper reason it&rsquo;s the wrong model</h2>
+    <p>Every one of those failures traces back to one assumption: that leaders want every low-level task rolled up into one place. They don&rsquo;t. Executives think in terms of strategic, high-level boards &mdash; not an aggregated summary of every task across every team. The fix isn&rsquo;t a better rollup. It&rsquo;s not rolling everything up in the first place.</p>
+
+    <h2>What we build instead</h2>
+    <p>We rebuild the same executive reporting with native boards &mdash; no special portfolio product required. The shape looks like this:</p>
+    <ul>
+      <li><strong>A high-level board where each item is a project</strong>, living as an ordinary board, connected to your master-data boards: organization, owner, referrer, the opportunity it came from.</li>
+      <li><strong>Reporting from dashboards that group by that master data</strong> &mdash; open deliveries by industry, by lead, by owner &mdash; without ever scanning the underlying task boards. The insight comes from how the data is connected, not from rolling the weeds upward.</li>
+      <li><strong>Permissions handled at the board level.</strong> The high-level board can be open to the whole company; individual boards can be private or shared to a specific guest scoped to just that board; sensitive columns can be restricted. Locking one board down doesn&rsquo;t take the rest of the system with it.</li>
+    </ul>
+    <p>The result scales to the limits of any normal monday.com board, behaves predictably, and doesn&rsquo;t depend on a second Enterprise license to function.</p>
+
+    <div class="takeaways">
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>The default portfolio/project rollup demos well and breaks at scale.</li>
+        <li>Three failure modes: one private board breaks the whole view, front-end recalculation, and delete-asymmetry clutter.</li>
+        <li>Executives want strategic high-level boards &mdash; not every task rolled up.</li>
+        <li>Rebuild it with native boards, connected/mirror columns, and dashboards that group by master data.</li>
+        <li>You probably don&rsquo;t need the second (Enterprise) license you bought for the portfolio feature.</li>
+      </ul>
+    </div>
+
+    <div class="post-byline">
+      <span>Written by <strong>Ethan Foulkes</strong>, founder, Magic Button Labs &mdash; from patterns we see across real monday.com builds.</span>
+    </div>
+  </div>
+</article>
+<section class="post-related">
+  <div class="wrap">
+    <span class="eyebrow">Keep reading</span>
+    <div class="related-links">
+      <a class="soon">More Anti-Patterns &mdash; coming soon</a>
+      <a href="foundation-build.html">Foundation Build &mdash; architecture, done right</a>
+      <a href="customer-journey.html">Customer Journey Solution</a>
+    </div>
+  </div>
+</section>
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div><h2>Built your monday.com on the wrong foundation?</h2><p>It&rsquo;s fixable. We rebuild portfolios and reporting to scale &mdash; without the second license.</p></div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Builders Blueprint Series</a></li><li><a href="ai-workshop.html">AI Training Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+</body>
+</html>
