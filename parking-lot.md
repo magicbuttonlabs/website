@@ -148,3 +148,38 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 **Status:** Done 2026-05-30
 **Context:** The Foundation Build content file's 2-pager copy carried ⚠️ markers — reconstructed from a prior session, not verified against an actual `foundation-build-2pager.html`. That 2-pager now exists (built to the framework this session, gate-passing, committed to the instance). The 2-pager copy in `foundation-build-content.md` can have its ⚠️ markers cleared against it.
 **Note:** the build resolved the 2-pager's own structure too — page 2 gained a "Scoped on purpose" do/don't band so it fills the page (the offering's deliberate-scoping message now leads page 2 rather than sitting only in a stat).
+
+---
+
+## Blog / Content engine (added 2026-06-02)
+
+> First native blog post shipped — the **Anti-Patterns** launch, first run through the content engine (`topic-content-engine.md` in the canon, currently a temporary tenant there). Post: `blog-monday-portfolio-rollup-doesnt-scale.html`. Provenance + LinkedIn/email drafts: `blog-anti-patterns-source.md`.
+
+### Founder review of the first Anti-Patterns post
+**Status:** Open — review before the distribution push
+**Context:** `blog-monday-portfolio-rollup-doesnt-scale.html` is published and featured on `blog.html`, drafted from the call corpus (pattern lane, de-identified). It makes pointed but defensible claims about monday.com's portfolio/project solution. The LinkedIn + email versions sit in `blog-anti-patterns-source.md` ready to go.
+**Action needed:** Ethan read-through; greenlight (or soften) the post and the claims before the LinkedIn/email push.
+
+### Blog post hero images — no image pipeline yet
+**Status:** Open
+**Context:** The first post uses a text hero; the index card uses the existing CSS-gradient + emoji thumb (⚠️). No `assets/blog/` directory exists and there's no image step. Per `topic-blog-standard.md` §10, real hero images + alt text are the standard.
+**Action needed:** Create `assets/blog/monday-portfolio-rollup-doesnt-scale/` with a real hero (Canva), wire it into the post `<head>` OG tags + hero, and set the directory convention for future posts.
+
+### Article CSS not yet promoted
+**Status:** Open
+**Context:** The article typography (`.post-article`, `.post-hero`, `.takeaways`, `.pullquote`, `.post-related`) lives in the post's inline `<style>` block (v1). Per `topic-blog-standard.md` §5, promote to `styles.css` once a second post confirms the pattern; consider a `blog-post-template.html` starter file at the same time.
+**Action needed:** After post #2, lift the shared article CSS into `styles.css`.
+
+### Blog taxonomy — franchise segment as a filter pill
+**Status:** Open — decision
+**Context:** Added an **Anti-Patterns** pill to the `blog.html` filter row and used it as the post's tag/eyebrow to build the franchise. The row now mixes a franchise *segment* (Anti-Patterns) with topical *categories* (Workflows, Automations, Best Practices, Case Studies). Pills are still decorative (`href="#"`) — they don't filter.
+**Action needed:** Decide whether segments and topical categories coexist on one row (or split into two facets), and whether to wire real filtering. Ties to the engine's segment architecture (`topic-content-engine.md` §2).
+
+### Legacy Wix blog post still external
+**Status:** Open (carried from the canon parking lot "Blog post architecture")
+**Context:** "How to build a monday.com workflow your team will actually use" is now a standard (non-featured) card on `blog.html` but still links out to the Wix `/post/...` URL (`target="_blank"`). Inconsistent with native posts.
+**Action needed:** Rewrite/migrate as a native `blog-[slug].html` when convenient.
+
+### New post matches the stale © 2025 footer — on purpose
+**Status:** Open — folds into the existing site-wide © year sweep (see "Site-wide copyright year" above)
+**Context:** The new post's footer reads "© 2025" deliberately, to stay byte-identical with the rest of the site's chrome (Shared Chrome Contract). It rides along with the known site-wide year bump, not a per-page fix.
