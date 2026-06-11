@@ -8,6 +8,16 @@ Site-specific open decisions and deferred items for the live magicbuttonlabs.com
 
 ## Done — logged for continuity
 
+### Our Approach page + 2-pager shipped (five-phase delivery framework)
+**Status:** Done 2026-06-10
+**What landed:** The delivery-approach page — the sales→delivery handoff artifact from the Ethan/Brandon framework calls (Fathom 706962675 / 706984615). Phases: **Analyze → Prototype → Iterate → Optimize (optional) → Handoff**, each with an explicit Goal + Output. First page in the new **methodology category** (canon: page + 2-pager, **no primer**):
+- `approach-content.md` — source of truth (three-block skeleton). Drafted from the two transcripts; internal hour-percentages and upsell mechanics deliberately excluded from public copy.
+- `approach.html` — live page, in nav (between Solutions and About) and footer Company column. **Filename locked** — it's the SOW-referenced URL and the 2-pager's CTA target.
+- `approach-2pager.html` — slim/linked-font, 5-across phase grid (first 5-column build — logged against the framework's parked column-count question). Added to `build-2pager-pdfs.py` → `downloads/approach-2pager.pdf`. **Validation gate PASS locally** (2× Letter, fill 785/782pt).
+- Chrome swept across all 21 chrome-bearing pages (10 mains, 4 primers, 6 blog posts, + the new page).
+**Vocabulary decision (option a):** Foundation Build's Analyze/Prototype/Align stages coexist with the five-phase vocabulary as a compressed special case — recorded in both content files.
+**Follow-ups (off-site, owners Ethan + Brandon):** (1) SOW template sprint — align SOW wording to the five-phase vocabulary so SOW + 2-pager + delivery speak identically; (2) Brandon to build delivery-team training from the same material (his explicit ask: zero gap between customer-facing and internal versions); (3) sequence per the call: 2-pager goes out with the SOW reply, hours-to-phases mapping happens at delivery kickoff.
+
 ### All three offering primers built + wired live
 **Status:** Done 2026-05-30
 **What:** Per the Offering Primer Standard (canon), built a web primer for each of the three offering pages, each wired with a "Share this overview" link from its full page, each using the shared design system + "Share with a colleague" + placeholder "Download PDF (soon)":
