@@ -204,6 +204,18 @@ offerings:
     card-href: ai-workshop.html
     notes: Added 2026-05-30. The full trio (content.md + primer + 2-pager) is owed but not yet built. Tracked in parking-lot.md.
 
+### 4c. Methodology pages (non-offering, page + 2-pager, no primer)
+
+  - name: Our Approach (five-phase delivery framework)
+    status: live
+    full-page: approach.html
+    content-md: approach-content.md (complete — three-block skeleton)
+    2pager-html: approach-2pager.html (slim, linked-font, in this Trove)
+    2pager-pdf: downloads/approach-2pager.pdf (generated at deploy time)
+    primer: — (none by design — non-offering page; PDF CTA points at the full page)
+    nav-label: Our Approach
+    notes: The sales→delivery handoff artifact — attached to every SOW, and used verbatim as delivery-team training material. Phases: Analyze → Prototype → Iterate → Optimize (optional) → Handoff. Source: Ethan/Brandon framework calls 2026-06-10 (Fathom 706962675, 706984615). First page in the methodology category.
+
 ---
 
 ## 5. Components
