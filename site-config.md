@@ -73,7 +73,9 @@ favicon: —
 | Customer Journey Solution | live | customer-journey.html | Customer Journey | Full offering page. |
 | Foundation Build | live | foundation-build.html | Foundation Build | Full offering page. |
 | Builders Blueprint Series Training | live | workshop.html | Builders Blueprint | File kept as workshop.html to avoid link rot. |
-| AI Training Workshop | live | ai-workshop.html | AI Workshop | Fourth offering, added 2026-05-30. |
+| AI Training Workshop | live | ai-workshop.html | (via Solutions) | Fourth offering, added 2026-05-30. |
+| Solutions | live | solutions.html | Solutions | Offerings index; nav collapsed the four offering tabs into this single tab (2026-06). |
+| Our Approach | live | approach.html | Our Approach | Non-offering methodology page (five-phase delivery framework). Added 2026-06-10. Page + 2-pager, no primer. |
 | CJ Primer | live | customer-journey-overview.html | — | Not in nav. Emailable artifact only. |
 | Foundation Build Primer | live | foundation-build-overview.html | — | Not in nav. Emailable artifact only. |
 | Workshop Primer | live | workshop-overview.html | — | Not in nav. Emailable artifact only. |
