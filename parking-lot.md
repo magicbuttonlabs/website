@@ -109,8 +109,8 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 - The four primers' "Download PDF" buttons now point at `downloads/<slug>-2pager.pdf` (live).
 **⚠️ ONE MANUAL STEP REMAINING:** `deploy.yml` could not be written from this session (GitHub blocks workflow-file writes via the Trove integration). The render step must be added to `.github/workflows/deploy.yml` by hand — see the "deploy.yml manual edit" item below. **Until that edit lands, the PDFs are NOT generated and the download buttons will 404.**
 
-### deploy.yml manual edit — add the PDF render step (⚠️ ACTION NEEDED)
-**Status:** Open — must be done by hand (GitHub blocks workflow writes via Trove)
+### deploy.yml manual edit — add the PDF render step — RESOLVED
+**Status:** Done (verified 2026-06-10) — `.github/workflows/deploy.yml` now contains the Python/Node setup and the "Build 2-pager PDFs (runs the PDF validation gate)" step before the Pages upload. PDFs render on every push; a gate failure fails the deploy. The fifth slug (`approach-2pager`) was added to `build-2pager-pdfs.py` 2026-06-10.
 **Context:** The existing `.github/workflows/deploy.yml` uploads the repo root and deploys to Pages. The PDF render must run *before* the `upload-pages-artifact` step so `downloads/*.pdf` is swept into the same deploy. The deploy mechanism and triggers stay untouched — this is purely additive.
 **Action needed:** In `deploy.yml`, after the `Checkout` step and before `Setup Pages`, add:
 ```yaml
