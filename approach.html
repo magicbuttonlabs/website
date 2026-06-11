@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Approach | Magic Button Labs</title>
+<meta name="description" content="How Magic Button Labs delivers — five phases that turn your hours into outcomes: Analyze, Prototype, Iterate, Optimize, Handoff. You always know where your hours stand."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- OUR APPROACH — page-specific ---- */
+.ap-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--hairline); }
+.ap-hero h1 { margin-bottom: 22px; max-width: 16ch; }
+.ap-hero .lead { margin-bottom: 36px; max-width: 62ch; }
+.ap-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Principles */
+.ap-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 40px; }
+.ap-principle { background: var(--paper); padding: 36px 32px; display: flex; flex-direction: column; gap: 10px; }
+.ap-principle h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.25; }
+.ap-principle p { font-size: 15px; color: var(--ink-muted); line-height: 1.6; }
+
+/* Phase rows */
+.ap-phases { display: flex; flex-direction: column; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 40px; }
+.ap-phase { background: var(--paper); padding: 36px 36px 32px; display: grid; grid-template-columns: 200px 1fr 300px; gap: 40px; align-items: start; }
+.ap-phase-id { display: flex; flex-direction: column; gap: 8px; }
+.ap-phase-id .step { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 22px; color: var(--accent); line-height: 1; }
+.ap-phase-id h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.015em; color: var(--ink); line-height: 1.15; }
+.ap-tag { display: inline-block; align-self: flex-start; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent-deep); background: var(--band-deeper); border-radius: 100px; padding: 4px 12px; margin-top: 2px; }
+.ap-phase-desc { font-size: 15.5px; color: var(--ink-muted); line-height: 1.65; }
+.ap-phase-go { display: flex; flex-direction: column; gap: 16px; padding-left: 28px; border-left: 1px solid var(--hairline); }
+.ap-go-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 4px; display: block; }
+.ap-phase-go p { font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; }
+
+/* Closed / what's next */
+.ap-closed { background: var(--band); }
+.ap-closed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.ap-closed-grid .big { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 34px); letter-spacing: -0.02em; color: var(--ink); line-height: 1.2; }
+.ap-closed-grid .big em { font-style: normal; color: var(--accent); }
+.ap-closed-grid p { font-size: 16px; color: var(--ink-muted); line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .ap-principles { grid-template-columns: 1fr; }
+  .ap-phase { grid-template-columns: 1fr; gap: 18px; padding: 30px 26px; }
+  .ap-phase-go { padding-left: 0; border-left: none; padding-top: 18px; border-top: 1px solid var(--hairline); }
+  .ap-closed-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+          <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+          <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Magic Button Labs</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li class="hide-mob"><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="approach.html" class="active">Our Approach</a></li>
+      <li class="hide-mob"><a href="about.html">About</a></li>
+      <li class="hide-mob"><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="ap-hero">
+  <div class="wrap">
+    <span class="eyebrow">How We Deliver</span>
+    <h1 class="display">Five phases. <em>Zero surprises.</em></h1>
+    <p class="lead">When you work with us, you purchase a bucket of hours &mdash; and our delivery team runs a proven five-phase process to turn those hours into results. Every engagement follows the same path, so you always know where your hours are going, what&rsquo;s coming next, and what it would take to go further.</p>
+    <div class="ap-hero-actions">
+      <a class="btn btn-dark" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline" href="downloads/approach-2pager.pdf">Download the 2-pager</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Your hours, working</span>
+    <h2 class="section-title">Built to make every hour count.</h2>
+    <div class="ap-principles">
+      <div class="ap-principle">
+        <h3>Your hours, mapped</h3>
+        <p>At delivery kickoff, your delivery lead allocates your hours across the five phases. The plan reflects your budget from day one &mdash; not a vague bucket that runs out unannounced.</p>
+      </div>
+      <div class="ap-principle">
+        <h3>Focus over everything</h3>
+        <p>monday.com can do almost anything. Your hours can&rsquo;t do all of it at once. We aim your budget at the highest-ROI problems first &mdash; and prove them out before going wider.</p>
+      </div>
+      <div class="ap-principle">
+        <h3>Aligned at every step</h3>
+        <p>If something needs more hours than the engagement holds, you hear it the moment it comes up &mdash; not at the end. Need more? We talk about it at every step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <span class="eyebrow">The five phases</span>
+    <h2 class="section-title">How your hours become outcomes.</h2>
+    <p class="lead" style="margin-bottom:0;">Every phase has a goal and an output you can see &mdash; and nothing moves forward until you&rsquo;ve confirmed it.</p>
+
+    <div class="ap-phases">
+
+      <div class="ap-phase">
+        <div class="ap-phase-id">
+          <span class="step">01</span>
+          <h3>Analyze</h3>
+        </div>
+        <p class="ap-phase-desc">We learn how your business runs, where it hurts, and everything monday.com could do about it &mdash; then aim your hours at the highest-ROI problems first. We also align on how much your team wants to own versus have us deliver. This is the most important phase: if the appetite is bigger than the budget, you find out here &mdash; not at the end.</p>
+        <div class="ap-phase-go">
+          <div><span class="ap-go-label">Goal</span><p>A shared, prioritized view of your needs &mdash; sized honestly against your hours.</p></div>
+          <div><span class="ap-go-label">Output</span><p>A prioritized backlog of deliverables, mapped to your budget. It has value on its own &mdash; whether we build it, your team does, or someone else does.</p></div>
+        </div>
+      </div>
+
+      <div class="ap-phase">
+        <div class="ap-phase-id">
+          <span class="step">02</span>
+          <h3>Prototype</h3>
+        </div>
+        <p class="ap-phase-desc">We reflect what we heard in a basic working build &mdash; starting with simple diagrams of how things relate, then real boards with your data &mdash; so you can confirm the direction before we invest deeper.</p>
+        <div class="ap-phase-go">
+          <div><span class="ap-go-label">Goal</span><p>Reflect your needs in a basic build that&rsquo;s directionally right.</p></div>
+          <div><span class="ap-go-label">Output</span><p>An initial build you&rsquo;ve seen and confirmed matches your understanding and needs.</p></div>
+        </div>
+      </div>
+
+      <div class="ap-phase">
+        <div class="ap-phase-id">
+          <span class="step">03</span>
+          <h3>Iterate</h3>
+        </div>
+        <p class="ap-phase-desc">With the direction confirmed, we build out the nuanced pieces that get it over the line &mdash; views, dashboards, refinements &mdash; checking off backlog goals as your team tests in the system.</p>
+        <div class="ap-phase-go">
+          <div><span class="ap-go-label">Goal</span><p>Continue the build against the backlog until the focused scope is done.</p></div>
+          <div><span class="ap-go-label">Output</span><p>The solution, demoed and approved &mdash; with your team testing inside it.</p></div>
+        </div>
+      </div>
+
+      <div class="ap-phase">
+        <div class="ap-phase-id">
+          <span class="step">04</span>
+          <h3>Optimize</h3>
+          <span class="ap-tag">Optional</span>
+        </div>
+        <p class="ap-phase-desc">If the core is approved and hours remain, we lean into what extends it most &mdash; a basic integration, an advanced dashboard, more views per role. If the budget&rsquo;s done, we skip straight to Handoff. No padding.</p>
+        <div class="ap-phase-go">
+          <div><span class="ap-go-label">Goal</span><p>Extend an approved solution with the enhancements that matter most.</p></div>
+          <div><span class="ap-go-label">Output</span><p>Each enhancement demoed and approved &mdash; or a deliberate decision to skip this phase.</p></div>
+        </div>
+      </div>
+
+      <div class="ap-phase">
+        <div class="ap-phase-id">
+          <span class="step">05</span>
+          <h3>Handoff</h3>
+        </div>
+        <p class="ap-phase-desc">We formally package the solution and close the gaps that help your team run it &mdash; recordings, walkthroughs, final touches. Minimal hours, by design. There should be no surprises left by the time we get here.</p>
+        <div class="ap-phase-go">
+          <div><span class="ap-go-label">Goal</span><p>Your team confidently owning the solution.</p></div>
+          <div><span class="ap-go-label">Output</span><p>A packaged, documented system &mdash; owned by you.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section ap-closed">
+  <div class="wrap">
+    <div class="ap-closed-grid">
+      <div>
+        <span class="eyebrow" style="margin-bottom:14px;">What comes after</span>
+        <div class="big">Closed &mdash; and <em>clear on what&rsquo;s next</em>.</div>
+      </div>
+      <p>Every engagement closes completely &mdash; the work accepted, the solution owned by your team. What remains is the backlog: the prioritized list of everything else your system could do. Tackle it in-house, or bring us back &mdash; more hours, a retainer, a new team, the next phase. Either way, you know exactly what&rsquo;s next.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Ready to put your hours to work?</h2>
+      <p>Five phases, one accountable process &mdash; and a backlog you&rsquo;ll own from day one.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-accent" href="contact.html">Contact Us</a>
+      <a class="btn btn-outline-white" href="downloads/approach-2pager.pdf">Download the 2-pager</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-logo-mark">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="1" width="6.5" height="6.5" rx="1.5" fill="#39B0E2"/>
+            <rect x="9.5" y="1" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="1" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white" opacity="0.55"/>
+            <rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Magic Button Labs</span>
+      </a>
+      <p>monday.com consulting and implementation. Built to fit the way you work.</p>
+    </div>
+    <div class="footer-col"><h4>Solutions</h4><ul><li><a href="foundation-build.html">Foundation Build</a></li><li><a href="customer-journey.html">Customer Journey Solution</a></li><li><a href="workshop.html">Builders Blueprint Series</a></li><li><a href="ai-workshop.html">AI Training Workshop</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/magic-button-labs/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="http://www.monday.com/" target="_blank" rel="noopener">Get monday.com</a></li><li><a href="https://forms.monday.com/forms/embed/47514fb487e3e5a2101520306dfc699e?r=use1" target="_blank" rel="noopener">Workshop Waitlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 by Magic Button Labs, LLC. All rights reserved.</span>
+    <a href="http://monday.com/" target="_blank" rel="noopener">Built on monday.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
