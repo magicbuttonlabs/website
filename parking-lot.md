@@ -53,9 +53,9 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Options:** (a) Replace slot 3 with "See all solutions" — cleaner, slight conversion trade-off; (b) Keep as-is — these pages already have a strong conversion pattern and the nav now handles discovery.
 
 ### `testimonials.html` — stale chrome, needs full refresh
-**Status:** Open
-**Context:** `testimonials.html` was not on the standard chrome — its nav had only two offering links (Workshop + Customer Journey, both old labels) and its footer listed only CJ, Workshop, and "Implementation" (predates the current four-offering structure). Nav was patched this session (now shows Solutions). Footer and CTA band still need to be brought to the current standard.
-**Action needed:** Full chrome refresh on `testimonials.html` — standard footer (4-offering Solutions col, Company col, Connect col) + CTA band aligned with current pattern.
+**Status:** Partially done 2026-06-10 — **footer fixed**, CTA band still open
+**Context:** `testimonials.html` was not on the standard chrome — its nav had only two offering links (Workshop + Customer Journey, both old labels) and its footer listed only CJ, Workshop, and "Implementation" (predates the current four-offering structure). Nav was patched previously (Solutions); **the stale footer was caught and fixed in the Our Approach chrome sweep 2026-06-10** — it now carries the canonical 4-offering Solutions column and the Company column (incl. Our Approach). The dead "Implementation" link and the Company-column "Testimonials" self-link are gone. Second real catch for the Shared Chrome Contract.
+**Still open:** CTA band ("Ready to make monday.com magic?" + Customer Journey Solution button) hasn't been reviewed against the current CTA-band pattern. Low urgency.
 
 
 
