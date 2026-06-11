@@ -214,7 +214,7 @@ offerings:
     2pager-pdf: downloads/approach-2pager.pdf (generated at deploy time)
     primer: — (none by design — non-offering page; PDF CTA points at the full page)
     nav-label: Our Approach
-    notes: The sales→delivery handoff artifact — attached to every SOW, and used verbatim as delivery-team training material. Phases: Analyze → Prototype → Iterate → Optimize (optional) → Handoff. Source: Ethan/Brandon framework calls 2026-06-10 (Fathom 706962675, 706984615). First page in the methodology category.
+    notes: The sales→delivery handoff artifact — attached to every SOW, and used verbatim as delivery-team training material. Phases: Analyze → Prototype → Iterate → Handoff → Support & Optimize (optional). Source: Ethan/Brandon framework calls 2026-06-10 (Fathom 706962675, 706984615); revised value-first in the review call of 2026-06-11. First page in the methodology category.
 
 ---
 
