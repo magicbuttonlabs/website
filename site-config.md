@@ -99,8 +99,8 @@ nav-order:
 footer-columns:
   col-1: Brand (logo mark + tagline)
   col-2: Solutions (Foundation Build, Customer Journey, Builders Blueprint, AI Workshop)
-  col-3: Company (About, Blog, Testimonials)
-  col-4: Contact (contact link)
+  col-3: Company (About Us, Our Approach, Blog, Contact Us)
+  col-4: Contact / Connect (LinkedIn, Get monday.com, Workshop Waitlist)
 
 > Canonical nav + footer markup is the authoritative source: WEB-STANDARDS/topic-shared-chrome-contract.md. When any page or offering is added/renamed/removed, sweep all 11 pages (8 main + 3 primers) per the contract.
 
