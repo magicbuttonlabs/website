@@ -9,8 +9,8 @@ Site-specific open decisions and deferred items for the live magicbuttonlabs.com
 ## Done — logged for continuity
 
 ### Our Approach page + 2-pager shipped (five-phase delivery framework)
-**Status:** Done 2026-06-10
-**What landed:** The delivery-approach page — the sales→delivery handoff artifact from the Ethan/Brandon framework calls (Fathom 706962675 / 706984615). Phases: **Analyze → Prototype → Iterate → Optimize (optional) → Handoff**, each with an explicit Goal + Output. First page in the new **methodology category** (canon: page + 2-pager, **no primer**):
+**Status:** Done 2026-06-10 · **Revised 2026-06-11** after the Ethan/Brandon page review (Fathom call "Delivery Model Sync Up"): value-first reframe (you purchase decades of expertise, not hours — hours minimized to two light groundings); control framing in the hero; outcomes-over-outputs seeded; phase column relabeled "What you get"; phases now **Analyze → Prototype → Iterate → Handoff → Support & Optimize (optional)** — Support & Optimize absorbs both the old Optimize phase and the deleted "Closed — and clear on what's next" section (read too cold); CTA now "Ready to supercharge your business?". All three artifacts updated from the `.md`; gate re-run locally: PASS, fill 782/782pt.
+**What landed (2026-06-10):** The delivery-approach page — the sales→delivery handoff artifact from the Ethan/Brandon framework calls (Fathom 706962675 / 706984615). First page in the new **methodology category** (canon: page + 2-pager, **no primer**):
 - `approach-content.md` — source of truth (three-block skeleton). Drafted from the two transcripts; internal hour-percentages and upsell mechanics deliberately excluded from public copy.
 - `approach.html` — live page, in nav (between Solutions and About) and footer Company column. **Filename locked** — it's the SOW-referenced URL and the 2-pager's CTA target.
 - `approach-2pager.html` — slim/linked-font, 5-across phase grid (first 5-column build — logged against the framework's parked column-count question). Added to `build-2pager-pdfs.py` → `downloads/approach-2pager.pdf`. **Validation gate PASS locally** (2× Letter, fill 785/782pt).
