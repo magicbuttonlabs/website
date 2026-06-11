@@ -111,7 +111,7 @@ Canonical section → where it lives in each artifact. For the CJ-style canonica
 
 **Stage names are canonical:** 01. Analyze · 02. Prototype · 03. Align. Used identically across all artifacts. Do not rename on one without the others.
 
-**Vocabulary overlap with the delivery framework (decision 2026-06-10, option a):** The site-wide delivery approach (`approach.html` / `approach-content.md`) uses the five-phase vocabulary **Analyze / Prototype / Iterate / Optimize / Handoff**. Foundation Build's three stages share two of those words by design — Foundation Build is effectively a compressed special case of the same motion (analyze, prototype, then align/hand over a validated starting point). Both vocabularies ship as-is; neither renames the other. Revisit only if buyer confusion surfaces.
+**Vocabulary overlap with the delivery framework (decision 2026-06-10, option a; framework revised 2026-06-11):** The site-wide delivery approach (`approach.html` / `approach-content.md`) uses the five-phase vocabulary **Analyze / Prototype / Iterate / Handoff / Support & Optimize**. Foundation Build's three stages share two of those words by design — Foundation Build is effectively a compressed special case of the same motion (analyze, prototype, then align/hand over a validated starting point). Both vocabularies ship as-is; neither renames the other. Revisit only if buyer confusion surfaces.
 
 ---
 
