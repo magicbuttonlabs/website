@@ -85,16 +85,14 @@ favicon: —
 ### 3b. Nav order
 
 nav-order:
-  - Home (logo)
-  - Foundation Build → foundation-build.html
-  - Customer Journey → customer-journey.html
-  - Builders Blueprint → workshop.html
-  - AI Workshop → ai-workshop.html
+  - Home (logo + Home link)
+  - Solutions → solutions.html (the four offerings live behind this tab)
+  - Our Approach → approach.html
   - About → about.html
   - Blog → blog.html
-  - Contact → contact.html
+  - Contact Us → contact.html (nav-cta)
 
-> The nav groups the four offerings inline (no dropdown currently). When a fifth offering is added, revisit whether a Solutions dropdown earns its keep. See parking-lot.md.
+> **Nav collapse (2026-06):** the four per-offering tabs were collapsed into a single Solutions tab. Offering pages mark the Solutions link `active`. Our Approach added 2026-06-10 between Solutions and About — it's the sales→delivery handoff page, referenced from every SOW. Canonical markup: WEB-STANDARDS/topic-shared-chrome-contract.md.
 
 ### 3c. Footer columns
 
