@@ -62,7 +62,7 @@
 - What you get: The solution, demoed and approved — with your team testing inside it.
 
 **04. Handoff**
-- One-liner (2-pager): Your team owns it. Packaged, documented, no surprises.
+- One-liner (2-pager): We transfer ownership to your team — packaged, ready to run. No surprises left.
 - Description: We formally package the solution and close the gaps that help your team run it — recordings, walkthroughs, final touches. There should be no surprises left by the time we get here.
 - Goal: Your team confidently owning the solution.
 - What you get: A packaged, documented system — owned by you.
