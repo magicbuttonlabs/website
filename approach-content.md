@@ -63,9 +63,9 @@
 
 **04. Handoff**
 - One-liner (2-pager): We transfer ownership to your team — packaged, ready to run. No surprises left.
-- Description: We formally package the solution and close the gaps that help your team run it — recordings, walkthroughs, final touches. There should be no surprises left by the time we get here.
+- Description: We transfer ownership to your team — formally packaging the solution and closing the gaps that help them run it: recordings, walkthroughs, final touches. There should be no surprises left by the time we get here.
 - Goal: Your team confidently owning the solution.
-- What you get: A packaged, documented system — owned by you.
+- What you get: A packaged system, ready to run — owned by you.
 
 **05. Support & Optimize** *(carries an "Optional" tag in both renders)*
 - One-liner (2-pager): A flexible platform keeps doing more. Grow it with us — or take it from here.
