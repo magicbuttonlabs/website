@@ -63,7 +63,7 @@
 
 **04. Handoff**
 - One-liner (2-pager): We transfer ownership to your team — packaged, ready to run. No surprises left.
-- Description: We transfer ownership to your team — formally packaging the solution and closing the gaps that help them run it: recordings, walkthroughs, final touches. There should be no surprises left by the time we get here.
+- Description: We transfer ownership to your team — training the person who'll own the system to run it and teach others. What we leave behind is built for your champion to carry it forward. There should be no surprises left by the time we get here.
 - Goal: Your team confidently owning the solution.
 - What you get: A packaged system, ready to run — owned by you.
 
