@@ -42,6 +42,15 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### Custom Work solution page — shipped lean; enrichment + primer decision deferred
+**Status:** Open (page live as of this session)
+**What landed:** `custom-work.html` built and wired — the Support &amp; Maintain card on `solutions.html` now routes "Learn more &rarr;" to it (was a direct "Get in touch &rarr;" &rarr; contact.html). Standard chrome, byte-identical nav/footer (Solutions active, &copy; 2025 to stay on the contract). Built **page-only — no primer, no 2-pager, no `[page]-content.md`** per the Offering Primer Standard's "ambiguous &rarr; default to no primer": Custom Work is the catch-all bucket, not a productized offering.
+**Built strictly from verified copy:** every string is reorganized from the existing `solutions.html` card (the promise headline, the 5-service list, the two delivery models) + the verified site CTA-band copy. **No service descriptions, pricing, process, or outcomes were invented** — so the page is intentionally lean.
+**Open decisions (need Ethan):**
+- **(a) Promote to a full offering with the trio?** If Custom Work should be sold like the four named offerings, it earns a web primer + print 2-pager + `custom-work-content.md` (and a chrome re-check). Default stands at page-only until it proves it needs the trio.
+- **(b) Enrich the page?** One-line descriptions per service (Migrations / Integrations / Full go-live builds / As-built training / Ongoing admin &amp; dev), the hour-based-vs-managed-service distinction, and any pricing/Magic-Guarantee framing — all need a real source (Ethan or a call), not invention.
+- **(c) Footer Solutions column** currently lists only the four productized offerings; Custom Work was deliberately NOT added. Decide whether it belongs there as a 5th link.
+
 ### Solutions overview page — needed for nav consolidation and CTA band destinations
 **Status:** Done 2026-05-31
 **What landed:** `solutions.html` built (Enable / Deploy & Build / Support & Maintain groups, richer cards with meta lines, standard chrome). Nav swept across all 13 pages — 4 individual offering links replaced with single "Solutions" → `solutions.html`. CTA bands on `customer-journey.html` and `foundation-build.html` restored with "See all solutions" as the third button.
