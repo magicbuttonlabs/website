@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom Work &amp; Managed Services — Magic Button Labs</title>
+<link rel="stylesheet" href="fonts-2pager.css">
+<style>
+@page { size:8.5in 11in; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { margin:0; padding:0; }
+body { font-family:'DM Sans',Arial,sans-serif; background:#F5F5F5; color:#3A3335; }
+
+/* ── SHARED ── */
+.topbar { background:#3A3335; height:38pt; padding:0 44pt; display:table; width:100%; table-layout:fixed; }
+.tb-row { display:table-row; height:38pt; }
+.tb-l, .tb-r { display:table-cell; vertical-align:middle; }
+.tb-r { text-align:right; font-size:7pt; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#948C8E; }
+.kicker { font-size:7pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#948C8E; margin-bottom:12pt; }
+
+/* ── PAGE 1 — HERO ── */
+.hero { background:#FFFFFF; padding:40pt 44pt 34pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.hero-eyebrow { font-size:7.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:14pt; }
+.hero-cols { display:grid; grid-template-columns:1fr 178pt; gap:34pt; }
+.hero h1 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-size:34pt; line-height:1.06; letter-spacing:-.03em; color:#3A3335; margin-bottom:15pt; }
+.hero h1 em { color:#39B0E2; font-style:italic; font-weight:800; }
+.hero-lead { font-size:10pt; line-height:1.6; color:#595153; font-weight:300; margin-bottom:11pt; }
+.hero-meta { font-size:8pt; color:#948C8E; line-height:1.6; font-weight:300; }
+.hero-stats { padding-left:20pt; border-left:1pt solid #B5ACAE; }
+.stat { padding:9pt 0; border-bottom:1pt solid rgba(58,51,53,.10); }
+.stat:last-child { border-bottom:none; }
+.stat-n { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-size:24pt; line-height:1; color:#3A3335; letter-spacing:-.03em; margin-bottom:3pt; }
+.stat-n em { color:#39B0E2; font-style:normal; }
+.stat-l { font-size:7pt; color:#948C8E; line-height:1.3; font-weight:400; }
+.stat-l strong { color:#3A3335; font-weight:600; }
+
+/* ── PAGE 1 — PILLARS (2-up) ── */
+.pillars-wrap { background:#F5F5F5; padding:30pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.pillars-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.pillar { background:#FFFFFF; padding:22pt 22pt; }
+.pillar .p-tag { font-size:6.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#39B0E2; margin-bottom:9pt; display:block; }
+.pillar h3 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:14pt; line-height:1.15; letter-spacing:-.02em; color:#3A3335; margin-bottom:8pt; }
+.pillar p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+.pillar-list { list-style:none; margin-top:11pt; padding-top:10pt; border-top:1pt solid rgba(58,51,53,.10); }
+.pillar-list li { font-size:7.5pt; line-height:1.45; color:#595153; font-weight:300; padding-left:13pt; position:relative; margin-bottom:6pt; }
+.pillar-list li:last-child { margin-bottom:0; }
+.pillar-list li::before { content:''; position:absolute; left:0; top:3.5pt; width:4.5pt; height:4.5pt; border-radius:50%; background:#39B0E2; }
+
+/* ── PAGE 1 — BAND ── */
+.band { margin-top:30pt; background:#DFF0FA; border:1pt solid #B5ACAE; padding:20pt 22pt; display:grid; grid-template-columns:74pt 1fr; gap:20pt; align-items:start; }
+.band-kicker { font-size:6.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; padding-top:2pt; }
+.band-name { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:12.5pt; color:#3A3335; margin-bottom:6pt; letter-spacing:-.02em; }
+.band-desc { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; margin-bottom:7pt; }
+.band-mods { font-size:6.5pt; color:#948C8E; font-style:italic; font-weight:400; line-height:1.5; }
+
+/* ── PAGE BREAK ── */
+.page-break { break-before:page; page-break-before:always; height:0; overflow:visible; }
+
+/* ── PAGE 2 — CONTEXT ── */
+.context-band { background:#DFF0FA; padding:46pt 44pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 1fr; gap:34pt; align-items:center; }
+.ctx-quote { font-family:'DM Sans',Arial,sans-serif; font-style:italic; font-weight:400; font-size:12pt; line-height:1.6; color:#595153; }
+.ctx-quote em { color:#39B0E2; font-style:italic; font-weight:500; }
+.ctx-details { padding-left:28pt; border-left:1pt solid #B5ACAE; }
+.ctx-item { margin-bottom:8pt; padding-left:13pt; position:relative; font-size:8.5pt; color:#595153; font-weight:300; line-height:1.5; }
+.ctx-item:last-child { margin-bottom:0; }
+.ctx-item::before { content:''; position:absolute; left:0; top:4.5pt; width:5pt; height:5pt; border-radius:50%; background:#39B0E2; }
+
+/* ── PAGE 2 — MODELS (2-up) ── */
+.models-wrap { background:#F5F5F5; padding:36pt 44pt; border-bottom:1pt solid #B5ACAE; break-inside:avoid; page-break-inside:avoid; }
+.models-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.model { background:#FFFFFF; padding:22pt 22pt; }
+.model-tag { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-style:italic; font-weight:800; font-size:18pt; color:#39B0E2; line-height:1; margin-bottom:9pt; display:block; }
+.model h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:12.5pt; color:#3A3335; margin-bottom:7pt; letter-spacing:-.02em; }
+.model p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — OUTCOMES (3-up) ── */
+.outcomes-wrap { background:#FFFFFF; padding:42pt 44pt 0; break-inside:avoid; page-break-inside:avoid; }
+.outcomes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5pt; background:#B5ACAE; border:1pt solid #B5ACAE; }
+.outcome { background:#F5F5F5; padding:20pt 16pt; }
+.outcome-num { font-family:'DM Sans',Arial,sans-serif; font-weight:400; font-size:9pt; color:#39B0E2; margin-bottom:6pt; letter-spacing:.02em; }
+.outcome h4 { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:700; font-size:11pt; color:#3A3335; margin-bottom:7pt; line-height:1.2; letter-spacing:-.02em; }
+.outcome p { font-size:8pt; line-height:1.55; color:#595153; font-weight:300; }
+
+/* ── PAGE 2 — CTA ── */
+.cta { background:#3A3335; padding:28pt 44pt; break-inside:avoid; page-break-inside:avoid; display:grid; grid-template-columns:1fr 188pt; gap:30pt; align-items:center; }
+.cta-kicker { font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#948C8E; margin-bottom:6pt; }
+.cta-hed { font-family:'Plus Jakarta Sans',Arial,sans-serif; font-weight:800; font-size:16pt; color:white; letter-spacing:-.03em; line-height:1.2; margin-bottom:7pt; }
+.cta-hed em { font-style:italic; font-weight:800; color:#286BB0; }
+.cta-url { font-size:9.5pt; font-weight:700; color:#286BB0; margin-bottom:3pt; }
+.cta-sub { font-size:7.5pt; color:#948C8E; font-weight:300; }
+.cta-r { text-align:right; padding-left:26pt; border-left:1pt solid rgba(255,255,255,.10); }
+.cta-tag { font-size:7.5pt; color:rgba(255,255,255,.32); font-weight:300; line-height:1.5; margin-top:7pt; }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Partner Resource &middot; Custom Work &amp; Managed Services</div>
+</div></div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Support &amp; Maintain</div>
+  <div class="hero-cols">
+    <div>
+      <h1>Whatever else you need.<br><em>We can help.</em></h1>
+      <p class="hero-lead">The work doesn&rsquo;t stop once you&rsquo;re up and running &mdash; and neither do we. Keep optimizing your monday.com, and your business, with ongoing help sized to exactly what you need.</p>
+      <p class="hero-meta">A simple bucket of hours, or a managed service. Flex up or down, no long contracts, stop whenever you&rsquo;re ready.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">2</div><div class="stat-l">simple ways to engage &mdash; a bucket of hours or a managed service</div></div>
+      <div class="stat"><div class="stat-n">1</div><div class="stat-l">partner who already knows your system</div></div>
+      <div class="stat"><div class="stat-n">0</div><div class="stat-l"><strong>long contracts, lock-in, or surprise invoices</strong></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pillars-wrap">
+  <div class="kicker">Two ways we keep helping</div>
+  <div class="pillars-grid">
+
+    <div class="pillar">
+      <span class="p-tag">Additional hours</span>
+      <h3>Continually optimize your monday.com &mdash; and your business.</h3>
+      <p>As your business evolves, additional hours keep the system evolving with it &mdash; refining how it works and, more importantly, how your business runs. No big commitment up front: take the next round only when you decide it&rsquo;s worth it.</p>
+      <ul class="pillar-list">
+        <li>Refine how the system works as your team learns</li>
+        <li>Layer in the next improvement when you&rsquo;re ready</li>
+        <li>Keep training and adoption strong as you grow</li>
+      </ul>
+    </div>
+
+    <div class="pillar">
+      <span class="p-tag">Ongoing support</span>
+      <h3>An on-call partner who already knows your system.</h3>
+      <p>Keep us on as part of your team &mdash; ready the moment something comes up, with no ramp-up and no re-explaining. Steady, as-you-need-it support that scales with you and never locks you in.</p>
+      <ul class="pillar-list">
+        <li>Flex up or down as your needs change</li>
+        <li>No long contracts &mdash; stop whenever you&rsquo;re ready</li>
+        <li>Pick back up the moment you need us again</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="band">
+    <div class="band-kicker">How it works</div>
+    <div>
+      <div class="band-name">As much &mdash; or as little &mdash; as you need.</div>
+      <div class="band-desc">Engage us for a one-off fix, a steady monthly cadence, or anything in between &mdash; and dial it up or down as things change. We&rsquo;re not here forever; we&rsquo;re here when you need us.</div>
+      <div class="band-mods">Sized to your needs &middot; Flex up or down &middot; Stop whenever you&rsquo;re ready</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== PAGE BREAK ===== -->
+<div class="page-break"></div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="topbar"><div class="tb-row">
+  <div class="tb-l"><svg width="185" height="22" viewBox="0 0 185 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+      <rect x="0" y="3" width="28" height="16" rx="4" fill="#39B0E2" opacity="0.9"/>
+      <path d="M14 7L14.7 10.3L18 11L14.7 11.7L14 15L13.3 11.7L10 11L13.3 10.3Z" fill="white" opacity="0.95"/>
+      <text x="36" y="15.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="13"><tspan fill="white">Magic Button</tspan><tspan fill="#286BB0"> Labs</tspan></text>
+    </svg></div>
+  <div class="tb-r">Custom Work &amp; Managed Services &middot; 2 of 2</div>
+</div></div>
+
+<div class="context-band">
+  <div class="ctx-quote">"Part of your team &mdash; <em>here when you need us.</em> An on-call monday.com partner who already knows your system, for as much or as little as you need."</div>
+  <div class="ctx-details">
+    <div class="ctx-item">Help from people already fluent in your build &mdash; no ramp-up, no re-explaining.</div>
+    <div class="ctx-item">Flex up or down as your needs change &mdash; no long contracts.</div>
+    <div class="ctx-item">Stop whenever you&rsquo;re ready, and pick back up the moment you need us.</div>
+  </div>
+</div>
+
+<div class="models-wrap">
+  <div class="kicker">Two simple ways to engage</div>
+  <div class="models-grid">
+    <div class="model">
+      <span class="model-tag">01</span>
+      <h4>Bucket of hours</h4>
+      <p>Prepay a set of hours and spend them on whatever you need most &mdash; a quick fix, a new build, a fresh set of eyes &mdash; with priority help the moment something comes up.</p>
+    </div>
+    <div class="model">
+      <span class="model-tag">02</span>
+      <h4>Managed service</h4>
+      <p>A monthly retainer that keeps us on your team for steady, as-you-need-it support once you&rsquo;re live &mdash; predictable, ongoing, and easy to dial up or down.</p>
+    </div>
+  </div>
+</div>
+
+<div class="outcomes-wrap">
+  <div class="kicker">What you walk away with</div>
+  <div class="outcomes-grid">
+    <div class="outcome"><div class="outcome-num">First &mdash;</div><h4>It keeps improving</h4><p>Your monday.com keeps pace with your business &mdash; tuned, extended, and adopted, round after round, instead of going stale the day we leave.</p></div>
+    <div class="outcome"><div class="outcome-num">Second &mdash;</div><h4>Expertise on call</h4><p>A partner who already knows your system and your goals, ready the moment something comes up &mdash; no ramp-up, no re-explaining.</p></div>
+    <div class="outcome"><div class="outcome-num">Third &mdash;</div><h4>You never over-buy</h4><p>Sized to exactly what you need, dialed up or down, stopped whenever you&rsquo;re ready. You never pay for more than you use.</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div>
+    <div class="cta-kicker">Talk to us</div>
+    <div class="cta-hed">Whatever else you need &mdash;<br><em>we can help.</em></div>
+    <div class="cta-url">magicbuttonlabs.com/custom-work</div>
+    <div class="cta-sub">Additional hours &middot; Managed service &middot; Here when you need us</div>
+  </div>
+  <div class="cta-r">
+    <svg width="165" height="20" viewBox="0 0 165 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="2" width="24" height="14" rx="3.5" fill="#286BB0" opacity="0.7"/>
+      <path d="M12 5.5L12.6 8.4L15.5 9L12.6 9.6L12 12.5L11.4 9.6L8.5 9L11.4 8.4Z" fill="white" opacity="0.9"/>
+      <text x="30" y="13.5" font-family="Plus Jakarta Sans,Arial,sans-serif" font-style="italic" font-size="11.5"><tspan fill="rgba(255,255,255,0.45)">Magic Button</tspan><tspan fill="#286BB0" opacity="0.65"> Labs</tspan></text>
+    </svg>
+    <div class="cta-tag">monday.com Partner<br>Here when you need us</div>
+  </div>
+</div>
+
+</body>
+</html>
