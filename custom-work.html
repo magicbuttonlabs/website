@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Custom Work &amp; Managed Services | Magic Button Labs</title>
-<meta name="description" content="Whatever else you need from monday.com, we can help — migrations, integrations, full go-live builds, custom &quot;as-built&quot; training, and ongoing admin or development, delivered as hour-based packages or a managed service."/>
+<meta name="description" content="Additional hours and managed services for monday.com — tuning, deeper builds, training, and ongoing support, delivered as a simple bucket of hours or a light monthly retainer."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -16,20 +16,32 @@
 .cw-hero .lead { margin-bottom: 36px; max-width: 60ch; }
 .cw-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.cw-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 56px; margin-top: 28px; }
-.cw-list li { font-size: 17px; color: var(--ink); line-height: 1.5; padding-left: 28px; position: relative; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; }
+.cw-lead-2 { margin-bottom: 8px; }
+.cw-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 56px; margin-top: 32px; }
+.cw-list li { font-size: 16.5px; color: var(--ink); line-height: 1.5; padding-left: 28px; position: relative; }
 .cw-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+.cw-bridge { font-size: 14px; color: var(--ink-subtle); margin-top: 32px; }
+.cw-bridge a { color: var(--accent); font-weight: 500; }
+.cw-bridge a:hover { color: var(--accent-deep); }
 
 .cw-deliver { background: var(--band); }
-.cw-deliver .section-title { margin-bottom: 28px; }
-.cw-models { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+.cw-deliver .lead { max-width: 64ch; margin-bottom: 4px; }
+.cw-models { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); margin-top: 36px; }
 .cw-model { background: var(--paper); padding: 36px 32px; display: flex; flex-direction: column; gap: 10px; }
 .cw-model .label { font-family: 'Plus Jakarta Sans', sans-serif; font-style: italic; font-weight: 300; font-size: 22px; color: var(--accent); line-height: 1; }
-.cw-model h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+.cw-model h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+.cw-model p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; }
+
+.cw-xref { border-top: 1px solid var(--hairline); }
+.cw-xref-inner { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.cw-xref .eyebrow { margin-bottom: 10px; }
+.cw-xref p { font-size: 16px; color: var(--ink-muted); line-height: 1.6; max-width: 64ch; }
+.cw-xref .btn { flex-shrink: 0; }
 
 @media (max-width: 900px) {
   .cw-list { grid-template-columns: 1fr; gap: 14px; }
   .cw-models { grid-template-columns: 1fr; }
+  .cw-xref-inner { grid-template-columns: 1fr; gap: 22px; align-items: start; }
 }
 </style>
 </head>
@@ -65,7 +77,7 @@
   <div class="wrap">
     <span class="eyebrow">Support &amp; Maintain</span>
     <h1 class="display">Whatever else you need from monday.com, we can help.</h1>
-    <p class="lead">Migrations, integrations, full go-live builds, custom &ldquo;as-built&rdquo; training, and ongoing admin or development &mdash; delivered as hour-based packages or a managed service.</p>
+    <p class="lead">Whatever comes after your solution is in place &mdash; tuning, the deeper builds, training, and ongoing support &mdash; handled as a simple bucket of hours or a managed service.</p>
     <div class="cw-hero-actions">
       <a class="btn btn-dark" href="contact.html">Get in touch</a>
       <a class="btn btn-outline" href="solutions.html">See all solutions</a>
@@ -75,31 +87,47 @@
 
 <section class="section">
   <div class="wrap">
-    <span class="eyebrow">What we can help with</span>
-    <h2 class="section-title">Whatever else you need from monday.com.</h2>
+    <span class="eyebrow">Additional hours</span>
+    <h2 class="section-title">Refine the system. Capture more wins.</h2>
+    <p class="lead cw-lead-2">Once your team is comfortable in the system and ready for more, additional hours go to the deeper, more customized work &mdash; plus the tuning and training that helps you capture as many additional wins as possible.</p>
     <ul class="cw-list">
-      <li>Migrations</li>
-      <li>Integrations</li>
-      <li>Full go-live builds</li>
-      <li>Custom &ldquo;as-built&rdquo; training</li>
-      <li>Ongoing admin &amp; development</li>
+      <li>Resource management &amp; custom time tracking</li>
+      <li>Cleaner workload &amp; capacity views</li>
+      <li>Workflows that work differently than the standard build</li>
+      <li>Extra tuning &amp; team training</li>
     </ul>
+    <p class="cw-bridge">Once you start, this work becomes part of how we deliver. <a href="approach.html">See our approach &rarr;</a></p>
   </div>
 </section>
 
-<section class="section cw-deliver" style="padding-top:0;">
+<section class="section cw-deliver">
   <div class="wrap">
-    <span class="eyebrow">How it&rsquo;s delivered</span>
-    <h2 class="section-title">Hour-based packages or a managed service.</h2>
+    <span class="eyebrow">Managed service</span>
+    <h2 class="section-title">As much &mdash; or as little &mdash; as you need.</h2>
+    <p class="lead">Every engagement includes portal support after we&rsquo;re done, so your team can ask questions and keep moving. Past that, keep us close with a prepaid bucket of hours or a light monthly retainer &mdash; flex up or down, no long contracts, and stop whenever you&rsquo;re ready. We&rsquo;re not here forever; we&rsquo;re here when you need us.</p>
     <div class="cw-models">
       <div class="cw-model">
         <span class="label">01</span>
-        <h3>Hour-based packages</h3>
+        <h3>Bucket of hours</h3>
+        <p>Prepay a bucket and draw it down as you go &mdash; call us when you need us, no clock-watching.</p>
       </div>
       <div class="cw-model">
         <span class="label">02</span>
         <h3>Managed service</h3>
+        <p>A light monthly retainer for steady, as-you-need-it support once you&rsquo;re live.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm cw-xref">
+  <div class="wrap">
+    <div class="cw-xref-inner">
+      <div>
+        <span class="eyebrow">Bigger pieces</span>
+        <p>Migrations, integrations, and full go-live builds are scoped as their own work. See how they fit alongside everything else we offer.</p>
+      </div>
+      <a class="btn btn-outline" href="solutions.html">See all solutions &rarr;</a>
     </div>
   </div>
 </section>
