@@ -43,7 +43,7 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 ## Open
 
 ### Homepage StoryBrand pass (us→them language) — first batch live; structure + whimsy queued
-**Status:** Language pass done 2026-06-28 · structural + parked items below still open
+**Status:** Language pass + homepage visual/structure polish done 2026-06-28 · Solutions-page two-paths + parked items below still open
 **Source:** Corrine's homepage review, Fathom "strategy for who gets which target" (2026-06-26). The mode transition Ethan named on that call: the structure was right, so flip internal "us" language → external StoryBrand "you" language.
 **What landed (live on `index.html`, 8 surgical edits):** hero H1 → "Get *way more* out of monday.com" + single Contact Us (dropped the dead "Get monday.com" → monday.com button); hero Enable + Support cards you-flipped ("Learn to build… yourself", "Keep us in your corner"); offerings H2 → "Choose the right monday.com help for where you are now" + you-framed lead; Builders Blueprint / AI Workshop (five-tool name list dropped for the win) / Customer Journey ("our flagship" removed) card copy; testimonials head → "How we've helped teams just like yours / In every vertical, at every size"; closing CTA band → "not sure? that's normal — shortest path, often within the week". **Custom Work card CTA bug fixed** (transcript action item): was "Get in touch" → `contact.html`, now "Learn more" → `custom-work.html`.
 **Left deliberately unflipped:** the Deploy & Build hero card and the Foundation Build offering card — both already outcome/you-framed; only greenlit strings were changed. Optional follow-up if we want them matched.
