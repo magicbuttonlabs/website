@@ -42,6 +42,19 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 
 ## Open
 
+### Homepage StoryBrand pass (us→them language) — first batch live; structure + whimsy queued
+**Status:** Language pass done 2026-06-28 · structural + parked items below still open
+**Source:** Corrine's homepage review, Fathom "strategy for who gets which target" (2026-06-26). The mode transition Ethan named on that call: the structure was right, so flip internal "us" language → external StoryBrand "you" language.
+**What landed (live on `index.html`, 8 surgical edits):** hero H1 → "Get *way more* out of monday.com" + single Contact Us (dropped the dead "Get monday.com" → monday.com button); hero Enable + Support cards you-flipped ("Learn to build… yourself", "Keep us in your corner"); offerings H2 → "Choose the right monday.com help for where you are now" + you-framed lead; Builders Blueprint / AI Workshop (five-tool name list dropped for the win) / Customer Journey ("our flagship" removed) card copy; testimonials head → "How we've helped teams just like yours / In every vertical, at every size"; closing CTA band → "not sure? that's normal — shortest path, often within the week". **Custom Work card CTA bug fixed** (transcript action item): was "Get in touch" → `contact.html`, now "Learn more" → `custom-work.html`.
+**Left deliberately unflipped:** the Deploy & Build hero card and the Foundation Build offering card — both already outcome/you-framed; only greenlit strings were changed. Optional follow-up if we want them matched.
+**Queued next — structural (own pass, not language):**
+- **Collapse the Enable / Deploy & Build / Support & Maintain offer groups on the homepage → "two paths to win"**, with the detailed three-level breakdown moving to `solutions.html`. Ethan: "this is very heavy… make it much simpler." Real restructure of the offerings section — judgment call, do deliberately.
+- **Solutions nav → hover dropdown** to each offering. Touches the Shared Chrome Contract (every page) — sweep accordingly.
+**Parked — later / v2:**
+- **"Business journey" reframe of the CJ visual** (find leads → source opportunities → get paid → project-manage → execution, instead of "customer journey," since not every client is service-industry). **Ethan explicitly deferred this** ("I'm not going to do that… later") and wants to own it when the system is handed over. Do NOT touch the CJ diagram vocab on this basis without him.
+- **Whimsy footer/CTA tagline** — Ethan wants a cute "let us build your magic button"-type line and wants to write it himself. The footer's current "Built to fit the way you work" stays until he lands it.
+- **Testimonial logos** (build trust; needs per-client logo consent/handling) and **"See all testimonials" → case-study videos** (currently a text teaser to the social-proof deep dive). Both "version 2."
+
 ### Custom Work solution page — reframed to sales-lens "additional hours + managed service"
 **Status:** Open — page live + reframed this session; the 2-pager (the missing leave-behind) still to build
 **What landed:** `custom-work.html` built and wired (the Support &amp; Maintain card on `solutions.html` routes "Learn more &rarr;" to it), then **reframed** from a lean catch-all list into two sales-lens pillars: (1) **Additional hours** — post-foundation tuning, training, and deeper customization (resource mgmt, custom time tracking, workload views, "do it differently"); (2) **Managed service** — included portal support, then a prepaid bucket of hours or a light monthly retainer. A "Bigger pieces" band cross-references migrations/integrations/go-live to `solutions.html` instead of re-explaining them (those live in the build offerings). Standard chrome, byte-identical (Solutions active, &copy; 2025).
