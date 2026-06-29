@@ -65,7 +65,7 @@
 
 ## 2. Render Deltas
 
-> How the artifacts intentionally diverge. NOTE: a print 2-pager does not exist for Workshop yet; deltas below are full-page vs. web primer only. Add 2-pager deltas if/when one is built.
+> How the artifacts intentionally diverge across the full page, the web primer, and the print 2-pager (`workshop-2pager.html` — built after this file; see Delta 5).
 
 ### Delta 1 — Naming *(resolved: plural "Builders," 2026-05-30)*
 - **Decision:** the offering label is **"Builders Blueprint Series"** — plural, no apostrophe — everywhere it appears as a name. The print 2-pager was updated off the earlier singular "Builder's."
