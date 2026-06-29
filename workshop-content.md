@@ -87,6 +87,11 @@
 - **Primer:** a single tight problem line, profiles omitted.
 - **Why:** The primer states the problem once and moves to the offer; the page does the fuller diagnostic and audience-targeting work.
 
+### Delta 5 — Print 2-pager (built after this file; voice already aligned)
+- The print 2-pager **does exist**: `workshop-2pager.html` → `downloads/workshop-2pager.pdf` (in `build-2pager-pdfs.py`). A two-page Letter leave-behind. Page 1 = hero + 3-stat rail + the eight sessions; page 2 = the 3-step method, the problem as a pull-quote ("context band"), three outcomes, and the CTA.
+- **StoryBrand voice already matches the full page** (verified 2026-06-28): same hero, same "it's not your fault / nobody showed you the right patterns" problem, same you-framed outcomes. No flip was needed.
+- **Micro-diff (left as-is):** the 2-pager hero reads "You weren't shown how to build it right" vs. the page's "You *just* weren't shown" — "just" dropped for line-fit. Immaterial.
+
 ---
 
 ## 3. Section Map
