@@ -96,17 +96,17 @@
 
 ## 3. Section Map
 
-| Canonical section | Full page (`workshop.html`) | Web primer (`workshop-overview.html`) | Print 2-pager |
+| Canonical section | Full page (`workshop.html`) | Web primer (`workshop-overview.html`) | Print 2-pager (`workshop-2pager.html`) |
 |---|---|---|---|
-| Hero | hero w/ headline + subhead + actions + stat block | hero w/ headline + subhead + 8-sessions stat | — (none yet) |
-| Problem | "Sound familiar?" band + 4 signs | one condensed problem line | — |
-| How it works | "Learn it. See it. Build it." | brief 3-step line | — |
-| Curriculum | 8 session cards w/ descriptions | 8 session names listed | — |
-| Outcome | 3 walk-away cards | folded into outcome line | — |
-| Pricing & format | full grid (group/private) | one-line price summary | — |
-| Magic Guarantee | full guarantee band | one-line guarantee mention | — |
-| Who this is for | 3 buyer profiles | omitted | — |
-| CTA | waitlist + private session | primary → full page; secondary → contact/waitlist | — |
+| Hero | hero w/ headline + subhead + actions + stat block | hero w/ headline + subhead + 8-sessions stat | page 1: headline + lead + meta line + 3-stat rail (8 / 2–4 / 1) |
+| Problem | "Sound familiar?" band + 4 signs | one condensed problem line | page 2: "context band" — problem as a pull-quote + 3 condensed signs |
+| How it works | "Learn it. See it. Build it." | brief 3-step line | page 2: 3-step grid (Learn it / See it / Build it) |
+| Curriculum | 8 session cards w/ descriptions | 8 session names listed | page 1: 8-session 4×2 grid, one-line descriptions |
+| Outcome | 3 walk-away cards | folded into outcome line | page 2: 3 outcome cards (First/Second/Third) |
+| Pricing & format | full grid (group/private) | one-line price summary | CTA line only ("Group from $500 · Private from $2,500") |
+| Magic Guarantee | full guarantee band | one-line guarantee mention | folded into the 3rd outcome + CTA sub |
+| Who this is for | 3 buyer profiles | omitted | omitted |
+| CTA | waitlist + private session | primary → full page; secondary → contact/waitlist | page 2 CTA → magicbuttonlabs.com/workshop-overview + waitlist |
 
 **Naming note:** "Builders" (plural, no apostrophe) is locked across all surfaces incl. the 2-pager (2026-05-30). "Workshop" and "Builders Blueprint Series Training" remain the same offering; the only deferred item is the optional `workshop.html` → `builders-blueprint.html` file rename.
 
