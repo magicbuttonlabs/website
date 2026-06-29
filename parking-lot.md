@@ -223,6 +223,5 @@ Everything else in the file is unchanged. Once committed, the next push renders 
 **Context:** "How to build a monday.com workflow your team will actually use" is now a standard (non-featured) card on `blog.html` but still links out to the Wix `/post/...` URL (`target="_blank"`). Inconsistent with native posts.
 **Action needed:** Rewrite/migrate as a native `blog-[slug].html` when convenient.
 
-### New post matches the stale © 2025 footer — on purpose
-**Status:** Open — folds into the existing site-wide © year sweep (see "Site-wide copyright year" above)
-**Context:** The new post's footer reads "© 2025" deliberately, to stay byte-identical with the rest of the site's chrome (Shared Chrome Contract). It rides along with the known site-wide year bump, not a per-page fix.
+### New post matches the stale © 2025 footer — RESOLVED
+**Status:** Done 2026-06-28 — the site-wide © 2025 → 2026 sweep covered all 6 blog posts, so the post now reads © 2026 along with the rest of the site.
