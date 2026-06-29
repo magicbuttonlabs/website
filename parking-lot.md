@@ -71,7 +71,7 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Framing decision (resolved by Ethan):** the *sales* lens for this artifact is **"Custom Work & Managed Services"** — NOT "Iterate." **Iterate** is the *delivery* framework's phase (Our Approach); the sales→delivery transition happens at purchase/kickoff, so the page leads in the sales lens and only gestures at delivery (one light "See our approach" link). Same sales-vs-delivery-lens coexistence the canon already records for Foundation Build's Analyze/Prototype/Align vs the five-phase vocab.
 **This page IS the missing PDF.** In the bundle emails Ethan attaches a 2-pager per solution but has none for the "additional hours" item — so this page is the basis for that missing leave-behind. Build the `custom-work` 2-pager to `topic-2pager-framework.md` (Playwright/Chromium + gate) when ready; at that point a `custom-work-content.md` becomes worthwhile to keep page + 2-pager in sync.
 **Still open:**
-- **Footer Solutions column** lists only the four productized offerings; Custom Work deliberately NOT added. Decide whether it belongs there as a 5th link.
+- ~~**Footer Solutions column** lists only the four productized offerings; Custom Work deliberately NOT added.~~ **Resolved 2026-06-28** — Custom Work & Managed Services is now the 5th link in every footer Solutions column (matches the nav dropdown).
 - **Consent:** source emails/calls are real named prospects (Brit Laureys/Ghost Ranch, Michael Kruse/RSCS). Framing/patterns are de-identified and safe in public copy; named quotes/attribution need the testimonials consent gate.
 - **Primer:** still page-only (no web primer) — correct for a catch-all; revisit only if it gets productized.
 
