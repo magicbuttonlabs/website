@@ -113,10 +113,8 @@ Non-offering pages (Home, About, Blog, Contact) correctly have NO primer, per th
 **Status:** Done 2026-05-30
 **What:** The Enable group's single umbrella "monday.com Training" card was split into a two-card grid (mirroring Deploy & Build): **Builders Blueprint Series** &rarr; `workshop.html` (reusing the existing training-card blurb, which already described this offering) and **AI Training Workshop** &rarr; `ai-workshop.html` (blurb taken from the AI page's own summary line, not invented). Both cards point at full pages, per the cards-routing decision below.
 
-### Site-wide copyright year — © 2025 → 2026
-**Status:** Open — chrome (footer-bottom), site-wide
-**Context:** Every page's footer-bottom still reads "© 2025 by Magic Button Labs, LLC." `ai-workshop.html` was conformed to 2025 to stay byte-identical with the rest rather than fork one page to 2026. It's a year stale across the whole site.
-**Action needed:** Bump footer-bottom to 2026 on all 11 pages in one chrome sweep. Low effort; fold into the next chrome pass or do standalone.
+### Site-wide copyright year — © 2025 → 2026 — DONE
+**Status:** Done 2026-06-28 — swept across all 23 chrome-bearing pages' footer-bottom in the combined footer edit (alongside the Custom Work footer link). Only the 6 print 2-pagers remain unchecked (own chrome; see the footer-sweep note above).
 
 ### Workshop naming — RESOLVED: plural "Builders" locked everywhere
 **Status:** Done 2026-05-30 (cross-ref `workshop-content.md` Delta 1)
